@@ -3,8 +3,8 @@ all:
 	javac *.java
 
 clean:
-	rm -rf *.class recvInfo channelInfo *.txt
+	rm -rf *.class
 
 fast:
-	rm -rf *.class recvInfo channelInfo *.txt
+	rm -rf *.class
 	javac *.java

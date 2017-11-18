@@ -117,6 +117,36 @@ public class Board {
     return matchStatus;
   }
   
+  public void print() {
+    char[][] board = new char[5][5];
+    for (int column = 1; column <= 4; ++column) {
+      for (int row = 1; row <= 4; ++row) {
+        board[column][row] = '.';
+      }
+    }
+    for (Map.Entry<Cell, Piece> entry : pieceInCell.entrySet()) {
+      Cell cell = entry.getKey();
+      Piece piece = entry.getValue();
+      board[cell.getColumn()][cell.getRow()] = piece.toChar();
+    }
+    System.out.println();
+    
+    for (int row = 4; row >= 1; --row) {
+      System.out.println("---------");
+     
+      for (int column = 1; column <= 4; ++column) {
+          System.out.print("|");
+       
+        System.out.print(board[column][row]);
+        
+      }
+      System.out.print("|");
+      System.out.println();
+    }
+    System.out.println("---------");
+    System.out.println();
+  }
+  
   public void print(PrintWriter log) {
     log.println("\\begin{center}");
     log.println("\\setchessboard{");

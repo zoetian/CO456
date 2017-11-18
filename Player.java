@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+import java.text.DecimalFormat;
+import java.util.*;
 
 abstract class Player {
   protected int myColour;
@@ -11,30 +12,34 @@ abstract class Player {
   protected int theirKingColumn, theirKingRow;
   protected boolean theirRookIsAlive;
   protected int theirRookColumn, theirRookRow;
-  
+
   protected final int WHITE = 0, BLACK = 1;
-  
+
   public Player() {
   }
-  
+
   public void prepareForSeries() {
     throw new RuntimeException("You need to override the method prepareForSeries.");
   }
-  
+
   public void prepareForMatch() {
     throw new RuntimeException("You need to override the method prepareForMatch.");
   }
-  
+
   public MoveDescription chooseMove() {
     throw new RuntimeException("You need to override the method ChooseMove.");
   }
   
+  public void receiveMatchOutcome(int matchOutcome) {
+    throw new RuntimeException("You need to override the method receiveMatchOutcome.");
+  }
+
   public final void update(Board board, Colour myColour_, int numMovesPlayed_) {
     myColour = myColour_.toInt();
     numMovesPlayed = numMovesPlayed_;
-    
+
     Cell cell = null;
-        
+
     cell = board.getPieceLocation(new Piece(PieceType.KING, myColour_));
     if (cell == null) {
       myKingIsAlive = false;
@@ -45,7 +50,7 @@ abstract class Player {
       myKingColumn = cell.getColumn();
       myKingRow = cell.getRow();
     }
-    
+
     cell = board.getPieceLocation(new Piece(PieceType.ROOK, myColour_));
     if (cell == null) {
       myRookIsAlive = false;
@@ -56,7 +61,7 @@ abstract class Player {
       myRookColumn = cell.getColumn();
       myRookRow = cell.getRow();
     }
-    
+
     cell = board.getPieceLocation(new Piece(PieceType.KING, myColour_.reverse()));
     if (cell == null) {
       theirKingIsAlive = false;
@@ -67,7 +72,7 @@ abstract class Player {
       theirKingColumn = cell.getColumn();
       theirKingRow = cell.getRow();
     }
-    
+
     cell = board.getPieceLocation(new Piece(PieceType.ROOK, myColour_.reverse()));
     if (cell == null) {
       theirRookIsAlive = false;
@@ -79,67 +84,90 @@ abstract class Player {
       theirRookRow = cell.getRow();
     }
   }
-  
+
   public final Colour getColour() {
     return myColour == WHITE ? Colour.WHITE : Colour.BLACK;
   }
+
+  protected final BoardPosition toBoardPosition() {
+    BoardPosition boardPosition = null;
+    if (myColour == WHITE) {
+      boardPosition = new BoardPosition(
+          myKingIsAlive, myKingColumn, myKingRow,
+          myRookIsAlive, myRookColumn, myRookRow,
+          theirKingIsAlive, theirKingColumn, theirKingRow,
+          theirRookIsAlive, theirRookColumn, theirRookRow,
+          numMovesPlayed,
+          myColour
+          );
+    } else {
+      boardPosition = new BoardPosition(
+          theirKingIsAlive, theirKingColumn, theirKingRow,
+          theirRookIsAlive, theirRookColumn, theirRookRow,
+          myKingIsAlive, myKingColumn, myKingRow,
+          myRookIsAlive, myRookColumn, myRookRow,
+          numMovesPlayed,
+          myColour
+          );
+    }
+    return boardPosition;
+  }
   
   protected final ArrayList<MoveDescription> getAllPossibleMoves() {
-    // construct board
-    char[][] board = new char[5][5];
-    for (int column = 1; column <= 4; ++column) {
-      for (int row = 1; row <= 4; ++row) {
-        board[column][row] = '.';
-      }
-    }
-    if (myKingIsAlive) {
-      board[myKingColumn][myKingRow] = 'a';
-    }
-    if (myRookIsAlive) {
-      board[myRookColumn][myRookRow] = 'a';
-    }
-    if (theirKingIsAlive) {
-      board[theirKingColumn][theirKingRow] = 'b';
-    }
-    if (theirRookIsAlive) {
-      board[theirRookColumn][theirRookRow] = 'b';
-    }
-    
-    ArrayList<MoveDescription> allPossibleMoves = new ArrayList<MoveDescription> ();
-    
-    // generate all possible moves for my king
-    if (myKingIsAlive) {
-      int[][] possibleDirections = new int[][] {{-1, -1}, {-1, 0}, {-1, +1}, {0, -1}, {0, +1}, {+1, -1}, {+1, 0}, {+1, +1}};
-      for (int[] direction : possibleDirections) {
-        int column = myKingColumn + direction[0];
-        int row = myKingRow + direction[1];
-        if (1 <= column && column <= 4 && 1 <= row && row <= 4 && (board[column][row] == '.' || board[column][row] == 'b')) {
-          allPossibleMoves.add(new MoveDescription("king", column, row));
-        }
-      }
-    }
-    
-    // generate all possible moves for my rook
-    if (myRookIsAlive) {
-      int[][] possibleDirections = new int[][] {{-1, 0}, {+1, 0}, {0, -1}, {0, +1}};
-      for (int[] direction : possibleDirections) {
-        int column = myRookColumn + direction[0];
-        int row = myRookRow + direction[1];
-        while (1 <= column && column <= 4 && 1 <= row && row <= 4 && (board[column][row] == '.' || board[column][row] == 'b')) {
-          allPossibleMoves.add(new MoveDescription("rook", column, row));
-          if (board[column][row] == 'b') {
-            break;
-          } else {
-            column += direction[0];
-            row += direction[1];
+    return this.toBoardPosition().getAllPossibleMoves();
+  }
+
+  protected LinkedList<BoardPosition> getAllInitialBoardPositions() {
+    LinkedList<BoardPosition> allInitialBoardPositions = new LinkedList<BoardPosition> ();
+    for (int whiteKingPosition = 1; whiteKingPosition <= 16; ++whiteKingPosition) {
+      for (int whiteRookPosition = 1; whiteRookPosition <= 16; ++whiteRookPosition) {
+        for (int blackKingPosition = 1; blackKingPosition <= 16; ++blackKingPosition) {
+          for (int blackRookPosition = 1; blackRookPosition <= 16; ++blackRookPosition) {
+            HashSet<Integer> S = new HashSet<Integer> ();
+            S.add(whiteKingPosition);
+            S.add(whiteRookPosition);
+            S.add(blackKingPosition);
+            S.add(blackRookPosition);
+            if (S.size() == 4) {
+              for (int myColour = WHITE; myColour <= BLACK; ++myColour) {
+                allInitialBoardPositions.add(new BoardPosition(whiteKingPosition, whiteRookPosition, blackKingPosition, blackRookPosition, 0, myColour));
+              }
+            }
           }
         }
       }
     }
-    
-    return allPossibleMoves;
+    return allInitialBoardPositions;
   }
   
+  /*protected LinkedList<BoardPosition> getAllFinalBoardPositions() {
+	    LinkedList<BoardPosition> allFinalBoardPositions = new LinkedList<BoardPosition> ();
+	    for (int kingColour = WHITE; kingColour <= BLACK; ++kingColour) {
+	    	for (int kingPosition = 0; kingPosition <= 16; ++kingPosition) {
+	    		for (int whiteRookPosition = 0; whiteRookPosition <= 16; ++whiteRookPosition) {
+	    			if ((whiteRookPosition !=0) && (whiteRookPosition == kingPosition)) {
+	    				continue;
+	    			}
+	    			for (int blackRookPosition = 0; blackRookPosition <= 16; ++blackRookPosition) {
+		    			if ((blackRookPosition !=0) && ((blackRookPosition == kingPosition) || (blackRookPosition == whiteRookPosition))) {
+		    				continue;
+		    			}
+	    				HashSet<Integer> S = new HashSet<Integer> ();
+	    				S.add(kingPosition);
+	    				S.add(whiteRookPosition);
+	    				S.add(blackRookPosition);
+	    				if () {
+	    					for (int myColour = WHITE; myColour <= BLACK; ++myColour) {
+	    						allInitialBoardPositions.add(new BoardPosition(whiteKingPosition, whiteRookPosition, blackKingPosition, blackRookPosition, 0, myColour));
+	    					}
+	    				}
+	    			}
+	    		}
+	    	}
+	    }
+	    return allFinalBoardPositions;
+	  }*/
+
   public final String getName() {
     String result = getClass().getName();
     return result.substring(result.indexOf('$') + 1);

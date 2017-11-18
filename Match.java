@@ -3,18 +3,20 @@ import java.util.*;
 
 public class Match {
   
-  HashMap<Colour, Player> players;
+  private HashMap<Colour, Player> players;
   private Board board;
   private PrintWriter log;
-  int numMovesPlayed;
+  private int numMovesPlayed;
+  private boolean verbose;
 
-  public Match(Player whitePlayer_, Player blackPlayer_, Board board_, PrintWriter log_) {
+  public Match(Player whitePlayer_, Player blackPlayer_, Board board_, PrintWriter log_, boolean verbose_) {
     players = new HashMap<Colour, Player> ();
     players.put(Colour.WHITE,  whitePlayer_);
     players.put(Colour.BLACK, blackPlayer_);
     board = board_;
     log = log_;
     numMovesPlayed = 0;
+    verbose = verbose_;
   }
   
   private MatchOutcome computeMatchOutcome() {
@@ -58,6 +60,10 @@ public class Match {
       board.print(log);
     }
     
+    if (verbose) {
+      board.print();
+    }
+    
     while (numMovesPlayed < Parameters.MAX_NUM_MOVES && gameStatus != MatchStatus.OVER) {
       Colour currentPlayerColour = (numMovesPlayed % 2 == 0) ? Colour.WHITE : Colour.BLACK;
       Player currentPlayer = players.get(currentPlayerColour);
@@ -71,7 +77,17 @@ public class Match {
         log.println("Move chosen by " + currentPlayer.getColour().toString() + ": " + moveDescription.toString() + "\n");
       }
       
+      if (verbose) {
+        System.out.println("*********************");
+        System.out.println("Move chosen by " + currentPlayer.getColour().toString() + ": " + moveDescription.toString() + "\n");
+       }
+      
       gameStatus = board.performMove(new Move(moveDescription), currentPlayer.getColour(), gameStatus);
+      
+      if (verbose) {
+        System.out.println("Board configuration after the move:");
+        board.print();
+      }
       
       if (log != null) {
         board.print(log);
@@ -81,6 +97,12 @@ public class Match {
     }
     
     MatchOutcome matchOutcome = computeMatchOutcome();
+    
+    for (Player player : players.values()) {
+      watch.startCounting();
+      player.receiveMatchOutcome(matchOutcome.toInt(player.getColour()));
+      watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_RECEIVE_MATCH_OUTCOME, "receiveMatchOutcome");
+    }
     
     if (log != null) {
       double[] payoffs = matchOutcome.getPayoffs();

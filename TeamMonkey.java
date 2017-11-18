@@ -8,14 +8,17 @@ public class TeamMonkey extends Player {
   }
   
   public void prepareForSeries() {
-
   }
   
   public void prepareForMatch() {
-
+  }
+  
+  public void receiveMatchOutcome(int matchOutcome) {
   }
   
   public MoveDescription chooseMove() {
+
+    
     ArrayList<MoveDescription> allPossibleMoves = getAllPossibleMoves();
     
     // Try to capture their king.

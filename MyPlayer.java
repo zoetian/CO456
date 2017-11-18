@@ -62,7 +62,7 @@ public class MyPlayer extends Player {
     The time limit for this method is 60 seconds.
     The parameter maxNumMoves indicates the maximum number of moves in a match.
     
-    After you change this function, you need to remove the line below 
+    After you change this method, you need to remove the line below 
     that throws an exception.
     */
     
@@ -82,7 +82,7 @@ public class MyPlayer extends Player {
 
     The time limit for this method is 1 second.
     
-    After you change this function, you need to remove the line below 
+    After you change this method, you need to remove the line below 
     that throws an exception.
     */
     
@@ -101,7 +101,7 @@ public class MyPlayer extends Player {
 
     The time limit for this method is 1 second.
     
-    After you change this function, you need to remove the line below 
+    After you change this method, you need to remove the line below 
     that throws an exception.
     */
     
@@ -134,10 +134,28 @@ public class MyPlayer extends Player {
       move.getDestinationColumn() will return 3
       move.getDestinationRow() will return 4
     
-    After you change this function, you need to remove the line below 
+    After you change this method, you need to remove the line below 
     that throws an exception.
      */
     
     throw new RuntimeException("You need to implement the method chooseMove.");
+  }
+  
+  public void receiveMatchOutcome(int matchOutcome) {
+    /*
+    This method will be called immediately after the end of each match.
+    The parameter matchOutcome will tell you the outcome of the game, as follows:
+    
+    matchOutcome = 1 indicates that you won the match
+    matchOutcome = 2 indicates that you lost the match
+    matchOutcome = 3 indicates that the match ended in a tie
+    matchOutcome = 4 indicates that the match ended in a draw
+    
+    The time limit for this method is .1 second.
+    
+    After you change this method, you need to remove the line below 
+    that throws an exception.
+     */
+    throw new RuntimeException("You need to override the method receiveMatchOutcome.");
   }
 }
