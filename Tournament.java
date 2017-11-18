@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Tournament {
 
-	private int NUM_PLAYERS = 3; //This needs to be changed to test tournament with more players.
+	private int NUM_PLAYERS = 4; // TODO: double check when testing
 	private TournamentMode tournamentMode;
 	private Random rand;
 	private DecimalFormat numberFormat;
@@ -16,7 +16,7 @@ public class Tournament {
 		rand = new Random(0);
 		numberFormat = new DecimalFormat("#.000");
 		watch = new Watch();
-		verbose = verbose_; 
+		verbose = verbose_;
 	}
 
 	public Player getPlayer(int id) {
@@ -29,11 +29,14 @@ public class Tournament {
 			case 0:
 				player = new TeamRealist(Parameters.MAX_NUM_MOVES);
 				break;
-			case 1: 
+			case 1:
 				player = new TeamNihilist(Parameters.MAX_NUM_MOVES);
 				break;
-			case 2: 
+			case 2:
 				player = new TeamMonkey(Parameters.MAX_NUM_MOVES);
+				break;
+			case 3:
+				player = new TeamWatermelon(Parameters.MAX_NUM_MOVES);
 				break;
 			//Cases need to be added to test tournament with more players.
 			}
@@ -127,7 +130,7 @@ public class Tournament {
 				startingPositions[t] = randomStartingPositions();
 			}
 
-			Player[] players = 
+			Player[] players =
 					new Player[] {allPlayers[playersInThisRound[0]], allPlayers[playersInThisRound[1]]};
 
 			// prepare players for round
@@ -184,9 +187,9 @@ public class Tournament {
 				}
 			}
 			System.out.println();
-			System.out.println("Round ended");      
+			System.out.println("Round ended");
 			for (int i = 0; i <= 1; ++i) {
-				System.out.println("Average payoff of player " + players[i].getName() + 
+				System.out.println("Average payoff of player " + players[i].getName() +
 						": " + numberFormat.format(averagePayoffInThisRound[i]));
 				totalScore[playersInThisRound[i]] += averagePayoffInThisRound[i];
 			}
