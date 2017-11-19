@@ -8,3 +8,4 @@ clean:
 fast:
 	rm -rf *.class
 	javac *.java
+	java Tournament full 

@@ -6,10 +6,11 @@ public class TeamWatermelon extends Player {
 	private Node[] results; //Array of Nodes indexed by an integer representing a board position. Memory intensive!
 	private int[] bestMoveInts; //A best move for each position, encoded with ``bit twiddling'' to save memory.
 	int maxNumMoves; //Called GameLimit in the project specs
+	static boolean isTrustModeOn = false;
 
 	// NOTE: only 60s
 	public TeamWatermelon(int maxNumMoves) {
-		maxNumMoves = this.maxNumMoves; // maximum # moves in a match
+		this.maxNumMoves = maxNumMoves; // maximum # moves in a match
 		LinkedList<BoardPosition> allInitialBoardPositions = getAllInitialBoardPositions();
 
 		//BoardPosition.toInt() will be used for indices in the following arrays:
@@ -24,40 +25,20 @@ public class TeamWatermelon extends Player {
 	}
 
 	public void prepareForSeries() {
-		/*
-		This method will be called each time you are paired off with another player,
-		immediately before you play a series of matches against them.
-
-		You can use it to initialize variables or do some *light*
-		precomputation.
-
-		At this point, the variables explained above (that describe the state of
-		the game) are not initialized, so you should not use them.
-
-		The time limit for this method is 1 second.
-
-		After you change this method, you need to remove the line below
-		that throws an exception.
-		*/
+		// try{
+		// 	System.out.println("prepare for series: "+ boardPosition.toInt());
+		// } catch(Exception e) {
+		// 	System.out.println("could not fetch in series");
+		// }
 
 	}
 
 	public void prepareForMatch() {
-		/*
-		This method will be called immediately before the beginning of each match.
-
-		You can use it to initialize variables or do some *light*
-		precomputation.
-
-		At this point, the variables explained above (that describe the state of
-		the game) are not initialized, so you should not use them.
-
-		The time limit for this method is 1 second.
-
-		After you change this method, you need to remove the line below
-		that throws an exception.
-		*/
-
+		// try{
+		// 	System.out.println("prepare for series: "+ boardPosition.toInt());
+		// } catch(Exception e) {
+		// 	System.out.println("could not fetch in series");
+		// }
 	}
 
 	public void receiveMatchOutcome(int matchOutcome) {
@@ -75,6 +56,24 @@ public class TeamWatermelon extends Player {
 		After you change this method, you need to remove the line below
 		that throws an exception.
 		*/
+
+		// TODO: can pass out result to change the next move
+		// switch(matchOutcome) {
+		// 	case 1:
+		// 		System.out.println("TeamWatermelon wins");
+		// 		break;
+		// 	case 2:
+		// 		System.out.println("TeamWatermelon lost");
+		// 		break;
+		// 	case 3:
+		// 		System.out.println("Tie");
+		// 		break;
+		// 	case 4:
+		// 		System.out.println("Draw");
+		// 		break;
+		// 	default:
+		// 		break;
+		// }
 	}
 
 	public MoveDescription chooseMove() {
@@ -107,6 +106,9 @@ public class TeamWatermelon extends Player {
 		that throws an exception.
 		*/
 		BoardPosition boardPosition = toBoardPosition();
+		// if the opponent's king already been captured
+		// and we still have 2 pieces left on board
+		isTrustModeOn = (theirRookIsAlive && !theirKingIsAlive && myKingIsAlive && myRookIsAlive);
 		return new MoveDescription(bestMoveInts[boardPosition.toInt()]);
 	}
 
@@ -119,6 +121,7 @@ public class TeamWatermelon extends Player {
 		}
 
 		int currentPlayerColour = (boardPosition.numMovesPlayed % 2 == 0) ? WHITE : BLACK;
+		int nextPlayerColour = 1 - currentPlayerColour;
 
 		Node ret = null;
 
@@ -167,8 +170,16 @@ public class TeamWatermelon extends Player {
 			for (MoveDescription moveDescription : allPossibleMoves) {
 				BoardPosition newBoardPosition = boardPosition.doMove(moveDescription);
 				Node node = computeBestMove(newBoardPosition);
-				if (ret == null || node.getScore(currentPlayerColour) > ret.getScore(currentPlayerColour)) {
-					ret = new Node(moveDescription, node.getScore(WHITE), node.getScore(BLACK));
+				if (isTrustModeOn) {
+					double node_util = 3*node.getScore(currentPlayerColour)+2*node.getScore(nextPlayerColour);
+					double ret_util = 3*ret.getScore(currentPlayerColour)+2*ret.getScore(nextPlayerColour);
+					if (ret == null || node_util > ret_util) {
+						ret = new Node(moveDescription, node.getScore(WHITE), node.getScore(BLACK));
+					}
+				} else {
+					if (ret == null || node.getScore(currentPlayerColour) > ret.getScore(currentPlayerColour)) {
+						ret = new Node(moveDescription, node.getScore(WHITE), node.getScore(BLACK));
+					}
 				}
 			}
 		}
