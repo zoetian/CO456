@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Tournament {
 
-	private int NUM_PLAYERS = 4; // TODO: double check when testing
+	private int NUM_PLAYERS = 20; // TODO: double check when testing
 	private TournamentMode tournamentMode;
 	private Random rand;
 	private DecimalFormat numberFormat;
@@ -27,7 +27,20 @@ public class Tournament {
 			System.out.println("Calling Constructor of player " + Integer.toString(id));
 			switch (id) {
 			case 0:
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+			case 11:
+			case 18:
+			case 19:
 				player = new TeamRealist(Parameters.MAX_NUM_MOVES);
+				break;
+			case 20:
+				player = new TeamSlowRealist(Parameters.MAX_NUM_MOVES);
 				break;
 			case 1:
 				player = new TeamNihilist(Parameters.MAX_NUM_MOVES);
@@ -36,6 +49,12 @@ public class Tournament {
 				player = new TeamMonkey(Parameters.MAX_NUM_MOVES);
 				break;
 			case 3:
+			case 12:
+			case 13:
+			case 14:
+			case 15:
+			case 16:
+			case 17:
 				player = new TeamWatermelon(Parameters.MAX_NUM_MOVES);
 				break;
 			//Cases need to be added to test tournament with more players.

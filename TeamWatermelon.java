@@ -171,6 +171,7 @@ public class TeamWatermelon extends Player {
 				BoardPosition newBoardPosition = boardPosition.doMove(moveDescription);
 				Node node = computeBestMove(newBoardPosition);
 				if (isTrustModeOn) {
+					System.out.println("PROUD TRUSTER!!!!!");
 					double node_util = 3*node.getScore(currentPlayerColour)+2*node.getScore(nextPlayerColour);
 					double ret_util = 3*ret.getScore(currentPlayerColour)+2*ret.getScore(nextPlayerColour);
 					if (ret == null || node_util > ret_util) {
