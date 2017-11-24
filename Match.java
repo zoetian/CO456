@@ -50,6 +50,8 @@ public class Match {
     
     for (Player player : players.values()) {
       watch.startCounting();
+
+      player.update(board,player.getColour(), numMovesPlayed);
       player.prepareForMatch();
       watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_PREPARE_FOR_MATCH, "prepareForMatch");
     }
@@ -100,6 +102,8 @@ public class Match {
     
     for (Player player : players.values()) {
       watch.startCounting();
+
+      player.update(board, player.getColour(), numMovesPlayed);
       player.receiveMatchOutcome(matchOutcome.toInt(player.getColour()));
       watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_RECEIVE_MATCH_OUTCOME, "receiveMatchOutcome");
     }

@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Tournament {
 
-	private int NUM_PLAYERS = 20; // TODO: double check when testing
+	private int NUM_PLAYERS = 5; //This needs to be changed to test tournament with more players.
 	private TournamentMode tournamentMode;
 	private Random rand;
 	private DecimalFormat numberFormat;
@@ -16,7 +16,7 @@ public class Tournament {
 		rand = new Random(0);
 		numberFormat = new DecimalFormat("#.000");
 		watch = new Watch();
-		verbose = verbose_;
+		verbose = verbose_; 
 	}
 
 	public Player getPlayer(int id) {
@@ -27,35 +27,19 @@ public class Tournament {
 			System.out.println("Calling Constructor of player " + Integer.toString(id));
 			switch (id) {
 			case 0:
-			case 4:
-			case 5:
-			case 6:
-			case 7:
-			case 8:
-			case 9:
-			case 10:
-			case 11:
-			case 18:
-			case 19:
 				player = new TeamRealist(Parameters.MAX_NUM_MOVES);
 				break;
-			case 20:
-				player = new TeamSlowRealist(Parameters.MAX_NUM_MOVES);
-				break;
-			case 1:
+			case 1: 
 				player = new TeamNihilist(Parameters.MAX_NUM_MOVES);
 				break;
-			case 2:
+			case 2: 
 				player = new TeamMonkey(Parameters.MAX_NUM_MOVES);
 				break;
-			case 3:
-			case 12:
-			case 13:
-			case 14:
-			case 15:
-			case 16:
-			case 17:
-				player = new TeamWatermelon(Parameters.MAX_NUM_MOVES);
+			case 3: 
+				player = new TeamTitForTat(Parameters.MAX_NUM_MOVES);
+				break;
+			case 4: 
+				player = new TeamTitForTat(Parameters.MAX_NUM_MOVES);
 				break;
 			//Cases need to be added to test tournament with more players.
 			}
@@ -149,7 +133,7 @@ public class Tournament {
 				startingPositions[t] = randomStartingPositions();
 			}
 
-			Player[] players =
+			Player[] players = 
 					new Player[] {allPlayers[playersInThisRound[0]], allPlayers[playersInThisRound[1]]};
 
 			// prepare players for round
@@ -206,9 +190,9 @@ public class Tournament {
 				}
 			}
 			System.out.println();
-			System.out.println("Round ended");
+			System.out.println("Round ended");      
 			for (int i = 0; i <= 1; ++i) {
-				System.out.println("Average payoff of player " + players[i].getName() +
+				System.out.println("Average payoff of player " + players[i].getName() + 
 						": " + numberFormat.format(averagePayoffInThisRound[i]));
 				totalScore[playersInThisRound[i]] += averagePayoffInThisRound[i];
 			}

@@ -3,15 +3,15 @@ import java.util.*;
 public class TeamTruster extends Player {
 	//A Node represents a board position, a best move and payoffs; this is according to Realist assumptions.
 	private Node[] results; //Array of Nodes indexed by an integer representing a board position. Memory intensive!
-	private int[] bestMoveInts; //A best move for each position, encoded with ``bit twiddling'' to save memory.
+	public int[] bestMoveInts; //A best move node for each position, encoded with ``bit twiddling'' to save memory.
 	int maxNumMoves; //Called GameLimit in the project specs
 	private Random rand;
 
 	public TeamTruster(int maxNumMoves_) {
 		maxNumMoves = maxNumMoves_;
 		LinkedList<BoardPosition> allInitialBoardPositions = getAllInitialBoardPositions();
-		
-	    rand = new Random(0); //For choosing random moves...
+
+		rand = new Random(0); //For choosing random moves...
 
 		//BoardPosition.toInt() will be used for indices in the following arrays:
 		results = new Node[1<<23];
@@ -37,7 +37,7 @@ public class TeamTruster extends Player {
 
 	public MoveDescription chooseMove() {
 		BoardPosition boardPosition = toBoardPosition();
-		return new MoveDescription(bestMoveInts[boardPosition.toInt()]);
+		return (new Node(bestMoveInts[boardPosition.toInt()])).bestMove;
 	}
 
 	private Node computeBestMove(BoardPosition boardPosition) {
@@ -52,15 +52,10 @@ public class TeamTruster extends Player {
 
 		Node ret = null;
 
-		double[] payoffsWhiteWins;
-		double[] payoffsBlackWins;
-		double[] payoffsTie;
-		double[] payoffsDraw;
-	    
-		payoffsWhiteWins = new double[] {9.0, 6.0};
-		payoffsBlackWins = new double[] {6.0, 9.0};
-		payoffsTie = new double[] {10.0, 10.0};
-		payoffsDraw = new double[] {5.0, 5.0};
+		int[] payoffsWhiteWins = new int[] {9,6};
+		int[] payoffsBlackWins = new int[] {6,9};
+		int[] payoffsTie = new int[] {10, 10};
+		int[] payoffsDraw = new int[] {5, 5};
 
 		// if both kings have been captured, the game has ended
 		if (boardPosition.whiteKingPosition == 0 && boardPosition.blackKingPosition == 0) {
@@ -100,14 +95,14 @@ public class TeamTruster extends Player {
 			// Explore all possible moves
 			ArrayList<MoveDescription> allPossibleMoves = boardPosition.getAllPossibleMoves();
 			ArrayList<Node> allBestNodes = new ArrayList<Node> ();
-			double bestScore=0.0;
+			int bestScore=0;
 			for (MoveDescription moveDescription : allPossibleMoves) {
 				BoardPosition newBoardPosition = boardPosition.doMove(moveDescription);
 				Node node = computeBestMove(newBoardPosition);
 				if (allBestNodes.size()==0) {
 					bestScore=node.getScore(currentPlayerColour);
 					allBestNodes.add(new Node(moveDescription, node.getScore(WHITE), node.getScore(BLACK)));
-				} else if (node.getScore(currentPlayerColour) == bestScore) { //Dangerous to compare doubles!!!
+				} else if (node.getScore(currentPlayerColour) == bestScore) {
 					allBestNodes.add(new Node(moveDescription, node.getScore(WHITE), node.getScore(BLACK)));
 				} else if (node.getScore(currentPlayerColour) > bestScore) { 
 					bestScore=node.getScore(currentPlayerColour);
@@ -117,11 +112,11 @@ public class TeamTruster extends Player {
 			}
 			ret=allBestNodes.get(rand.nextInt(allBestNodes.size()));
 		}
-		
+
 		//Add result to array!
 		results[currentPositionInt]=ret;
 		if (ret.bestMove != null) {
-			bestMoveInts[currentPositionInt]=ret.bestMove.toInt();
+			bestMoveInts[currentPositionInt]=ret.toInt();
 		}
 		return ret;
 	}
@@ -129,20 +124,43 @@ public class TeamTruster extends Player {
 
 	private class Node {
 		public MoveDescription bestMove;
-		public double scoreWhite, scoreBlack;
+		public int scoreWhite, scoreBlack;
 
-		public Node(MoveDescription bestMove_, double scoreWhite_, double scoreBlack_) {
+		public Node(MoveDescription bestMove_, int scoreWhite_, int scoreBlack_) {
 			bestMove = bestMove_;
 			scoreWhite = scoreWhite_;
 			scoreBlack = scoreBlack_;
 		}
 
-		public Node(MoveDescription bestMove_, double [] score_) {
+		public Node(MoveDescription bestMove_, int[] score_) {
 			this(bestMove_, score_[WHITE], score_[BLACK]);
 		}
 
-		public double getScore(int colour) {
+		public int getScore(int colour) {
 			return (colour == WHITE) ? scoreWhite : scoreBlack;
+		}
+
+		public int toInt() {//encode a node as a 14 bit integer.
+			//bits 0-3 for scoreBlack, 4-7 for scoreWhite, 8-12 for bestMove, 13 indicates that bestMove is null.
+			if (bestMove != null) {
+				return (bestMove.toInt() << 8)// 5-bit integer
+						+ (scoreWhite << 4)// 4-bit integer
+						+ (scoreBlack);// 4-bit integer
+			} else {
+				return (1<<13) // 5-bit integer
+						+ (scoreWhite << 4)// 4-bit integer
+						+ (scoreBlack);// 4-bit integer
+			}
+		}
+
+		public Node(int nodeInt) {// decode an integer into a node.
+			if ((nodeInt>>13)==1) {
+				bestMove = null;
+			} else {
+				bestMove = new MoveDescription(nodeInt >> 8);
+			}
+			scoreWhite = (nodeInt - ((nodeInt >> 8) << 8)) >> 4;
+			scoreBlack = nodeInt - ((nodeInt >> 4) << 4);
 		}
 	}
 }
