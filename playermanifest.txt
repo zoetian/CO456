@@ -1,0 +1,8 @@
+TeamMonkey
+1
+TeamNihilist
+1
+TeamRationalRealist
+2
+TeamTitForTat
+3

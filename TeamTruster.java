@@ -1,5 +1,8 @@
+
+
 import java.util.*;
 
+@Deprecated
 public class TeamTruster extends Player {
 	//A Node represents a board position, a best move and payoffs; this is according to Realist assumptions.
 	private Node[] results; //Array of Nodes indexed by an integer representing a board position. Memory intensive!
@@ -132,7 +135,7 @@ public class TeamTruster extends Player {
 			scoreBlack = scoreBlack_;
 		}
 
-		public Node(MoveDescription bestMove_, int[] score_) {
+		public Node(MoveDescription bestMove_, int [] score_) {
 			this(bestMove_, score_[WHITE], score_[BLACK]);
 		}
 
@@ -140,27 +143,16 @@ public class TeamTruster extends Player {
 			return (colour == WHITE) ? scoreWhite : scoreBlack;
 		}
 
-		public int toInt() {//encode a node as a 14 bit integer.
-			//bits 0-3 for scoreBlack, 4-7 for scoreWhite, 8-12 for bestMove, 13 indicates that bestMove is null.
-			if (bestMove != null) {
-				return (bestMove.toInt() << 8)// 5-bit integer
-						+ (scoreWhite << 4)// 4-bit integer
-						+ (scoreBlack);// 4-bit integer
-			} else {
-				return (1<<13) // 5-bit integer
-						+ (scoreWhite << 4)// 4-bit integer
-						+ (scoreBlack);// 4-bit integer
-			}
+		public int toInt() {//encode a node as an integer.
+			return (bestMove.toInt()<<8)//6-bit integer
+					+(scoreWhite<<4)//4-bit integer
+					+(scoreBlack);//4-bit integer
 		}
 
-		public Node(int nodeInt) {// decode an integer into a node.
-			if ((nodeInt>>13)==1) {
-				bestMove = null;
-			} else {
-				bestMove = new MoveDescription(nodeInt >> 8);
-			}
-			scoreWhite = (nodeInt - ((nodeInt >> 8) << 8)) >> 4;
-			scoreBlack = nodeInt - ((nodeInt >> 4) << 4);
+		public Node(int nodeInt) {//decode an integer into a node.
+			bestMove=new MoveDescription(nodeInt>>8);
+			scoreWhite=(nodeInt-((nodeInt>>8)<<8))>>4;
+			scoreBlack=nodeInt-((nodeInt>>4)<<4);
 		}
 	}
 }

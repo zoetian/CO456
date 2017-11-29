@@ -1,5 +1,8 @@
+
+
 import java.util.*;
 
+@Deprecated
 public class TeamPessimist extends Player {
 	//A Node represents a board position, a best move and payoffs; this is according to Realist assumptions.
 	private Node[] results; //Array of Nodes indexed by an integer representing a board position. Memory intensive!

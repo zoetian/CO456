@@ -1,5 +1,8 @@
+
+
 import java.util.*;
 
+@Deprecated
 public class TeamRealist extends Player {
 	// A Node represents a board position, a best move and payoffs; this is
 	// according to Realist assumptions.
@@ -131,7 +134,7 @@ public class TeamRealist extends Player {
 		return ret;
 	}
 
-	private class Node {
+	public static class Node {
 		public MoveDescription bestMove;
 		public int scoreWhite, scoreBlack;
 
