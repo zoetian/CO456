@@ -8,4 +8,5 @@ clean:
 fast:
 	rm -rf *.class
 	javac *.java
+	wait
 	java Tournament full 

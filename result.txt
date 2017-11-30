@@ -1,0 +1,29 @@
+rm -rf *.class
+javac *.java
+wait
+java Tournament full 
+Calling Constructor of player: TeamTFTADC
+Calling Constructor of player: TeamLessBetrayal
+Calling Constructor of player: TeamMoreBetralTFT
+Calling Constructor of player: TeamMoreCoopTFT
+Calling Constructor of player: TeamMoreMoreTFT
+Calling Constructor of player: TeamMonkey
+Calling Constructor of player: TeamNihilist
+Calling Constructor of player: TeamRationalOptimist
+Calling Constructor of player: TeamRationalPessimist
+Calling Constructor of player: TeamRationalPessimist
+Calling Constructor of player: TeamRationalPessimist
+Calling Constructor of player: TeamRationalPessimist
+Calling Constructor of player: TeamRationalPessimist
+Calling Constructor of player: TeamRationalQueller
+Calling Constructor of player: TeamRationalQueller
+Calling Constructor of player: TeamRationalRealist
+Calling Constructor of player: TeamRationalScrapper
+Calling Constructor of player: TeamRationalTruster
+Calling Constructor of player: TeamRationalUtilitarian
+Calling Constructor of player: TeamTitForTat1
+Calling Constructor of player: TeamTitForTat2
+Calling Constructor of player: TeamTitForTat3
+Calling Constructor of player: TeamTitForTat4
+Calling Constructor of player: TeamTitForTat5
+Calling Constructor of player: TeamTitForTat6

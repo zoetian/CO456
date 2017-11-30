@@ -6,12 +6,14 @@ public class TeamWatermelon extends Player {
 	private Node[] results; //Array of Nodes indexed by an integer representing a board position. Memory intensive!
 	private int[] bestMoveInts; //A best move for each position, encoded with ``bit twiddling'' to save memory.
 	int maxNumMoves; //Called GameLimit in the project specs
-	static boolean isTrustModeOn = false;
+	public boolean isTrustModeOn = false;
+	public final boolean DEBUG = false;
 
 	// NOTE: only 60s
 	public TeamWatermelon(int maxNumMoves) {
 		this.maxNumMoves = maxNumMoves; // maximum # moves in a match
-		LinkedList<BoardPosition> allInitialBoardPositions = getAllInitialBoardPositions();
+		// double check: due to the deprecated warining before
+		LinkedList<BoardPosition> allInitialBoardPositions = BoardPosition.getAllInitialBoardPositions();
 
 		//BoardPosition.toInt() will be used for indices in the following arrays:
 		results = new Node[1<<23];
@@ -171,7 +173,7 @@ public class TeamWatermelon extends Player {
 				BoardPosition newBoardPosition = boardPosition.doMove(moveDescription);
 				Node node = computeBestMove(newBoardPosition);
 				if (isTrustModeOn) {
-					System.out.println("PROUD TRUSTER!!!!!");
+					if(DEBUG) System.out.println("PROUD TRUSTER!!!!!");
 					double node_util = 3*node.getScore(currentPlayerColour)+2*node.getScore(nextPlayerColour);
 					double ret_util = 3*ret.getScore(currentPlayerColour)+2*ret.getScore(nextPlayerColour);
 					if (ret == null || node_util > ret_util) {

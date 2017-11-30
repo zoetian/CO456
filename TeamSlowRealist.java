@@ -4,11 +4,11 @@ public class TeamSlowRealist extends Player {
 
   private HashMap<String, Node> results;
   int maxNumMoves;
-  
+
   public TeamSlowRealist(int maxNumMoves_) {
-    maxNumMoves = maxNumMoves_;
-    LinkedList<BoardPosition> allInitialBoardPositions = getAllInitialBoardPositions();
-    
+    maxNumMoves = maxNumMoves_; // DOUBLE CHECK: due to the deprecated warning before
+    LinkedList<BoardPosition> allInitialBoardPositions = BoardPosition.getAllInitialBoardPositions();
+
     results = new HashMap<String, Node> ();
 
     for (BoardPosition boardPosition : allInitialBoardPositions) {
@@ -21,17 +21,19 @@ public class TeamSlowRealist extends Player {
 
   public void prepareForMatch() {
   }
-  
+
   public void receiveMatchOutcome(int matchOutcome) {
   }
 
   public MoveDescription chooseMove() {
     BoardPosition boardPosition = toBoardPosition();
-    return results.get(boardPosition.toString()).bestMove;
+    // return results.get(boardPosition.toString()).bestMove;
+    return results.get(boardPosition+"").bestMove;
   }
 
   private Node computeBestMove(BoardPosition boardPosition) {
-    String currentPositionString = boardPosition.toString();
+    // String currentPositionString = boardPosition.toString();
+    String currentPositionString = boardPosition+"";
 
     Node savedResult = results.get(currentPositionString);
     if (savedResult != null) {

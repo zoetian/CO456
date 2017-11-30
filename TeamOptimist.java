@@ -59,7 +59,7 @@ public class TeamOptimist extends Player {
 		double[] payoffsBlackWins;
 		double[] payoffsTie;
 		double[] payoffsDraw;
-	    
+
 	    if (boardPosition.myColour == WHITE) {
 	    	payoffsWhiteWins = new double[] {3.0, 3.0};
 	    	payoffsBlackWins = new double[] {0.0, 0.0};
@@ -119,7 +119,7 @@ public class TeamOptimist extends Player {
 					allBestNodes.add(new Node(moveDescription, node.getScore(WHITE), node.getScore(BLACK)));
 				} else if (node.getScore(currentPlayerColour) == bestScore) { //Dangerous to compare doubles!!!
 					allBestNodes.add(new Node(moveDescription, node.getScore(WHITE), node.getScore(BLACK)));
-				} else if (node.getScore(currentPlayerColour) > bestScore) { 
+				} else if (node.getScore(currentPlayerColour) > bestScore) {
 					bestScore=node.getScore(currentPlayerColour);
 					allBestNodes = new ArrayList<Node> ();
 					allBestNodes.add(new Node(moveDescription, node.getScore(WHITE), node.getScore(BLACK)));
@@ -127,7 +127,7 @@ public class TeamOptimist extends Player {
 			}
 			ret=allBestNodes.get(rand.nextInt(allBestNodes.size()));
 		}
-		
+
 		//Add result to array!
 		results[currentPositionInt]=ret;
 		if (ret.bestMove != null) {

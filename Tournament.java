@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 public class Tournament {
-
+	public static boolean CHECK_MEMORY = false;
 	private int numPlayers;
 	private Random rand;
 	private DecimalFormat numberFormat;
@@ -29,6 +29,7 @@ public class Tournament {
 		// New players can be registered here
 		playerFactory.registerPlayer("TeamMonkey", i -> new TeamMonkey(i));
 		playerFactory.registerPlayer("TeamNihilist", i -> new TeamNihilist(i));
+
 		playerFactory.registerPlayer("TeamRationalOptimist", i -> TeamRational.createOptimist(i));
 		playerFactory.registerPlayer("TeamRationalPessimist", i -> TeamRational.createPessimist(i));
 		playerFactory.registerPlayer("TeamRationalQueller", i -> TeamRational.createQueller(i));
@@ -37,47 +38,62 @@ public class Tournament {
 		playerFactory.registerPlayer("TeamRationalTruster", i -> TeamRational.createTruster(i));
 		playerFactory.registerPlayer("TeamRationalUtilitarian", i -> TeamRational.createUtilitarian(i));
 
-		playerFactory.registerPlayer("TeamTitForTat", i -> new TeamTitForTat(i));
-
-		// alliance list
-		/**
-		playerFactory.registerPlayer("TeamAlphaChess0", i -> new TeamAlphaChess0(i));
-		playerFactory.registerPlayer("TeamBestResponse", i -> new TeamBestResponse(i));
-		playerFactory.registerPlayer("TeamBigBallerBrand", i -> new TeamBigBallerBrand(i));
-		playerFactory.registerPlayer("TeamBlue", i -> new TeamBlue(i));
-		playerFactory.registerPlayer("TeamBOOPS", i -> new TeamBOOPS(i));
-		playerFactory.registerPlayer("TeamBrentastic", i -> new TeamBrentastic(i));
-		playerFactory.registerPlayer("TeamDddddd", i -> new TeamDddddd(i));
-		playerFactory.registerPlayer("TeamDROPLET", i -> new TeamDROPLET(i));
-		playerFactory.registerPlayer("TeamEMANMEAT", i -> new TeamEMANMEAT(i));
-		playerFactory.registerPlayer("TeamFUNKYMONKEYS", i -> new TeamFUNKYMONKEYS(i));
-		playerFactory.registerPlayer("TeamGOOSEMATE", i -> new TeamGOOSEMATE(i));
-		playerFactory.registerPlayer("TeamGUCKSQUAD", i -> new TeamGUCKSQUAD(i));
-		playerFactory.registerPlayer("TeamHAL9001", i -> new TeamHAL9001(i));
-		playerFactory.registerPlayer("TeamHumongous", i -> new TeamHumongous(i));
-		playerFactory.registerPlayer("TeamInfeasible", i -> new TeamInfeasible(i));
-		playerFactory.registerPlayer("TeamJinners", i -> new TeamJinners(i));
-		playerFactory.registerPlayer("TeamKismet", i -> new TeamKismet(i));
-		playerFactory.registerPlayer("TeamLEEROOOOOOY", i -> new TeamLEEROOOOOOY(i));
-		playerFactory.registerPlayer("TeamLEMONCHURRO", i -> new TeamLEMONCHURRO(i));
-		playerFactory.registerPlayer("TeamMachineLearn", i -> new TeamMachineLearn(i));
-		playerFactory.registerPlayer("TeamMaverick", i -> new TeamMaverick(i));
-		playerFactory.registerPlayer("TeamMonkeyKing", i -> new TeamMonkeyKing(i));
-		playerFactory.registerPlayer("TeamOreo", i -> new TeamOreo(i));
-		playerFactory.registerPlayer("TeamMonkeyKing", i -> new TeamPendo(i));
-		playerFactory.registerPlayer("TeamPredator", i -> new TeamPredator(i));
-		playerFactory.registerPlayer("TeamPVKHNOHX", i -> new TeamPVKHNOHX(i));
-		playerFactory.registerPlayer("TeamRocket", i -> new TeamRocket(i));
-		playerFactory.registerPlayer("TeamSnek", i -> new TeamSnek(i));
-		playerFactory.registerPlayer("TeamTANGOMANGOS", i -> new TeamTANGOMANGOS(i));
-		playerFactory.registerPlayer("TeamTwoBrownGuys", i -> new TeamTwoBrownGuys(i));
-		playerFactory.registerPlayer("TeamUtilityMaxim", i -> new TeamUtilityMaxim(i));
+		playerFactory.registerPlayer("TeamRational", i -> new TeamRational(i));
 		playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
-		playerFactory.registerPlayer("TeamWoops", i -> new TeamWoops(i));
-		playerFactory.registerPlayer("TeamYfnl", i -> new TeamYfnl(i));
-		playerFactory.registerPlayer("TeamZedModTwoZed", i -> new TeamZedModTwoZed(i));
-		playerFactory.registerPlayer("TeamZinger", i -> new TeamZinger(i));
-		**/
+
+		playerFactory.registerPlayer("TeamTFTADC", i -> new TeamTFTADC(i));
+		playerFactory.registerPlayer("TeamLessBetrayal", i -> new TeamLessBetrayal(i));
+		playerFactory.registerPlayer("TeamMoreBetralTFT", i -> new TeamMoreBetralTFT(i));
+		playerFactory.registerPlayer("TeamMoreCoopTFT", i -> new TeamMoreCoopTFT(i));
+		playerFactory.registerPlayer("TeamMoreMoreTFT", i -> new TeamMoreMoreTFT(i));
+		playerFactory.registerPlayer("TeamMoreMoreTFT", i -> new TeamMoreMoreTFT(i));
+
+		playerFactory.registerPlayer("TeamTitForTat1", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTat2", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTat3", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTat4", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTat5", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTat6", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTat7", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTat8", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTat9", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTat10", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat11", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat12", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat13", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat14", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat15", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat16", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat17", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat18", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat19", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat20", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat21", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat22", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat23", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat24", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat25", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat26", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat27", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat28", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat29", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat30", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat31", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat32", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat33", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat34", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat35", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat36", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat37", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat38", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat39", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat40", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat41", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat42", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat43", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat44", i -> new TeamTitForTat(i));
+		// playerFactory.registerPlayer("TeamTitForTat45", i -> new TeamTitForTat(i));
+
 	}
 
 	public Player getPlayer(String id) {
@@ -89,10 +105,10 @@ public class Tournament {
 		Player player = playerFactory.createPlayer(id, Parameters.MAX_NUM_MOVES);
 		boolean noLimitViolation = true;
 		noLimitViolation &= watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_CONSTRUCTOR, "constructor");
-		System.out.println("Constructor of player " + player.getName() + " took "
+		if(CHECK_MEMORY) System.out.println("Constructor of player " + player.getName() + " took "
 				+ numberFormat.format(watch.getElapsedTime()) + " seconds.");
 		noLimitViolation &= watch.enforceMemoryLimit(player, Parameters.MEMORY_LIMIT_CONSTRUCTOR, "constructor");
-		System.out.println("Constructor of player " + player.getName() + " used " + Long.toString(watch.getMemoryUse())
+		if(CHECK_MEMORY) System.out.println("Constructor of player " + player.getName() + " used " + Long.toString(watch.getMemoryUse())
 				+ " megabytes.\n");
 		if (!noLimitViolation) {
 			System.out.println("Turning player " + id + " into a monkey");
@@ -255,6 +271,7 @@ public class Tournament {
 
 	private ArrayList<Player> getPlayers() throws FileNotFoundException {
 		ArrayList<Player> allPlayers = new ArrayList<Player>();
+
 		Scanner scanner = new Scanner(new File("playermanifest.txt"));
 
 		while (scanner.hasNextLine()) {
