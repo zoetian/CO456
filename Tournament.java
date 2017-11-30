@@ -38,6 +38,7 @@ public class Tournament {
 		playerFactory.registerPlayer("TeamRationalUtilitarian", i -> TeamRational.createUtilitarian(i));
 
 		playerFactory.registerPlayer("TeamTitForTat", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamW", i -> new TeamW(i));
 
 		// alliance list
 		/**
