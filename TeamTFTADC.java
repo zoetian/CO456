@@ -1,5 +1,5 @@
 
-public class TeamW extends Player {
+public class TeamTFTADC extends Player {
 
 	boolean opponentCanWin;
 	int trust;
@@ -18,7 +18,7 @@ public class TeamW extends Player {
 	public final int BETRAYAL_DELTA = 3;
 	public final int COOPERATION_DELTA = 1;
 
-	public TeamW(int maxNumMoves) {
+	public TeamTFTADC(int maxNumMoves) {
 		TeamRational teamRationalRealist = TeamRational.createRealist(maxNumMoves);
 		TeamRational teamRationalCooperative = TeamRational.createCooperative(maxNumMoves);
 		TeamRational teamRationalTruster = TeamRational.createTruster(maxNumMoves);
