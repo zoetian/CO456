@@ -1,9 +1,9 @@
 
-public class TeamTFTADC extends Player {
+public class TeamW extends Player {
 
 	boolean opponentCanWin;
 	int trust;
-	public boolean isTrustModeOn = false;
+	static boolean isTrustModeOn = false;
 
 	public byte[] bestMoveBytesRealist;
 	public byte[] scoreWhiteBytesRealist;
@@ -11,13 +11,17 @@ public class TeamTFTADC extends Player {
 	public byte[] bestMoveBytesCooperative;
 	public byte[] scoreWhiteBytesCooperative;
 	public byte[] scoreBlackBytesCooperative;
+	public byte[] bestMoveBytesTruster;
+	public byte[] scoreWhiteBytesTruster;
+	public byte[] scoreBlackBytesTruster;
 
 	public final int BETRAYAL_DELTA = 3;
 	public final int COOPERATION_DELTA = 1;
 
-	public TeamTFTADC(int maxNumMoves) {
+	public TeamW(int maxNumMoves) {
 		TeamRational teamRationalRealist = TeamRational.createRealist(maxNumMoves);
 		TeamRational teamRationalCooperative = TeamRational.createCooperative(maxNumMoves);
+		TeamRational teamRationalTruster = TeamRational.createTruster(maxNumMoves);
 
 		bestMoveBytesRealist = teamRationalRealist.bestMoveBytes;
 		scoreWhiteBytesRealist = teamRationalRealist.scoreWhiteBytes;
@@ -26,6 +30,10 @@ public class TeamTFTADC extends Player {
 		bestMoveBytesCooperative = teamRationalCooperative.bestMoveBytes;
 		scoreWhiteBytesCooperative = teamRationalCooperative.scoreWhiteBytes;
 		scoreBlackBytesCooperative = teamRationalCooperative.scoreBlackBytes;
+
+		bestMoveBytesTruster = teamRationalTruster.bestMoveBytes;
+		scoreWhiteBytesTruster = teamRationalTruster.scoreWhiteBytes;
+		scoreBlackBytesTruster = teamRationalTruster.scoreBlackBytes;
 
 		opponentCanWin = false;
 		trust = 1;
@@ -75,6 +83,7 @@ public class TeamTFTADC extends Player {
 		opponentCanWin = updateOpponentCanWin(boardPosition, currentPlayerColour);
 
 		isTrustModeOn = (theirRookIsAlive && !theirKingIsAlive && myKingIsAlive && myRookIsAlive);
+
 		return bestMoveFromTrust(boardPosition, currentPlayerColour);
 	}
 
@@ -83,14 +92,27 @@ public class TeamTFTADC extends Player {
 				scoreWhiteBytesRealist[boardPosition.toInt()], scoreBlackBytesRealist[boardPosition.toInt()]);
 		int bestScoreRealist = nodeRealist.getScore(currentPlayerColour);
 
-		TeamRational.Node nodeTruster = new TeamRational.Node(bestMoveBytesCooperative[boardPosition.toInt()],
+		// TeamRational.Node nodeCooperative = new TeamRational.Node(bestMoveBytesCooperative[boardPosition.toInt()],
+		// 		scoreWhiteBytesCooperative[boardPosition.toInt()], scoreBlackBytesCooperative[boardPosition.toInt()]);
+		// int bestScoreCooperative = nodeCooperative.getScore(currentPlayerColour);
+
+		TeamRational.Node nodeCooperative = new TeamRational.Node(bestMoveBytesCooperative[boardPosition.toInt()],
 				scoreWhiteBytesCooperative[boardPosition.toInt()], scoreBlackBytesCooperative[boardPosition.toInt()]);
+		int bestScoreCooperative = nodeCooperative.getScore(currentPlayerColour);
+
+		TeamRational.Node nodeTruster = new TeamRational.Node(bestMoveBytesTruster[boardPosition.toInt()],
+				scoreWhiteBytesTruster[boardPosition.toInt()], scoreBlackBytesTruster[boardPosition.toInt()]);
 		int bestScoreTruster = nodeTruster.getScore(currentPlayerColour);
+//
+
+
 
 		// If you cannot force a tie, and it is still possible to tie, and trust
 		// remains, then play trustingly:
-		if (bestScoreRealist != 2 && bestScoreTruster == 3 && trust > 0) {
+		if (isTrustModeOn) {
 			return nodeTruster.bestMove;
+		} else if (bestScoreRealist != 2 && bestScoreCooperative == 3 && trust > 0) {
+			return nodeCooperative.bestMove;
 		} else { // In all other cases, play realistically:
 			return nodeRealist.bestMove;
 		}

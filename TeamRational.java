@@ -14,8 +14,8 @@ public class TeamRational extends Player {
 
 	public int payoff1WW, payoff1WL, payoff1LW, payoff1LL, payoff2WW, payoff2WL, payoff2LW, payoff2LL;
 	/*These give the payoff table, according to this player's beliefs:
-	 * 
-	 * P1\P2 |         W           |          L          | 
+	 *
+	 * P1\P2 |         W           |          L          |
 	 * ---------------------------------------------------
 	 *   W   | payoff1WW,payoff2WW | payoff1WL,payoff2WL |
 	 * ---------------------------------------------------
@@ -54,7 +54,7 @@ public class TeamRational extends Player {
 		this(maxNumMoves, 2, 3,	0, 1, 2, 0,	3, 1);
 	}
 
-	
+
 	public void prepareForSeries() {
 	}
 
@@ -74,7 +74,7 @@ public class TeamRational extends Player {
 	private byte[] computeBestMove(BoardPosition boardPosition) {
 
 		int currentPositionInt = boardPosition.toInt();
-		
+
 		if (this.bestMoveBytes[currentPositionInt] != Node.UNINITIALIZED) {
 			return new byte[] {this.bestMoveBytes[currentPositionInt],
 					this.scoreWhiteBytes[currentPositionInt],this.scoreBlackBytes[currentPositionInt]};
@@ -169,7 +169,7 @@ public class TeamRational extends Player {
 
 		public static final int UNINITIALIZED = -2;
 		public static final int NULL = -1;
-		
+
 		public MoveDescription bestMove;
 		public int scoreWhite, scoreBlack;
 
