@@ -3,10 +3,10 @@ all:
 	javac *.java
 
 clean:
-	rm -rf *.class
+	rm -rf *.class result.txt
 
 fast:
-	rm -rf *.class *.txt
+	rm -rf *.class result.txt
 	javac *.java
 	wait
 	java Tournament full > result.txt 
