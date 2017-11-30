@@ -15,7 +15,7 @@ public class TeamTFTADC extends Player {
 	public byte[] scoreWhiteBytesTruster;
 	public byte[] scoreBlackBytesTruster;
 
-	public final int BETRAYAL_DELTA = 3;
+	public final int BETRAYAL_DELTA = 5;
 	public final int COOPERATION_DELTA = 1;
 
 	public TeamTFTADC(int maxNumMoves) {
@@ -109,10 +109,10 @@ public class TeamTFTADC extends Player {
 
 		// If you cannot force a tie, and it is still possible to tie, and trust
 		// remains, then play trustingly:
-		if (isTrustModeOn) {
-			return nodeTruster.bestMove;
-		} else if (bestScoreRealist != 2 && bestScoreCooperative == 3 && trust > 0) {
+		if (bestScoreRealist != 2 && bestScoreCooperative == 3 && trust > 0) {
 			return nodeCooperative.bestMove;
+		} else if (isTrustModeOn) {
+			return nodeTruster.bestMove;
 		} else { // In all other cases, play realistically:
 			return nodeRealist.bestMove;
 		}
