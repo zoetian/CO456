@@ -15,7 +15,7 @@ public class TeamTFTADC extends Player {
 	public byte[] scoreWhiteBytesTruster;
 	public byte[] scoreBlackBytesTruster;
 
-	public final int BETRAYAL_DELTA = 5;
+	public final int BETRAYAL_DELTA = 6;
 	public final int COOPERATION_DELTA = 1;
 
 	public TeamTFTADC(int maxNumMoves) {

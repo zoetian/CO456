@@ -1,0 +1,4070 @@
+rm -rf *.class
+javac *.java
+wait
+java Tournament full 
+Calling Constructor of player: TeamTFTADC
+Constructor of player TeamTFTADC took 17.016 seconds.
+Constructor of player TeamTFTADC used 72 megabytes.
+
+Calling Constructor of player: TeamLessBetrayal
+Constructor of player TeamLessBetrayal took 10.055 seconds.
+Constructor of player TeamLessBetrayal used 48 megabytes.
+
+Calling Constructor of player: TeamMoreBetralTFT
+Constructor of player TeamMoreBetralTFT took 10.393 seconds.
+Constructor of player TeamMoreBetralTFT used 48 megabytes.
+
+Calling Constructor of player: TeamMoreCoopTFT
+Constructor of player TeamMoreCoopTFT took 10.003 seconds.
+Constructor of player TeamMoreCoopTFT used 48 megabytes.
+
+Calling Constructor of player: TeamMoreMoreTFT
+Constructor of player TeamMoreMoreTFT took 10.003 seconds.
+Constructor of player TeamMoreMoreTFT used 48 megabytes.
+
+Calling Constructor of player: TeamMonkey
+Constructor of player TeamMonkey took .000 seconds.
+Constructor of player TeamMonkey used 0 megabytes.
+
+Calling Constructor of player: TeamNihilist
+Constructor of player TeamNihilist took .001 seconds.
+Constructor of player TeamNihilist used 0 megabytes.
+
+Calling Constructor of player: TeamRationalOptimist
+Constructor of player TeamRational took 5.329 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamRationalPessimist
+Constructor of player TeamRational took 6.355 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamRationalPessimist
+Constructor of player TeamRational took 4.874 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamRationalPessimist
+Constructor of player TeamRational took 5.245 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamRationalPessimist
+Constructor of player TeamRational took 5.432 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamRationalPessimist
+Constructor of player TeamRational took 5.040 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamRationalQueller
+Constructor of player TeamRational took 5.168 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamRationalQueller
+Constructor of player TeamRational took 4.917 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamRationalRealist
+Constructor of player TeamRational took 4.979 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamRationalScrapper
+Constructor of player TeamRational took 5.273 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamRationalTruster
+Constructor of player TeamRational took 5.537 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamRationalUtilitarian
+Constructor of player TeamRational took 4.966 seconds.
+Constructor of player TeamRational used 24 megabytes.
+
+Calling Constructor of player: TeamTitForTat1
+Constructor of player TeamTitForTat took 10.372 seconds.
+Constructor of player TeamTitForTat used 48 megabytes.
+
+Calling Constructor of player: TeamTitForTat2
+Constructor of player TeamTitForTat took 10.769 seconds.
+Constructor of player TeamTitForTat used 48 megabytes.
+
+Calling Constructor of player: TeamTitForTat3
+Constructor of player TeamTitForTat took 10.032 seconds.
+Constructor of player TeamTitForTat used 48 megabytes.
+
+Calling Constructor of player: TeamTitForTat4
+Constructor of player TeamTitForTat took 10.196 seconds.
+Constructor of player TeamTitForTat used 48 megabytes.
+
+Calling Constructor of player: TeamTitForTat5
+Constructor of player TeamTitForTat took 10.269 seconds.
+Constructor of player TeamTitForTat used 48 megabytes.
+
+Calling Constructor of player: TeamTitForTat6
+Constructor of player TeamTitForTat took 10.382 seconds.
+Constructor of player TeamTitForTat used 48 megabytes.
+
+Calling Constructor of player: TeamTitForTat7
+Constructor of player TeamTitForTat took 10.087 seconds.
+Constructor of player TeamTitForTat used 48 megabytes.
+
+Calling Constructor of player: TeamTitForTat8
+Constructor of player TeamTitForTat took 10.109 seconds.
+Constructor of player TeamTitForTat used 48 megabytes.
+
+Calling Constructor of player: TeamTitForTat9
+Constructor of player TeamTitForTat took 10.297 seconds.
+Constructor of player TeamTitForTat used 48 megabytes.
+
+Calling Constructor of player: TeamTitForTat10
+Constructor of player TeamTitForTat took 11.192 seconds.
+Constructor of player TeamTitForTat used 48 megabytes.
+
+Calling Constructor of player: TeamWatermelon
+Constructor of player TeamWatermelon took 7.292 seconds.
+Constructor of player TeamWatermelon used 32 megabytes.
+
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamMoreCoopTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamMoreCoopTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamRationalUtilitarian
+1T111111T1111111111111111111111111T11111111111111111111T111T1111111111111T1T
+Round ended
+Average payoff of player TeamWatermelon: 2.908
+Average payoff of player TeamRationalUtilitarian: .184
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamMonkey
+TT221112121212121212121TT1111T1T12T111111212111T121T1212111TTT121112111TTT121212
+Round ended
+Average payoff of player TeamTitForTat6: 2.025
+Average payoff of player TeamMonkey: 1.163
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat1
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat1: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamRationalPessimist
+TTTTTTTT221212TTTTTD12TTTT12TT12TT12TTTDTTTTTTTT12DT12TTTTTT12121212TT121212
+Round ended
+Average payoff of player TeamTitForTat4: 1.711
+Average payoff of player TeamRationalPessimist: 1.789
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat8
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat8: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalPessimist
+TTDT121212TT1212TTDT12TT12121212TT12TTTT121212TTTTTT1212121212TT12121212TT12
+Round ended
+Average payoff of player TeamRationalPessimist: 1.658
+Average payoff of player TeamRationalPessimist: 1.658
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMoreMoreTFT
+1212121212121212121212TDTT12TTTT12121212121212TTTT1212TT1212TT12121212TTTT12
+Round ended
+Average payoff of player TeamRationalPessimist: 1.618
+Average payoff of player TeamMoreMoreTFT: 1.618
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamMoreBetralTFT
+TT1212TT12TT12TTTTTTTTTTTTTTTT12121212TT1212TT12TTTT1212TTTT12TT121212TTTTTT1212
+Round ended
+Average payoff of player TeamWatermelon: 1.762
+Average payoff of player TeamMoreBetralTFT: 1.762
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat8
+TT12TT12TT12121212TT121212TD12TTTTTTTD1212TT121212TT121212TTTTTT121212121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.658
+Average payoff of player TeamTitForTat8: 1.658
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamTitForTat2
+2T2T222222TTT21222222222222222222T22T2222T22222222T22222222222222222222222222222
+Round ended
+Average payoff of player TeamNihilist: .263
+Average payoff of player TeamTitForTat2: 2.850
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat8
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat8: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamTitForTat1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamTitForTat1: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalPessimist
+12TT12TT1212TT1212TTTT12TT12TT12TTTT1212DT12121212TT1212121212TT1212TT12TT12TT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.671
+Average payoff of player TeamRationalPessimist: 1.671
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamTitForTat6
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamTitForTat6: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamRationalQueller
+1212DD121212DT1212DD1212121212DDDDDD12DD12TD12DDDD121212121212121212DD12DD1212DDDDDD
+Round ended
+Average payoff of player TeamRationalQueller: 1.345
+Average payoff of player TeamRationalQueller: 1.345
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamRationalPessimist
+T2121212TTTT1212121212TTTD12TT12TTTT1212TTTTTT12121212TT12TT1212TT12TTTT12121212
+Round ended
+Average payoff of player TeamMoreBetralTFT: 1.663
+Average payoff of player TeamRationalPessimist: 1.700
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat10: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamRationalPessimist
+12121212TT12TT12TT121212TTTTTT12121212TT121212121212TT12121212TTTT12DT12TDDD
+Round ended
+Average payoff of player TeamWatermelon: 1.618
+Average payoff of player TeamRationalPessimist: 1.618
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamRationalQueller
+121212DD12TT121212TDTDDD1212121212DD12DDTD1212DTDD12TDTDTT1212121212DD12DDDD
+Round ended
+Average payoff of player TeamWatermelon: 1.421
+Average payoff of player TeamRationalQueller: 1.421
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamTitForTat1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreBetralTFT: 2.000
+Average payoff of player TeamTitForTat1: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat1
+1212TTTDTTTT12TTDT121212121212121212121212TT1212DTTT1212TT121212TDTTTTTT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.632
+Average payoff of player TeamTitForTat1: 1.632
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamMonkey
+221222T2222222222222122222222222222222222TT2222222T2222222122222222222122222
+Round ended
+Average payoff of player TeamNihilist: .263
+Average payoff of player TeamMonkey: 2.789
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamRationalRealist
+T2222222T222T22222222222222222222222222222222222T2T212222222T2222222TT222T22
+Round ended
+Average payoff of player TeamRationalTruster: .276
+Average payoff of player TeamRationalRealist: 2.842
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamRationalTruster
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamRationalTruster: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamRationalScrapper
+1212DDTD12121212DD1212TD12DD1212TDTD121212DDTT121212DT12DT12TTDD121212DDTD12DD12TT
+Round ended
+Average payoff of player TeamWatermelon: 1.451
+Average payoff of player TeamRationalScrapper: 1.451
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamRationalRealist
+22TT121212TT12TT12TT12TT12121212TT1212TT121212121212TTTT12TT12121212TT121212
+Round ended
+Average payoff of player TeamMoreCoopTFT: 1.605
+Average payoff of player TeamRationalRealist: 1.684
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat6
+121212TTTT12121212TT12121212TTTT1212TTDTTTTT12TTTTTT121212TT121212121212TTTT12
+Round ended
+Average payoff of player TeamRationalPessimist: 1.679
+Average payoff of player TeamTitForTat6: 1.679
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamRationalPessimist
+221212TTTT12TT1212TTTTTD121212TTTTTT12TT12TTTT121212TTDTTTTT12TT12TTTT1212121212
+Round ended
+Average payoff of player TeamMoreBetralTFT: 1.675
+Average payoff of player TeamRationalPessimist: 1.750
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamRationalPessimist
+12DTTD12121212DTTT12DT1212TD12121212DT121212121212121212DTDT12TT121212121212DD
+Round ended
+Average payoff of player TeamRationalQueller: 1.513
+Average payoff of player TeamRationalPessimist: 1.513
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat2
+Team 2: TeamRationalRealist
+TT22TTTT12TT121212TTTTTT12TT12TTTT12121212TT12TT12TT1212TTTT12TTTT1212TT12TT
+Round ended
+Average payoff of player TeamTitForTat2: 1.711
+Average payoff of player TeamRationalRealist: 1.789
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamNihilist
+T1111111111T11111112111111T111111111111111111T11111111T11111111111111111111111111111
+Round ended
+Average payoff of player TeamRationalPessimist: 2.905
+Average payoff of player TeamNihilist: .155
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalScrapper
+12121212TT12121212121212TD12121212TTDD12TT1212TT121212TT1212TD121212TTTT12121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.575
+Average payoff of player TeamRationalScrapper: 1.575
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamWatermelon
+TT2212TTTT12TTTT1212121212TT12TTTT12TTTT1212TT12121212121212TT121212TT1212TT
+Round ended
+Average payoff of player TeamLessBetrayal: 1.645
+Average payoff of player TeamWatermelon: 1.724
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamRationalScrapper
+2212TD1212DT12TTTD121212121212TD12DD121212DD12TD12DT1212121212121212DTTD1212
+Round ended
+Average payoff of player TeamTitForTat10: 1.447
+Average payoff of player TeamRationalScrapper: 1.526
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamTitForTat7
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamTitForTat7: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamTitForTat6
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamTitForTat6: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamMoreMoreTFT
+12DD12DT12DDDDDT12DD1212DD1212DT121212TT121212DD1212TT1212DDDT1212DDTT12121212
+Round ended
+Average payoff of player TeamRationalQueller: 1.436
+Average payoff of player TeamMoreMoreTFT: 1.436
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat1
+12121212121212DTTT1212121212TTTT121212121212DDTT12TTTT121212121212TTTT121212TT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.603
+Average payoff of player TeamTitForTat1: 1.603
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamRationalPessimist
+22222222222T22T222222T22222222TT2TT22T22222T2222TT22222T2T2T2T2222222222222T2T
+Round ended
+Average payoff of player TeamRationalOptimist: .436
+Average payoff of player TeamRationalPessimist: 2.782
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMoreBetralTFT
+TT12TTTTTTDTTDTTTT121212121212TT12TTTT12121212121212TT1212DTTT12121212TTTTTT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.684
+Average payoff of player TeamMoreBetralTFT: 1.684
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamRationalPessimist
+TT2212TTTT1212TTTTTT121212TT12TTTTTT12TT12121212TT121212121212TT12121212121212
+Round ended
+Average payoff of player TeamMoreCoopTFT: 1.628
+Average payoff of player TeamRationalPessimist: 1.705
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamLessBetrayal
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamLessBetrayal: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamRationalQueller
+222222222222222222222222222222T21222222222222T222222222222222222T22222T222222222
+Round ended
+Average payoff of player TeamNihilist: .137
+Average payoff of player TeamRationalQueller: 2.913
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamTitForTat3
+12DDDDDDDD1212DT12DD12121212DTDD1212DD121212DD1212TT1212121212DTDDDD1212DD12
+Round ended
+Average payoff of player TeamRationalQueller: 1.368
+Average payoff of player TeamTitForTat3: 1.368
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat4: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamTFTADC
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamTFTADC: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamMonkey
+121T1212111112121212121T1T1T12TT1211121T1211TT121T111112T11T1T121TTT1112111T1212
+Round ended
+Average payoff of player TeamRationalQueller: 2.113
+Average payoff of player TeamMonkey: 1.100
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat10: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat5
+TTTTTTTTTT1212TTTT1212121212TT12TT12TT12TTTD121212TT1212121212TT12TTTT121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.697
+Average payoff of player TeamTitForTat5: 1.697
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamRationalPessimist
+T212121212121212TTTDTT1212TTTTTT12121212TT121212TT121212TT121212TT121212121212
+Round ended
+Average payoff of player TeamTitForTat10: 1.603
+Average payoff of player TeamRationalPessimist: 1.641
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMonkey
+1T1TTT121211111112121TTT121212TT12T111121212111T1T12TT1211121T1211121T12111T
+Round ended
+Average payoff of player TeamRationalPessimist: 2.105
+Average payoff of player TeamMonkey: 1.118
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamMonkey
+121211121T121212111212121112121T1112T1TT111112TTTT1T111211TTTT1212TT11121TT112
+Round ended
+Average payoff of player TeamWatermelon: 2.077
+Average payoff of player TeamMonkey: 1.154
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalUtilitarian
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalUtilitarian: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamRationalRealist
+22TTTTTT12TTTTTTTT12TTTTTTTT121212TTTT1212TT1212121212TT1212TT1212121212TT12
+Round ended
+Average payoff of player TeamTitForTat4: 1.684
+Average payoff of player TeamRationalRealist: 1.763
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamMoreMoreTFT
+12T2TTTTT222TTT2T212TT12T212TT122TTT2TT2T2121212122212T212TTTT1212TT12T2T2TT121222
+Round ended
+Average payoff of player TeamMonkey: 1.366
+Average payoff of player TeamMoreMoreTFT: 2.024
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat10: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamLessBetrayal
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamLessBetrayal: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalPessimist
+12TT12TT12TT1212TD12121212TTTT121212TT12TT121212TT1212TT121212TT1212TD121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.632
+Average payoff of player TeamRationalPessimist: 1.632
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamRationalPessimist
+T2222222T2T222221222222222TT2222222T22T22222T22TT222T2222222222T222T22222222
+Round ended
+Average payoff of player TeamRationalTruster: .382
+Average payoff of player TeamRationalPessimist: 2.789
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreBetralTFT: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamTitForTat3
+1212DD12DD12DD121212DD12121212TD12121212121212DT12DDDD12TTDD12121212DTTDTT12
+Round ended
+Average payoff of player TeamRationalQueller: 1.434
+Average payoff of player TeamTitForTat3: 1.434
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamRationalQueller
+2222222222222222222222222222222222TT22222D2222222T2222T2222222222222222222222T
+Round ended
+Average payoff of player TeamRationalTruster: .141
+Average payoff of player TeamRationalQueller: 2.910
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamTitForTat1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamTitForTat1: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamNihilist
+111111111T1111111111111111111111111111T1T1111111111111111111T1111T11111111111111
+Round ended
+Average payoff of player TeamRationalPessimist: 2.938
+Average payoff of player TeamNihilist: .125
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamRationalPessimist
+T212TT1212TT12121212DT12121212121212121212121212121212TT12TTTDTT12TT12TTTTTT12
+Round ended
+Average payoff of player TeamLessBetrayal: 1.603
+Average payoff of player TeamRationalPessimist: 1.641
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamRationalPessimist
+T2TT121212TT1212TTTTTT12TT12TT12121212TT1212TT1212TT1212TT1212121212TD121212
+Round ended
+Average payoff of player TeamTitForTat4: 1.632
+Average payoff of player TeamRationalPessimist: 1.671
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamTitForTat10
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamTitForTat10: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreMoreTFT
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreMoreTFT: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat9
+TTTT12TTTTTT121212TT1212121212TT1212TTTT12TT12121212TD12TTTT12TT121212TTTTTT12TT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.702
+Average payoff of player TeamTitForTat9: 1.702
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMonkey
+121TTT21TT12111212111212TT1TTTTTTT1T1T12121212121211TT121T1212121T12T11T1112
+Round ended
+Average payoff of player TeamRationalPessimist: 1.961
+Average payoff of player TeamMonkey: 1.329
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalScrapper
+Team 2: TeamRationalQueller
+12TD1212121212DD12DDDD12DDDD12121212DD12121212DD1212121212DD1212TTTDDDDD1212TD
+Round ended
+Average payoff of player TeamRationalScrapper: 1.385
+Average payoff of player TeamRationalQueller: 1.385
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamTitForTat10
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 2.000
+Average payoff of player TeamTitForTat10: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreBetralTFT: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamMoreMoreTFT
+1DDD12DT1212DD1212DD1212DD121212DT12121212121212DD12121212DD121212TDDT12DDDD12
+Round ended
+Average payoff of player TeamRationalQueller: 1.410
+Average payoff of player TeamMoreMoreTFT: 1.372
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamTitForTat4
+1212T2T2TTT212122212221212T2T21212T2121212222T122222T21222221222122212TT1212
+Round ended
+Average payoff of player TeamMonkey: 1.066
+Average payoff of player TeamTitForTat4: 2.092
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamRationalPessimist
+T2TD121212TT12DD1212TTTTTTTTTTTT121212TDTT1212121212TTTT1212TTTT1212121212TD
+Round ended
+Average payoff of player TeamMoreCoopTFT: 1.632
+Average payoff of player TeamRationalPessimist: 1.671
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamTitForTat1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 2.000
+Average payoff of player TeamTitForTat1: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat8
+12TTTT1212TD12121212TT12TT12TTDT12TTTTTTTTTT12TT1212TTTTTT1212TD12TT12121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.697
+Average payoff of player TeamTitForTat8: 1.697
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMoreMoreTFT
+TT12121212TT121212121212121212121212TTTT12TT1212TT12121212TTTTTTTT1212121212TT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.634
+Average payoff of player TeamMoreMoreTFT: 1.634
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamTitForTat10
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamTitForTat10: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamRationalQueller
+DD12DDDD1212121212TDDD12DDTTDD1212121212DDDD1212TD12121212DDTD121212DD1212DD
+Round ended
+Average payoff of player TeamTitForTat4: 1.368
+Average payoff of player TeamRationalQueller: 1.368
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamRationalQueller
+22TD12DT12DDDD12DDTD1212DD12TD121212DD1212TD1212DD1212DD1212TT1212DD12DD12DD
+Round ended
+Average payoff of player TeamTFTADC: 1.342
+Average payoff of player TeamRationalQueller: 1.421
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat1
+Team 2: TeamRationalScrapper
+22TTTT1212TT121212121212TTTT12TDDTTDTD121212DD121212TDTDDD12121212TTTTDD12TD
+Round ended
+Average payoff of player TeamTitForTat1: 1.513
+Average payoff of player TeamRationalScrapper: 1.592
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamWatermelon
+121212TTTTTT121212121212TT12TT121212121212121212121212TT12DT12DDTT1212121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.579
+Average payoff of player TeamWatermelon: 1.579
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalUtilitarian
+1111T1111T11T111111111111T111111111111111T111T1T1111T111111111111111T1111111
+Round ended
+Average payoff of player TeamRationalPessimist: 2.882
+Average payoff of player TeamRationalUtilitarian: .237
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamRationalUtilitarian
+11TT111T1111T1111T12111T11TTT1T1TTTT111111T111T11TT1TTT11T11111111T1TT1T11T1
+Round ended
+Average payoff of player TeamMonkey: 2.605
+Average payoff of player TeamRationalUtilitarian: .750
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat2
+Team 2: TeamRationalQueller
+D21212DD12DDDDDD1212DTDDDD1212DD1212121212121212DD1212TTDT12TTDD1212DD121212
+Round ended
+Average payoff of player TeamTitForTat2: 1.368
+Average payoff of player TeamRationalQueller: 1.408
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat9
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat9: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamRationalRealist
+22TTTT1212TTTT121212121212TT12TT1212TT12TTTT12TTTTTTTTTT12TT121212TT121212TT1212TTTT
+Round ended
+Average payoff of player TeamTitForTat5: 1.690
+Average payoff of player TeamRationalRealist: 1.762
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamNihilist
+11121111111T11111111111T1111111111111111111111111111111T1111111111111111111111
+Round ended
+Average payoff of player TeamRationalPessimist: 2.923
+Average payoff of player TeamNihilist: .115
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamRationalQueller
+222222222222222222222T222222T22222222222122222222222222222222222222212222212
+Round ended
+Average payoff of player TeamNihilist: .171
+Average payoff of player TeamRationalQueller: 2.855
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamNihilist
+22T1111111111211111111111111111211121111111111TT111T11111111111111111111111111
+Round ended
+Average payoff of player TeamTitForTat6: 2.756
+Average payoff of player TeamNihilist: .295
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamTitForTat4
+12121212121212DD1212TTDD12DDDDDDDD12TD12121212DD12DDDD1212DD121212DT1212DD12
+Round ended
+Average payoff of player TeamRationalQueller: 1.368
+Average payoff of player TeamTitForTat4: 1.368
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamTitForTat7
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamTitForTat7: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalRealist
+12121212TT12121212121212121212TT121212TTTTTTTT12TT12TTTT1212TT1212TT1212TT12
+Round ended
+Average payoff of player TeamRationalPessimist: 1.658
+Average payoff of player TeamRationalRealist: 1.658
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat2
+121212121212TTTTTT12121212TTTTTT1212TTTT1212TT12TTTTTT12TTTTTTTTTTTT1212121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.731
+Average payoff of player TeamTitForTat2: 1.731
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamLessBetrayal
+121212TT121212121212121212TTTT12121212TTTT1212TT12121212TT12TT1212TT1212DT12
+Round ended
+Average payoff of player TeamRationalPessimist: 1.618
+Average payoff of player TeamLessBetrayal: 1.618
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMoreMoreTFT
+1212TTTT1212TTTT12TTTTTTTT1212TT1212TT1212121212TTTTTT1212DDTTTT121212121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.684
+Average payoff of player TeamMoreMoreTFT: 1.684
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamTitForTat7
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamTitForTat7: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamRationalScrapper
+2222T2222222222222T222222222222222222222222222222222T22222222222222222222222
+Round ended
+Average payoff of player TeamRationalOptimist: .079
+Average payoff of player TeamRationalScrapper: 2.961
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamTitForTat4
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreCoopTFT: 2.000
+Average payoff of player TeamTitForTat4: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalQueller
+1212TD121212TDTT1212121212121212121212121212TT1212121212TTTD12TTTD1212DT12TD121212TD1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.545
+Average payoff of player TeamRationalQueller: 1.545
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMoreBetralTFT
+12TT121212121212TTTTTT12121212DT1212TD12TT12121212TT12DT1212DTTT12TTTTTT12TTTT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.654
+Average payoff of player TeamMoreBetralTFT: 1.654
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamRationalRealist
+221212TT12TTTTTTTTTT12TT1212TTTTTT12TTTT121212TTTT121212TT12121212121212TT12121212
+Round ended
+Average payoff of player TeamMoreBetralTFT: 1.659
+Average payoff of player TeamRationalRealist: 1.732
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat2
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat2: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalScrapper
+Team 2: TeamMoreMoreTFT
+12DT121212DT12121212121212DDTTDT1212DTDD121212121212TD1212DDDT12121212TDTTTT
+Round ended
+Average payoff of player TeamRationalScrapper: 1.500
+Average payoff of player TeamMoreMoreTFT: 1.500
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat1
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat1: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamLessBetrayal
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamLessBetrayal: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalRealist
+12TT12TTTTTTTT12TT1212TT12121212TT12121212TT12121212121212TT1212TT12DTTT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.658
+Average payoff of player TeamRationalRealist: 1.658
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalQueller
+1212DDDD1212TT1212TD12TD121212TT12TDTD12TD12TD12DD12TT121212TD1212TT12TD12121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.513
+Average payoff of player TeamRationalQueller: 1.513
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMoreMoreTFT
+12TT1212121212121212121212121212121212121212TT12TT12121212121212TT12TT12121212TT121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.570
+Average payoff of player TeamMoreMoreTFT: 1.570
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat4: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat7
+12TT1212TT1212DT12TT1212121212TTTT12121212TT12TT121212TTTTTTDTTT121212TT121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.654
+Average payoff of player TeamTitForTat7: 1.654
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamMoreCoopTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreBetralTFT: 2.000
+Average payoff of player TeamMoreCoopTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamRationalPessimist
+221212TD12TT1212TT1212TTTTTT1212TTTT12TT121212TT12TT12121212TT12TT121212TT12
+Round ended
+Average payoff of player TeamTitForTat7: 1.632
+Average payoff of player TeamRationalPessimist: 1.711
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat1
+Team 2: TeamRationalPessimist
+T2TT121212TT121212121212121212TTTT1212121212TT121212TT121212TDTTTT1212121212
+Round ended
+Average payoff of player TeamTitForTat1: 1.592
+Average payoff of player TeamRationalPessimist: 1.632
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat1
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat1: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat4
+1212121212TT1212TT12TTTTTT1212TTTT1212121212TTTT121212121212121212TT12TTTTTT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.671
+Average payoff of player TeamTitForTat4: 1.671
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreBetralTFT: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamMoreCoopTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamMoreCoopTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMoreCoopTFT
+TTTT121212TTTT1212TT1212TTTTTT1212TT12TT121212TTTTTT121212TT1212TTTT12121212TT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.718
+Average payoff of player TeamMoreCoopTFT: 1.718
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalUtilitarian
+T11111111T111111111111T111111T1111111111111T111T111111T11T11111111111111111T11
+Round ended
+Average payoff of player TeamRationalPessimist: 2.885
+Average payoff of player TeamRationalUtilitarian: .231
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamLessBetrayal
+21222222T222222222222222222222222222222222222222222212222222222222T222222222
+Round ended
+Average payoff of player TeamNihilist: .132
+Average payoff of player TeamLessBetrayal: 2.895
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat10: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat2
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat2: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalScrapper
+TT121212TT12TT121212TTTTTT12TT12TT1212121212TT121212TT1212121212121212TT121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.641
+Average payoff of player TeamRationalScrapper: 1.641
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamTitForTat1
+12121212DD1212TDDT12TD121212DD12DD12DD121212DD1212121212TD121212TDDT12121212
+Round ended
+Average payoff of player TeamRationalQueller: 1.434
+Average payoff of player TeamTitForTat1: 1.434
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamRationalRealist
+TT2212TTTT121212TTTT121212TTTT12TTTTTT1212TT12TT12TT1212TT12TT1212TTTT1212TT
+Round ended
+Average payoff of player TeamTitForTat6: 1.697
+Average payoff of player TeamRationalRealist: 1.776
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamRationalScrapper
+TTT21212TT12TT12TDTT12DD12TTDDDTDTDDDT12121212TTTD12121212121212TT12TT1212DT
+Round ended
+Average payoff of player TeamTitForTat6: 1.553
+Average payoff of player TeamRationalScrapper: 1.592
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMoreMoreTFT
+1212TT12TT1212TT121212121212TT12TT1212121212TT12121212TTTD1212121212TT12121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.603
+Average payoff of player TeamMoreMoreTFT: 1.603
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamMoreBetralTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 2.000
+Average payoff of player TeamMoreBetralTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamTitForTat3
+1212121222T212TT12TTT21212221212T2T212221212121212TT1212121212T2121212TT221212
+Round ended
+Average payoff of player TeamMonkey: 1.333
+Average payoff of player TeamTitForTat3: 1.833
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat2
+TT12TT1212121212TT1212TD1212TTTTTTDTTDTT1212TTTT12TTTT12DTTT1212TT1212TT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.684
+Average payoff of player TeamTitForTat2: 1.684
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalUtilitarian
+11111111111T11TT111111111111111T1T1T111111T1T11111111111111111111111T111T111
+Round ended
+Average payoff of player TeamRationalPessimist: 2.868
+Average payoff of player TeamRationalUtilitarian: .263
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat2
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat2: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamMoreCoopTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 2.000
+Average payoff of player TeamMoreCoopTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreCoopTFT: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamMoreBetralTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamMoreBetralTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalRealist
+Team 2: TeamRationalQueller
+12DDDDDDDDDD12121212121212TT1212DD121212TDDD1212DD12121212DDTD12TTTD12DD1212
+Round ended
+Average payoff of player TeamRationalRealist: 1.395
+Average payoff of player TeamRationalQueller: 1.395
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamMoreCoopTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamMoreCoopTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamRationalPessimist
+22122212T222121212T21212121212T2T212121222T2122T2T12TT1212T222121212122T2212
+Round ended
+Average payoff of player TeamMonkey: 1.158
+Average payoff of player TeamRationalPessimist: 1.987
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreCoopTFT: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat4: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMoreCoopTFT
+12TT1212TTTT12TTTT12TTTT121212TT1212121212DT1212121212121212TT121212TTTT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.645
+Average payoff of player TeamMoreCoopTFT: 1.645
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamTitForTat4
+22TT2TT2T2122222222T222T222222222222222212222222222T22222T22222222222222222222
+Round ended
+Average payoff of player TeamNihilist: .308
+Average payoff of player TeamTitForTat4: 2.808
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamRationalPessimist
+2222222222T222T2T2222222222222T2222222T22T2T222222222222T2222T222T22222222T22T
+Round ended
+Average payoff of player TeamRationalOptimist: .308
+Average payoff of player TeamRationalPessimist: 2.846
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamTitForTat8
+12121212DTDD121212121212DDDT1212TT121212DD1212DD1212121212121212121212TD12DT12
+Round ended
+Average payoff of player TeamRationalQueller: 1.462
+Average payoff of player TeamTitForTat8: 1.462
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat8
+TT1212121212TTTTTTTT121212121212121212TT1212TT12TD121212121212TTTT1212TT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.632
+Average payoff of player TeamTitForTat8: 1.632
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamTitForTat10
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamTitForTat10: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalRealist
+TTTTTT1212TTTT1212121212TT1212TT121212121212TT121212DT121212TT12TTTT1212TTTT121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.659
+Average payoff of player TeamRationalRealist: 1.659
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamTitForTat6
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamTitForTat6: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat9
+Team 2: TeamRationalQueller
+2212DDDDDD1212DD121212121212DDDD12DD1212DD1212DD12DD1212121212TDTT121212DD1212
+Round ended
+Average payoff of player TeamTitForTat9: 1.333
+Average payoff of player TeamRationalQueller: 1.410
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamMoreCoopTFT
+121212TT121212121212TT12TTTT12TTTTTT1212TT1212TTTT121212121212TT1212121212TT
+Round ended
+Average payoff of player TeamWatermelon: 1.658
+Average payoff of player TeamMoreCoopTFT: 1.658
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamRationalPessimist
+T212TT12TT1212121212TT12TDTTTT12121212TTTT1212TT12121212121212121212TT121212
+Round ended
+Average payoff of player TeamTitForTat6: 1.605
+Average payoff of player TeamRationalPessimist: 1.645
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamRationalPessimist
+22222222T22T2222222T22222222T222T2T2121222T22222T22222222222T2T22T222222122222
+Round ended
+Average payoff of player TeamNihilist: .397
+Average payoff of player TeamRationalPessimist: 2.744
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamTitForTat4
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamTitForTat4: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamMonkey
+T211T111111211111T11121211TT1111T112121212121211121212T1121T1T12TT1212TTT1T112
+Round ended
+Average payoff of player TeamTitForTat7: 2.115
+Average payoff of player TeamMonkey: 1.077
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat10
+12121212TT12TT121212TT12TT121212TTTTTTTTTTTT12TT12TTTT1212TTTT12TTTT12TTTTTTTT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.769
+Average payoff of player TeamTitForTat10: 1.769
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamRationalScrapper
+DTDT1212121212121212DT12TDDD12TTTT12TDTD12121212TT12TD1212TDTD1212DD12TT121212121212
+Round ended
+Average payoff of player TeamTitForTat7: 1.524
+Average payoff of player TeamRationalScrapper: 1.524
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamRationalPessimist
+TDDT12DD12DT1212TT121212TT12DD12DD121212DTDD12121212TTDTDT12DTDD12DDTD121212
+Round ended
+Average payoff of player TeamRationalQueller: 1.461
+Average payoff of player TeamRationalPessimist: 1.461
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalPessimist
+121212121212TT1212TTTTTT12121212121212TT1212TTTT12TT121212TT12TTTT12TT1212121212DTTT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.655
+Average payoff of player TeamRationalPessimist: 1.655
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalRealist
+Team 2: TeamRationalScrapper
+1212121212TTDT1212TT12TT12TT12121212121212TD121212DT12TDTTTD1212TTTTTT12DT12
+Round ended
+Average payoff of player TeamRationalRealist: 1.605
+Average payoff of player TeamRationalScrapper: 1.605
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamRationalPessimist
+TT22TTTT121212TT12TT1212TT12TT12TTTTTT121212121212TT12TT1212121212TTTT1212121212
+Round ended
+Average payoff of player TeamTitForTat6: 1.638
+Average payoff of player TeamRationalPessimist: 1.713
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamMoreCoopTFT
+T221222T22222212222222222T222222222222222222222T22222222222222222222222222222222
+Round ended
+Average payoff of player TeamNihilist: .175
+Average payoff of player TeamMoreCoopTFT: 2.875
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamMoreCoopTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamMoreCoopTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamRationalTruster
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamRationalTruster: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamRationalQueller
+D2TDDD121212DD1221DD1212TD12DD1212TD1212DD1212TD12DDDDDT1212DD12TDDD12DDDD12
+Round ended
+Average payoff of player TeamMoreCoopTFT: 1.329
+Average payoff of player TeamRationalQueller: 1.368
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalPessimist
+12TT12121212121212TT1212121212TTTTTT1212121212DT1212TTTT12TT12TTTTTT12TT1212TTTT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.675
+Average payoff of player TeamRationalPessimist: 1.675
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalPessimist
+TTTTTT12TTDT1212121212TT121212TTTTTT12121212TT121212TT121212DTTT12TT12TT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.671
+Average payoff of player TeamRationalPessimist: 1.671
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamRationalQueller
+221212DD12DDDDDD12TD121212DTDD1212DDDD121212DD1212121212DD12DD12121212TTTD12
+Round ended
+Average payoff of player TeamTitForTat7: 1.342
+Average payoff of player TeamRationalQueller: 1.421
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamRationalPessimist
+2212121212TT12TTTT1212TTTT12121212121212DTDDTTTTTTTT12TT12121212121212TTTT12
+Round ended
+Average payoff of player TeamTitForTat6: 1.605
+Average payoff of player TeamRationalPessimist: 1.684
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamMoreBetralTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamMoreBetralTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalRealist
+1212TT1212TT1212TT1212TT12121212121212121212TTTT1212TD1212TTTTTT12TT12TTTT12
+Round ended
+Average payoff of player TeamRationalPessimist: 1.658
+Average payoff of player TeamRationalRealist: 1.658
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamMoreMoreTFT
+TT1212TTTTTT1212121212TTTT1212TTTT1212TT1212TTTT1212121212TT12TT1212TTTTTT12TTTT12
+Round ended
+Average payoff of player TeamWatermelon: 1.720
+Average payoff of player TeamMoreMoreTFT: 1.720
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat1
+Team 2: TeamRationalRealist
+22TT12121212121212TT12TT12TT12TT12TT12TTTT12TT121212TT121212121212TTTT12TTTT
+Round ended
+Average payoff of player TeamTitForTat1: 1.645
+Average payoff of player TeamRationalRealist: 1.724
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamRationalPessimist
+2T222T2222222T222T2T2222T2222222222T22222T22222222T2T22222222222222222TT2222
+Round ended
+Average payoff of player TeamRationalOptimist: .316
+Average payoff of player TeamRationalPessimist: 2.842
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamTitForTat8
+1212TTTT121212121212121212TTTTTT1212TTTT1212TTTT12TT12121212121212TT12TT12TTTT
+Round ended
+Average payoff of player TeamWatermelon: 1.679
+Average payoff of player TeamTitForTat8: 1.679
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamTitForTat1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamTitForTat1: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamWatermelon
+221212TT12TT12TTTTTTTT12TTTTTT12TTTTTT121212TT1212121212TTTT12TTTT121212TT12
+Round ended
+Average payoff of player TeamTFTADC: 1.697
+Average payoff of player TeamWatermelon: 1.776
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamTitForTat8
+TT12T212T2TTTTT21212122212121212221212T2121222T21222T2TT1212T212122TTTTT121212
+Round ended
+Average payoff of player TeamMonkey: 1.321
+Average payoff of player TeamTitForTat8: 1.936
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalTruster
+111111T11T1111111T111T1111111111T111111111T111TT111111111T1T111111111111TT11T1
+Round ended
+Average payoff of player TeamRationalPessimist: 2.833
+Average payoff of player TeamRationalTruster: .333
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamTitForTat1
+12TT1212TTTT1212TTTTTTTT121212TT121212TT12TT121212121212TTTTTT12TTTT1212TT12
+Round ended
+Average payoff of player TeamWatermelon: 1.711
+Average payoff of player TeamTitForTat1: 1.711
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamRationalRealist
+2212121212TTTT1212TTTTTT1212TT121212TT121212TT12TT12TTTT12TTTTTTTTTT12TT1212
+Round ended
+Average payoff of player TeamTitForTat10: 1.684
+Average payoff of player TeamRationalRealist: 1.763
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMonkey
+111212121T12TT1T1112121T111T111TTT12TTTTTT1T1112121T11TTT112121T1112121TT112
+Round ended
+Average payoff of player TeamRationalPessimist: 2.145
+Average payoff of player TeamMonkey: 1.158
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamMoreCoopTFT
+12DD12121212DDDD121212TT12DDDD1212TD1212121212DT12DTDD1212DT121212DDDDDDDD12
+Round ended
+Average payoff of player TeamRationalQueller: 1.382
+Average payoff of player TeamMoreCoopTFT: 1.382
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamTitForTat10
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamTitForTat10: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamRationalQueller
+22222222222222222222T222T22222222222222T22222222222222222222222222222222T222
+Round ended
+Average payoff of player TeamRationalOptimist: .105
+Average payoff of player TeamRationalQueller: 2.947
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat2
+TT1212TD121212TTTTTT12121212TDTT1212TT12121212121212121212DT12TT12TTTT121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.618
+Average payoff of player TeamTitForTat2: 1.618
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamRationalScrapper
+T2TDTT12121212TT12TT122112121212121212TD12DD121212TD121212TD1212DD12DD12DTTTTD
+Round ended
+Average payoff of player TeamTitForTat4: 1.500
+Average payoff of player TeamRationalScrapper: 1.538
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat4
+12TTTT121212TTTTTTTT12121212121212DT121212TT12TT12TT12TTTT12TTTTTTTT12121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.697
+Average payoff of player TeamTitForTat4: 1.697
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat1
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat1: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamRationalQueller
+DDDDDD1212DD12121212DDTD1212DD121212TD12121212DDDD12TDDDDD1212DD121212DDDD1212DDDDDD
+Round ended
+Average payoff of player TeamTitForTat10: 1.310
+Average payoff of player TeamRationalQueller: 1.310
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat9
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat9: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalPessimist
+TD121212121212121212TTDDTT12TT12121212TT12TTTTTT1212121212TT12TT1212TTTTTT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.641
+Average payoff of player TeamRationalPessimist: 1.641
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreCoopTFT: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamRationalPessimist
+T2TT12TDTTTTTT12TT12TT12TT12TTTT1212TTTTTT12TTTD121212122112TTTT12TT1212121212
+Round ended
+Average payoff of player TeamTitForTat5: 1.692
+Average payoff of player TeamRationalPessimist: 1.731
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalScrapper
+Team 2: TeamTitForTat9
+1212TT121212TT1212DTTDDD12TD12DD12TDDT12121212TDDDTTTT121212DDTT12TT12121212
+Round ended
+Average payoff of player TeamRationalScrapper: 1.526
+Average payoff of player TeamTitForTat9: 1.526
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamRationalRealist
+222222222T222TT2222222222222222222222222222222221222T22212T222122222222T1222
+Round ended
+Average payoff of player TeamNihilist: .316
+Average payoff of player TeamRationalRealist: 2.763
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamTitForTat2
+T1T212221212TT121222T21212TT12T212121212TT121212T222121222TTTT2TT21212T2T22212
+Round ended
+Average payoff of player TeamMonkey: 1.295
+Average payoff of player TeamTitForTat2: 1.949
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamMoreCoopTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamMoreCoopTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamRationalPessimist
+T21212121212TT12TTTT12TT1212TTTT121212TTTT12TTTT1212TT12121212TTDD12121212TT121212
+Round ended
+Average payoff of player TeamTitForTat7: 1.634
+Average payoff of player TeamRationalPessimist: 1.671
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamRationalScrapper
+DD121212DD121212DDDD12DD12DDDD12DD1212DD12DD1212DDDD1212121212DD12DDDD121212DD
+Round ended
+Average payoff of player TeamRationalQueller: 1.295
+Average payoff of player TeamRationalScrapper: 1.295
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamRationalScrapper
+2222222222T2222222222222T22222222222222222222222222222222222222222222T22222222222222
+Round ended
+Average payoff of player TeamRationalTruster: .071
+Average payoff of player TeamRationalScrapper: 2.964
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamRationalPessimist
+2212T2TT121222TT1212TT12T2121212TT12121212T2122T12121212T2T2122D221222TTT21222
+Round ended
+Average payoff of player TeamMonkey: 1.256
+Average payoff of player TeamRationalPessimist: 1.949
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamWatermelon
+TT22TT1212121212121212TT1212TT12TTTTTT1212TTTTTT1212TTTT12121212TTTTTT121212
+Round ended
+Average payoff of player TeamTitForTat6: 1.658
+Average payoff of player TeamWatermelon: 1.737
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat2
+Team 2: TeamRationalScrapper
+T2TTTT121212TTDD1212TTTD121212TD12DT12TTTDTT12121212TD12TTTT12DD12TT121212TTDD
+Round ended
+Average payoff of player TeamTitForTat2: 1.577
+Average payoff of player TeamRationalScrapper: 1.615
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamRationalPessimist
+T212TT12TT121212TTTT1212TD1212TTTT12121212TTTT12TT12TT12TTTD1212TDTT12TTTT12TT
+Round ended
+Average payoff of player TeamTFTADC: 1.679
+Average payoff of player TeamRationalPessimist: 1.718
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalQueller
+TT12TT12TDTTTD12121212DDTDDD1212TT1212DD12TDDDTDTD1212TDTTDD12TTTT1212DDTTTT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.539
+Average payoff of player TeamRationalQueller: 1.539
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamRationalRealist
+12121222222T22T2T212122T1212121222222T22TT22221212TT2222121212TT2T12T22T22121222T2
+Round ended
+Average payoff of player TeamMonkey: .988
+Average payoff of player TeamRationalRealist: 2.195
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamTitForTat4
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamTitForTat4: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat8
+Team 2: TeamRationalScrapper
+22DTDD1212121212121212TT12121212DD12121212TD12DDTTDT1212TDDTTDDT1212DDTDDD12
+Round ended
+Average payoff of player TeamTitForTat8: 1.421
+Average payoff of player TeamRationalScrapper: 1.500
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalOptimist
+1111111111T1TT1T111T1T111111111111T11111111TTT111111T111T1T11111TT1111T1T11T
+Round ended
+Average payoff of player TeamRationalPessimist: 2.763
+Average payoff of player TeamRationalOptimist: .474
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat6
+TT12TT12121212TTDD12TT1212TT1212TT12TT121212TTTT12TT12TT12TT121212121212121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.641
+Average payoff of player TeamTitForTat6: 1.641
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat4
+TT12TTTT1212TTTTTT12TT121212TT12TT12TT12TTTT1212TD1212TT121212DD12TTTT121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.684
+Average payoff of player TeamTitForTat4: 1.684
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamRationalScrapper
+12122212TT1212TT12T2122T2212T212122T2212121222121222T22212TTT212121212121212
+Round ended
+Average payoff of player TeamMonkey: 1.224
+Average payoff of player TeamRationalScrapper: 1.934
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamLessBetrayal
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamLessBetrayal: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamLessBetrayal
+1212TTTT12TTTT12TT12TTTTTD12121212121212TT1212TT12121212121212121212121212TT12TT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.638
+Average payoff of player TeamLessBetrayal: 1.638
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamTitForTat3
+T22122222222211222222222222222222222222222222222222T22222222222T2222222222222222
+Round ended
+Average payoff of player TeamNihilist: .188
+Average payoff of player TeamTitForTat3: 2.850
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamRationalPessimist
+T21212TT12TT12TTTT12TT12TT121212TT121212121212TTTTTT12TT12DD1212TTTTTT12121212
+Round ended
+Average payoff of player TeamTitForTat5: 1.654
+Average payoff of player TeamRationalPessimist: 1.692
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamLessBetrayal
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamLessBetrayal: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat3
+TT1212TDTD1212TTTTTT12TT12DDTTTTTTTTTT12DD12TT12121212TT121212TT12121212TT12TT1212TT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.667
+Average payoff of player TeamTitForTat3: 1.667
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamWatermelon
+T2121212TT1212TT1212TT12TT12TT1212TT1212TT12TT1212TT121212121212121212121212
+Round ended
+Average payoff of player TeamTitForTat7: 1.605
+Average payoff of player TeamWatermelon: 1.645
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamRationalScrapper
+DDTTTD12TTTT12121212121212DD12TTTT1212TT1212121212121212TD1212121212TDTTTTTDTTTT
+Round ended
+Average payoff of player TeamMoreCoopTFT: 1.600
+Average payoff of player TeamRationalScrapper: 1.600
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamTitForTat2
+12TT12TT12TT12TT121212TTTTTT121212TT1212TT12TT12TT1212121212TT12TTTT1212TT12121212
+Round ended
+Average payoff of player TeamWatermelon: 1.683
+Average payoff of player TeamTitForTat2: 1.683
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat1
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat1: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamMoreMoreTFT
+22122222T21222T22222T22222222222222222221222222222T2T22222222222222222222222
+Round ended
+Average payoff of player TeamNihilist: .250
+Average payoff of player TeamMoreMoreTFT: 2.816
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamTitForTat7
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamTitForTat7: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat4: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat3
+12TT1212TTTT12121212121212TT12TT121212TT12TTTT12TT121212121212TTTTDTTTTTTTDD
+Round ended
+Average payoff of player TeamRationalPessimist: 1.671
+Average payoff of player TeamTitForTat3: 1.671
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat10
+12TTTT12TDTTTT1212TTDDTT12121212TT122112121212TT121212121212TT12TTTTTT121212TT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.654
+Average payoff of player TeamTitForTat10: 1.654
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreBetralTFT: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat8
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat8: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalQueller
+1212TD12TT12DT1212121212TD12121212DD12121212TD12DDTT12121212121212TTTD121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.513
+Average payoff of player TeamRationalQueller: 1.513
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamRationalScrapper
+2212121212TDTD12121212TTDDTT12DT121212121212TD1212TDTD12TD1212DTTD12121212DT
+Round ended
+Average payoff of player TeamTFTADC: 1.474
+Average payoff of player TeamRationalScrapper: 1.553
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamMoreBetralTFT
+1222T2122T12TTT2121222121212121222T2122212T2122212TTT21212122212TT2212T21222
+Round ended
+Average payoff of player TeamMonkey: 1.132
+Average payoff of player TeamMoreBetralTFT: 2.039
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamRationalPessimist
+TT22121212TT12TT12121221TT1212TTTTTT12TT1212TT1212121212TTTTTT121212TTTT12TT12
+Round ended
+Average payoff of player TeamTitForTat5: 1.654
+Average payoff of player TeamRationalPessimist: 1.731
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamWatermelon
+T2TT1212TTTT12TTTT1212TTTTTT12121212TTTTTT12TT12TT12TT121212TT1212TT12TTTT1212TTTT
+Round ended
+Average payoff of player TeamTitForTat10: 1.732
+Average payoff of player TeamWatermelon: 1.768
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamTitForTat1
+122212T2222222222222T222222222222222222212T22T222222222222222222222222222222
+Round ended
+Average payoff of player TeamNihilist: .224
+Average payoff of player TeamTitForTat1: 2.829
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalScrapper
+12TD1212DT12TTTD12TD1212TT12TD1212121212TT1212121212TT12TD121212DT12121212DD1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.538
+Average payoff of player TeamRationalScrapper: 1.538
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamRationalPessimist
+2TT222222T2222T222T222222222T222222222222222222222222222T222T22222222222222T
+Round ended
+Average payoff of player TeamRationalOptimist: .237
+Average payoff of player TeamRationalPessimist: 2.882
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamRationalRealist
+222222222222222222222T22222222T222222T222T22T222T222222222T2222T2222T222222222
+Round ended
+Average payoff of player TeamRationalOptimist: .231
+Average payoff of player TeamRationalRealist: 2.885
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamMonkey
+2112TT1T12121T1212121T1212TT1T121T12121211111TTT12121T1T121T12TT1212TT121212TT1T
+Round ended
+Average payoff of player TeamLessBetrayal: 1.900
+Average payoff of player TeamMonkey: 1.375
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamRationalUtilitarian
+1T111111111111111111111111111111111111111111111T11111111111111TT1T1111111111111T
+Round ended
+Average payoff of player TeamRationalQueller: 2.925
+Average payoff of player TeamRationalUtilitarian: .150
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamRationalQueller
+22222222T222222T2222T22222T222222222T222222222222222222222222222T22222222222222222T2
+Round ended
+Average payoff of player TeamRationalTruster: .167
+Average payoff of player TeamRationalQueller: 2.917
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamTitForTat10
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamTitForTat10: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamMoreCoopTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat10: 2.000
+Average payoff of player TeamMoreCoopTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMoreCoopTFT
+12TDTT12121212TT12TTTT1212TT12TT121212121212TT1212TT12TT1212TT12TT1212TT12TT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.671
+Average payoff of player TeamMoreCoopTFT: 1.671
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamRationalPessimist
+T2121212TT12121212TT1212TT12TTTT1212TT121212TTTDTT12TT12TT12212112TT12TT12TT
+Round ended
+Average payoff of player TeamTitForTat10: 1.658
+Average payoff of player TeamRationalPessimist: 1.697
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamTitForTat9
+1212TT121212TTTT1212TTTT1212TTTTTT12TT1212TT12TT1212TT1212121212TT12TT121212TT12
+Round ended
+Average payoff of player TeamWatermelon: 1.688
+Average payoff of player TeamTitForTat9: 1.688
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamRationalPessimist
+22T2222T2222222TT2T222222T2T22222222T222222222222222T222222222T2222TT2222222
+Round ended
+Average payoff of player TeamRationalTruster: .316
+Average payoff of player TeamRationalPessimist: 2.842
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamWatermelon
+TT2212121212TTTTTTTT1212TT12TT1212121212TTTT1212TT121212TT1212121212TT1212TT12
+Round ended
+Average payoff of player TeamTitForTat5: 1.628
+Average payoff of player TeamWatermelon: 1.705
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamRationalScrapper
+211212TTTTDDTDTT12121212DT12TT12121212TD1212DT1212DT12TTTT12DDDTDTTT121212TD121212
+Round ended
+Average payoff of player TeamTitForTat5: 1.561
+Average payoff of player TeamRationalScrapper: 1.561
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalTruster
+1111111111111111T111111TT11T111T1T1T111T11111T11T1111T11111111D1111T11111111
+Round ended
+Average payoff of player TeamRationalPessimist: 2.816
+Average payoff of player TeamRationalTruster: .329
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamRationalUtilitarian
+T22D21T212T121212211122T2111D1T111121111T1T12DD11121D1112D11DTDD112T221DD1T2
+Round ended
+Average payoff of player TeamNihilist: 1.789
+Average payoff of player TeamRationalUtilitarian: 1.197
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamRationalPessimist
+T212TDTT121212TTTT1212121212TTTT12121212TTTTTT12TTTT12TT121212121212TT1212TTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 1.675
+Average payoff of player TeamRationalPessimist: 1.712
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat9
+1212TT121221TT12121212TT1212121212TTTT1212121212TT1212DT121212TT12TT121212TT12
+Round ended
+Average payoff of player TeamRationalPessimist: 1.615
+Average payoff of player TeamTitForTat9: 1.615
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamRationalQueller
+2DDD12TD12DDTD1212TD1212DD1212DT121212DD12121212121212DDDD12121212121212DD121212
+Round ended
+Average payoff of player TeamTitForTat5: 1.388
+Average payoff of player TeamRationalQueller: 1.425
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamRationalQueller
+DD121212121212DD12121212DD12121212TD1212TT1212DDDD12DT12DD1212DD12DD12121212
+Round ended
+Average payoff of player TeamWatermelon: 1.408
+Average payoff of player TeamRationalQueller: 1.408
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamRationalQueller
+2DTDDD121212DD12DTDD12TD12121212121212DD1212DD12DDDT1212DDTT121212DD121212DD12DD
+Round ended
+Average payoff of player TeamLessBetrayal: 1.362
+Average payoff of player TeamRationalQueller: 1.400
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamNihilist
+TD11111111T111121111111111121T1111111111121111111111111111111111111111111111
+Round ended
+Average payoff of player TeamTitForTat7: 2.816
+Average payoff of player TeamNihilist: .211
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat1
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat1: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamTitForTat9
+122222222T222222222222222222T2222222T2T2221222222222122222222T22222222222222
+Round ended
+Average payoff of player TeamNihilist: .250
+Average payoff of player TeamTitForTat9: 2.816
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamWatermelon
+1212TT12TT121212TTTT1212TT12TT12TT12TT1212TT12TTTT12TT121212121212TT12121212TT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.679
+Average payoff of player TeamWatermelon: 1.679
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalPessimist
+TT12TT121212TT12121212TT1212121212121212DD1212121212TT121212TT121212TTTT12TT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.605
+Average payoff of player TeamRationalPessimist: 1.605
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamTitForTat4
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamTitForTat4: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamMonkey
+T21TD11212TT1T1111121T12TT1212121TT1121211121T121T1T12TT1T12TT12121TTT12121212
+Round ended
+Average payoff of player TeamTitForTat5: 1.936
+Average payoff of player TeamMonkey: 1.321
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamRationalPessimist
+1212121212TTTDTT12TT1212121212121212TTTT12TT121212TT1212TDDTDD12TD12121212TTTT12
+Round ended
+Average payoff of player TeamWatermelon: 1.600
+Average payoff of player TeamRationalPessimist: 1.600
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalQueller
+12DT1212TTTDTTTD1212121212TTTD12TT1212TT12TD1212121212DDDT1212TT12TDTD121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.566
+Average payoff of player TeamRationalQueller: 1.566
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat10
+12121212TT1212TTTT12TT12121212TTTT1212TTTT121212TT1212TTTT12TT12TTTT12TT121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.692
+Average payoff of player TeamTitForTat10: 1.692
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat2
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat2: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamTitForTat9
+T112221222T222TT222T2T221212TTTT122T222222TT12TTTT222212TT1222222222121222T2
+Round ended
+Average payoff of player TeamMonkey: .961
+Average payoff of player TeamTitForTat9: 2.303
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamMoreBetralTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamMoreBetralTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalUtilitarian
+1111111111111111111T11111T11111111111111T11T111T1111111TT1111T11111T11111111
+Round ended
+Average payoff of player TeamRationalPessimist: 2.882
+Average payoff of player TeamRationalUtilitarian: .237
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamTitForTat1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat10: 2.000
+Average payoff of player TeamTitForTat1: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamMoreBetralTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamMoreBetralTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreCoopTFT: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat9
+TT12TDTT12121212TTTTTTTTTT1212TTTTTTTT1212TT12121212TT1212121212TT1212TT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.697
+Average payoff of player TeamTitForTat9: 1.697
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamTitForTat1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamTitForTat1: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamMonkey
+222222222222221T22T2T22222T22222TTTT21TT222TT2T2T22TT222222222TT222222222T2122
+Round ended
+Average payoff of player TeamRationalTruster: .603
+Average payoff of player TeamMonkey: 2.641
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamRationalRealist
+DD121212121212121212TT1212TDTDDTDD12121212121212DD121212TDDT12121212DD12DDTT
+Round ended
+Average payoff of player TeamRationalQueller: 1.461
+Average payoff of player TeamRationalRealist: 1.461
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreBetralTFT: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamTFTADC
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamTFTADC: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamMoreBetralTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamMoreBetralTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat2
+TTTT1212TT1212TT121212TT1212TT12TTTT1212TTTD12TT1212DT1212TTTT12121212TT121212TT12
+Round ended
+Average payoff of player TeamRationalPessimist: 1.671
+Average payoff of player TeamTitForTat2: 1.671
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat8
+12TT12121212TT1212TT1212TT12121212TT12TT1212121212TT12TT12TTTTTT121212TT1212TTDT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.662
+Average payoff of player TeamTitForTat8: 1.662
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamRationalPessimist
+T2121212121212TT1212TTTT1212121212TT1212TTTT1212121212121212TT12TT12121212121212
+Round ended
+Average payoff of player TeamLessBetrayal: 1.588
+Average payoff of player TeamRationalPessimist: 1.625
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalRealist
+Team 2: TeamTitForTat3
+12TTTT12TT12TT12TTTT12TT12TTTTTT121212TTTT12TTTTTT1212TT12TT12TT12TTTT121212
+Round ended
+Average payoff of player TeamRationalRealist: 1.763
+Average payoff of player TeamTitForTat3: 1.763
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalQueller
+1212DDTT121212TD12TD121212TT12121212DDTDTT12121212TDTT121212121212TD121212DD
+Round ended
+Average payoff of player TeamRationalPessimist: 1.513
+Average payoff of player TeamRationalQueller: 1.513
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamTitForTat9
+DT12TD12DD12121212DDDTDDDD121212DD1212DDDTDT1212121212121212121212DD12DD12DD
+Round ended
+Average payoff of player TeamRationalQueller: 1.382
+Average payoff of player TeamTitForTat9: 1.382
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamRationalPessimist
+22222222222TT22222222TT222222T222222222T22222222T222222222222222T2222T22222222
+Round ended
+Average payoff of player TeamRationalTruster: .231
+Average payoff of player TeamRationalPessimist: 2.885
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamMonkey
+222T222T22222TTTTTTT2222T2222T2222222T2222222T222TT2T2T2T2222TT22T2222222T2222
+Round ended
+Average payoff of player TeamRationalOptimist: .564
+Average payoff of player TeamMonkey: 2.718
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamRationalRealist
+2212TT121212TTTT12TT12121212121212TT1212TTTT12TT121212121212121212TTTT121212
+Round ended
+Average payoff of player TeamTitForTat7: 1.592
+Average payoff of player TeamRationalRealist: 1.671
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalUtilitarian
+Team 2: TeamRationalQueller
+22222T22222222222222T2222222222222T22222T22222222222222222222222222222222222
+Round ended
+Average payoff of player TeamRationalUtilitarian: .105
+Average payoff of player TeamRationalQueller: 2.947
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamRationalPessimist
+T21212TTTD121212TT121212TTTT121212TT1212TT121212TT12121212TT1212121212TTTT1212TT
+Round ended
+Average payoff of player TeamTFTADC: 1.625
+Average payoff of player TeamRationalPessimist: 1.663
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamRationalQueller
+DD12121212DD12DDDDDDDD12121212DDDT12DD121212TT121212DDTD121212121212DTDDTD1212DD12
+Round ended
+Average payoff of player TeamTitForTat6: 1.378
+Average payoff of player TeamRationalQueller: 1.378
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat8
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat8: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalRealist
+12TT12TTTT12TT1212TTTT1212TT1212TTTT12121212TT12TT12TTTT12TT1212121212DT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.684
+Average payoff of player TeamRationalRealist: 1.684
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamWatermelon
+222222222T221222222222222222222222222222222222222T2222222222222222222222222222
+Round ended
+Average payoff of player TeamNihilist: .090
+Average payoff of player TeamWatermelon: 2.936
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalScrapper
+Team 2: TeamRationalUtilitarian
+1111111111111111TT11111111111T111111111111111111T1111111111T1T11111111111111
+Round ended
+Average payoff of player TeamRationalScrapper: 2.921
+Average payoff of player TeamRationalUtilitarian: .158
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamRationalPessimist
+T21212TD12121212TT121212TT12TT12121212121212121212TTTTTTTTTT12TTTT1212TD12TT12
+Round ended
+Average payoff of player TeamTitForTat5: 1.628
+Average payoff of player TeamRationalPessimist: 1.667
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamTitForTat3
+TTTTTTTT12TT1212DDTTTT1212TTTT12121212TTTTTT12121212TT12TT12121212TT12TT1212
+Round ended
+Average payoff of player TeamWatermelon: 1.697
+Average payoff of player TeamTitForTat3: 1.697
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamTitForTat10
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamTitForTat10: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalRealist
+Team 2: TeamMoreMoreTFT
+TTTT12121212TT12121212TT12TT12121212121212121212121212TT1212TT1212121212121212
+Round ended
+Average payoff of player TeamRationalRealist: 1.590
+Average payoff of player TeamMoreMoreTFT: 1.590
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalQueller
+1212TD12TD12DDDDTT12TD1212121212121212TT121212TT1212DDDT12DDDD121212121212121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.475
+Average payoff of player TeamRationalQueller: 1.475
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalScrapper
+TT1212121212TT1212TTTDTTTT12DTTT12DT1212TTTT12TTTT1212121221TD12TT1212TT121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.654
+Average payoff of player TeamRationalScrapper: 1.654
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamMoreBetralTFT
+1212DD12TTTD12DD12DDDDDDDD12121212121212DDDTDDTT121212DDDD12TT12DDTT12DD1212TT12DD1212
+Round ended
+Average payoff of player TeamRationalQueller: 1.407
+Average payoff of player TeamMoreBetralTFT: 1.407
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamNihilist
+1111211T1111111111T1111111111111111T1T111112111111111111111111111111111111111111
+Round ended
+Average payoff of player TeamTitForTat5: 2.875
+Average payoff of player TeamNihilist: .175
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamRationalQueller
+T212DD1212TT1212DDDD12TD121212DT1212DD121212121212DDDD12DD12121212TD1212TDDD121212
+Round ended
+Average payoff of player TeamTitForTat6: 1.402
+Average payoff of player TeamRationalQueller: 1.439
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamTitForTat4
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamTitForTat4: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamRationalQueller
+221212DDDD1212TTTD12DD1212DD121212TT12DD12TD121212121212DDDTTTTD12DDDDTD1212
+Round ended
+Average payoff of player TeamTitForTat5: 1.395
+Average payoff of player TeamRationalQueller: 1.474
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreCoopTFT: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat3
+TTTTTTTT1212121212TTTT121212TTTT12TTTTTT12TTTT12TTTT1212TTTTDT12TTTT1212121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.744
+Average payoff of player TeamTitForTat3: 1.744
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamTitForTat4
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamTitForTat4: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamLessBetrayal
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamLessBetrayal: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat2
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat2: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalRealist
+Team 2: TeamRationalUtilitarian
+111111111T1111T11T111111111T111111111T111111111111111111111T1111T11111T11T1111
+Round ended
+Average payoff of player TeamRationalRealist: 2.885
+Average payoff of player TeamRationalUtilitarian: .231
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat4: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamWatermelon
+2T22222T22T2222T22TT22T2222222T2T22222222T22222T222222222222222222222222T222T2
+Round ended
+Average payoff of player TeamRationalOptimist: .333
+Average payoff of player TeamWatermelon: 2.833
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalPessimist
+1212TT12TT12TT121212121212TT12TTTT12TTTT12TT1212DT12TT1212TT12TTTD121212TT12121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.659
+Average payoff of player TeamRationalPessimist: 1.659
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalUtilitarian
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalUtilitarian: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamMonkey
+2112121T121T12TT1212121212111111121T1T111211111111121T121T12TT12121212111T121212
+Round ended
+Average payoff of player TeamTitForTat10: 2.038
+Average payoff of player TeamMonkey: 1.100
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamTitForTat4
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat10: 2.000
+Average payoff of player TeamTitForTat4: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalQueller
+TT1212DDTTTD12TTDD12121212TT12TDTD12TD121212121212DD12121212121212TT1212TD1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.526
+Average payoff of player TeamRationalQueller: 1.526
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamNihilist
+2D112TTT2T11222222111T2T2212111121121122112TT2T122112D122DTD2111D2221111T121
+Round ended
+Average payoff of player TeamRationalTruster: 1.579
+Average payoff of player TeamNihilist: 1.500
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalUtilitarian
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalUtilitarian: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamTitForTat1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat4: 2.000
+Average payoff of player TeamTitForTat1: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamNihilist
+11212221222D222TDD2TT2212TD21211D12221DD12222DD2221222222122T2221222D1D2D22T
+Round ended
+Average payoff of player TeamRationalOptimist: .908
+Average payoff of player TeamNihilist: 2.013
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalScrapper
+121212TTTTTTTTTT12121212TT12TT12TTTT12TT1212121212TTTTTTTT12121212TT1212121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.692
+Average payoff of player TeamRationalScrapper: 1.692
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamRationalRealist
+22TT121212121212TTTTTTTTTT1212TT12121212TTTT1212DD12121212121212TT1212TTTT12TT
+Round ended
+Average payoff of player TeamTFTADC: 1.615
+Average payoff of player TeamRationalRealist: 1.692
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamRationalTruster
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamRationalTruster: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalQueller
+Team 2: TeamTitForTat2
+1DDD12121212DDDD1212DD12DDDDDD121212121212121212TTDT121212DDTD121212DT12DDDD
+Round ended
+Average payoff of player TeamRationalQueller: 1.395
+Average payoff of player TeamTitForTat2: 1.355
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamRationalPessimist
+2212TTTT121212TT121212TTTT1212TTTT12121212TT12121212TT121212TTTTTTTT1212121212
+Round ended
+Average payoff of player TeamTitForTat7: 1.628
+Average payoff of player TeamRationalPessimist: 1.705
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamWatermelon
+TTTTTT12TDTT12TTTTTTTTTT12TTTT12TT1212TT12TT12TTTT121212TT1212TTTTTT12TT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.776
+Average payoff of player TeamWatermelon: 1.776
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat1
+12TTTTTT12TT1212TT12TT12TT1212TT12121212TTTT12121212TTTTDT1212TT12TT1212TTTT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.711
+Average payoff of player TeamTitForTat1: 1.711
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamTitForTat1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamTitForTat1: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTFTADC: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamTitForTat4
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreBetralTFT: 2.000
+Average payoff of player TeamTitForTat4: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalRealist
+Team 2: TeamTitForTat9
+121212121212TTTT1212121212TTTT12TT12121212121212TT121212TTTT121212TT12121212TT
+Round ended
+Average payoff of player TeamRationalRealist: 1.628
+Average payoff of player TeamTitForTat9: 1.628
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamRationalOptimist
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamRationalOptimist: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamRationalQueller
+T21212121212TDDDDT12DD12TD1212DD1212121212DD121212121212121212DD12DD1212121212
+Round ended
+Average payoff of player TeamTFTADC: 1.410
+Average payoff of player TeamRationalQueller: 1.449
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamWatermelon
+22222222222T2222T2222222222222T2TT2222222222TD22222222222TT22D222222222222222T2T222T222T
+Round ended
+Average payoff of player TeamRationalTruster: .295
+Average payoff of player TeamWatermelon: 2.818
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalUtilitarian
+1T1T111T11T111111111111TT11T1111T111T111111111111111TT111TT1111111T1111111111T1111T1
+Round ended
+Average payoff of player TeamRationalPessimist: 2.810
+Average payoff of player TeamRationalUtilitarian: .381
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat8
+12121212121212TD12TT12TT121212TT121212DT1212TT1212TT1212TTTT12TTTT1212DTTT121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.625
+Average payoff of player TeamTitForTat8: 1.625
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamTitForTat9
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat10: 2.000
+Average payoff of player TeamTitForTat9: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTFTADC
+TT12TTTT1212TT12121212121212TT12TT1212TTTT12TT12121212DT1212TT121212121212121212TT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.634
+Average payoff of player TeamTFTADC: 1.634
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalRealist
+Team 2: TeamTitForTat8
+12TT12TT1212TT12TTTT121212121212TT1212TT1212121212121212TT12121212TT12121212
+Round ended
+Average payoff of player TeamRationalRealist: 1.618
+Average payoff of player TeamTitForTat8: 1.618
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamTitForTat4
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 2.000
+Average payoff of player TeamTitForTat4: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamMoreBetralTFT
+1212TT121212121212TT12TTTT1212TTTTTTTT121212TT1212TT1212TTTTTTTT12TT12121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.697
+Average payoff of player TeamMoreBetralTFT: 1.697
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamRationalQueller
+2D1212121212DDDDTD12DD1212DD12121212DDDD121212TD1212DD12DTDD1212121212TT1212
+Round ended
+Average payoff of player TeamTitForTat10: 1.382
+Average payoff of player TeamRationalQueller: 1.421
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamRationalScrapper
+2222222222222222222222TT222222222222222222222222222222222222222222222222221222T22222
+Round ended
+Average payoff of player TeamNihilist: .107
+Average payoff of player TeamRationalScrapper: 2.929
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamRationalPessimist
+T2TT12121212TT1212TDTT12211212TTTT12TTTTTT121212TTTTTT12TT1212TT121212TTTTDTTT
+Round ended
+Average payoff of player TeamTFTADC: 1.692
+Average payoff of player TeamRationalPessimist: 1.731
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamMoreBetralTFT
+2TT12222222222222222222T22222222222212222222222222222222222212T22222122222222222
+Round ended
+Average payoff of player TeamNihilist: .250
+Average payoff of player TeamMoreBetralTFT: 2.800
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat3
+12TD12TT121212TT121212TT1212TD121212121212TT121212TT122112TD12121212TTTTTT1212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.603
+Average payoff of player TeamTitForTat3: 1.603
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat6
+Team 2: TeamMoreMoreTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat6: 2.000
+Average payoff of player TeamMoreMoreTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat8
+Team 2: TeamRationalQueller
+2DTD12TT1212DD12121212DTDTDD12TTDDDTDD1212DD121212TT12TT12DD12DD12TD121212DD121212DD
+Round ended
+Average payoff of player TeamTitForTat8: 1.417
+Average payoff of player TeamRationalQueller: 1.452
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamMoreBetralTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat10: 2.000
+Average payoff of player TeamMoreBetralTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamTitForTat10
+1222222222222222222T22222222222222222222T2222222222222222222222222222222T22212
+Round ended
+Average payoff of player TeamNihilist: .154
+Average payoff of player TeamTitForTat10: 2.885
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamRationalQueller
+T212DD12DD12121212TD12DD1212TTTDDDDD1212TD12DDDDDT121212121212DD121212DD121212TT
+Round ended
+Average payoff of player TeamTitForTat7: 1.400
+Average payoff of player TeamRationalQueller: 1.437
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamTitForTat1
+122T12TT1212121212T2121212121222121212TT2212T22TTT2222TTD22212TTT2221212121212
+Round ended
+Average payoff of player TeamMonkey: 1.244
+Average payoff of player TeamTitForTat1: 1.936
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat9
+TT12TT12TTTT1212TTTT12TT121212121212121212TT1212TDTTTT1212TT121212DD12121212
+Round ended
+Average payoff of player TeamRationalPessimist: 1.632
+Average payoff of player TeamTitForTat9: 1.632
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamNihilist
+12111T111T11111T1111111111111111111111111111TT111T1111111111121111111211111111
+Round ended
+Average payoff of player TeamTFTADC: 2.808
+Average payoff of player TeamNihilist: .269
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamTitForTat8
+1222222222222222T22222222222T222T2222222222222221222222222222222222222222222
+Round ended
+Average payoff of player TeamNihilist: .158
+Average payoff of player TeamTitForTat8: 2.882
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamRationalQueller
+2222222222T222222222222T2222222222T222222222222222222222T2T22222222222222222222222222222
+Round ended
+Average payoff of player TeamRationalOptimist: .114
+Average payoff of player TeamRationalQueller: 2.943
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamRationalQueller
+2212T2121222221222TTT21212221222T2121222TT12222112122212121212221222TTT212T2T2
+Round ended
+Average payoff of player TeamMonkey: 1.038
+Average payoff of player TeamRationalQueller: 2.115
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat9
+12TT1212TT1212DTTTTTTTTTTT1212121212TT1212TTTT1212TT12TT12121212TD12TT12TTTT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.697
+Average payoff of player TeamTitForTat9: 1.697
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreBetralTFT: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamTitForTat4
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamTitForTat4: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat2
+Team 2: TeamRationalPessimist
+2T12121212TT121212TT12TT12TT12TT1212121221121221TT12TT1212TT12121212TT12TTTT1212TT121212
+Round ended
+Average payoff of player TeamTitForTat2: 1.625
+Average payoff of player TeamRationalPessimist: 1.659
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamLessBetrayal
+TT1212121212121212TTTTTT12121212121212TT1212TT12TT1212121212TTTT12TTTT12TT12DD
+Round ended
+Average payoff of player TeamRationalPessimist: 1.641
+Average payoff of player TeamLessBetrayal: 1.641
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamRationalPessimist
+1212TT12TT12121212TTTTTT12TT1212TT1212121212DDTT12121212TT12121212TTTT1212TT12
+Round ended
+Average payoff of player TeamRationalPessimist: 1.641
+Average payoff of player TeamRationalPessimist: 1.641
+*********************
+*********************
+Starting new round.
+Team 1: TeamNihilist
+Team 2: TeamRationalPessimist
+222222222222222222T222221222222212222222222222222222221222222212222222222222
+Round ended
+Average payoff of player TeamNihilist: .184
+Average payoff of player TeamRationalPessimist: 2.829
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamTitForTat1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamTitForTat1: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalScrapper
+Team 2: TeamTitForTat3
+1212121212DD12DD12TTDT12DD121212DDDTDTDDTTDT121212TT12TD1212TTTDDTDT1212DD12
+Round ended
+Average payoff of player TeamRationalScrapper: 1.474
+Average payoff of player TeamTitForTat3: 1.474
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamTitForTat1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreCoopTFT: 2.000
+Average payoff of player TeamTitForTat1: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamTitForTat6
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamTitForTat6: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat4
+Team 2: TeamTitForTat8
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat4: 2.000
+Average payoff of player TeamTitForTat8: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalOptimist
+Team 2: TeamTitForTat7
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalOptimist: 2.000
+Average payoff of player TeamTitForTat7: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalTruster
+Team 2: TeamMoreCoopTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamRationalTruster: 2.000
+Average payoff of player TeamMoreCoopTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamRationalScrapper
+2T121212TT12DD121212DDDD121212121212121212TD121212TTDT121212DT12DD121212121212
+Round ended
+Average payoff of player TeamMoreBetralTFT: 1.462
+Average payoff of player TeamRationalScrapper: 1.500
+*********************
+*********************
+Starting new round.
+Team 1: TeamTFTADC
+Team 2: TeamMonkey
+TTT2TT121T1T1212121T12111112121211T11212TT1212T112TT1212121212111212TT1T12TT12
+Round ended
+Average payoff of player TeamTFTADC: 1.872
+Average payoff of player TeamMonkey: 1.372
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat1
+Team 2: TeamRationalPessimist
+TTTT2212121212TT1212TD12121212TDTT12121212TT12TTDT12TT12TT12TT1212TTTT12TTTT
+Round ended
+Average payoff of player TeamTitForTat1: 1.632
+Average payoff of player TeamRationalPessimist: 1.711
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat5
+Team 2: TeamMoreBetralTFT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat5: 2.000
+Average payoff of player TeamMoreBetralTFT: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat10
+Team 2: TeamRationalUtilitarian
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat10: 2.000
+Average payoff of player TeamRationalUtilitarian: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamMonkey
+Team 2: TeamMoreCoopTFT
+12T2T21222TT1212TTTTTT122222221222122212122T12222T1222T212221212121222T212T22212
+Round ended
+Average payoff of player TeamMonkey: 1.050
+Average payoff of player TeamMoreCoopTFT: 2.138
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamRationalRealist
+TTTTTTTTTTTT12TT12TT1212121212121212TT12TT121212TTTT12211212TT1212TTTTTTTTTT12
+Round ended
+Average payoff of player TeamWatermelon: 1.731
+Average payoff of player TeamRationalRealist: 1.731
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreCoopTFT
+Team 2: TeamTitForTat3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamMoreCoopTFT: 2.000
+Average payoff of player TeamTitForTat3: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat1
+Team 2: TeamRationalQueller
+2T12DT121212121212121212121212DD1212DDTD12TDDD12TDDDTD1212121212DTDD12DD121212
+Round ended
+Average payoff of player TeamTitForTat1: 1.410
+Average payoff of player TeamRationalQueller: 1.449
+*********************
+*********************
+Starting new round.
+Team 1: TeamWatermelon
+Team 2: TeamTitForTat4
+12121212TT1212TTTT121212TT12TTTT1212TTTT12TTTT12TTTT1212121212TT12121212121212
+Round ended
+Average payoff of player TeamWatermelon: 1.667
+Average payoff of player TeamTitForTat4: 1.667
+*********************
+*********************
+Starting new round.
+Team 1: TeamMoreBetralTFT
+Team 2: TeamRationalQueller
+2D1212TTDDDD12121212TDTD12DDDTDTDD12DD12DD121212DD12TT121212DD12DD12DD121212
+Round ended
+Average payoff of player TeamMoreBetralTFT: 1.368
+Average payoff of player TeamRationalQueller: 1.408
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat3
+TT1212TT121212TT12TT12TTTT1212TTTTTTTTTTTTTTTDTT1212TT12TT121212TTTT121212TT
+Round ended
+Average payoff of player TeamRationalPessimist: 1.750
+Average payoff of player TeamTitForTat3: 1.750
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamRationalRealist
+T212TT12TT12TTTT12TTTT1212DDTT12121212TTTTTT1212TTTT12121212TT121212TTTTTTTTTT
+Round ended
+Average payoff of player TeamLessBetrayal: 1.705
+Average payoff of player TeamRationalRealist: 1.744
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamRationalScrapper
+D2TD12TDDD12121212TD121212DTTDTT121212DD12TDTDDTDTDD12DT121212TT1212DT12DT12
+Round ended
+Average payoff of player TeamLessBetrayal: 1.461
+Average payoff of player TeamRationalScrapper: 1.500
+*********************
+*********************
+Starting new round.
+Team 1: TeamRationalPessimist
+Team 2: TeamTitForTat7
+TTTTTTTT12TTTT1212TT121212DT12121212TT121212TD12DT121212TT12TT1212DT12TT12TT12
+Round ended
+Average payoff of player TeamRationalPessimist: 1.654
+Average payoff of player TeamTitForTat7: 1.654
+*********************
+*********************
+Starting new round.
+Team 1: TeamTitForTat7
+Team 2: TeamTitForTat2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+Round ended
+Average payoff of player TeamTitForTat7: 2.000
+Average payoff of player TeamTitForTat2: 2.000
+*********************
+*********************
+Starting new round.
+Team 1: TeamLessBetrayal
+Team 2: TeamRationalQueller
+22DD1212121212DD121212TD121212TTDD12121212121212121212DD1212121212DT1212DTTD
+Round ended
+Average payoff of player TeamLessBetrayal: 1.421
+Average payoff of player TeamRationalQueller: 1.500
+*********************
+Final ranking:
+0 (55.019) : TeamTitForTat9
+1 (54.882) : TeamTitForTat4
+2 (54.880) : TeamMoreCoopTFT
+3 (54.870) : TeamMoreBetralTFT
+4 (54.854) : TeamTitForTat3
+5 (54.852) : TeamTitForTat10
+6 (54.822) : TeamTitForTat2
+7 (54.798) : TeamTitForTat5
+8 (54.689) : TeamTitForTat8
+9 (54.646) : TeamTitForTat1
+10 (54.638) : TeamTitForTat6
+11 (54.596) : TeamTitForTat7
+12 (54.566) : TeamMoreMoreTFT
+13 (54.524) : TeamTFTADC
+14 (54.476) : TeamLessBetrayal
+15 (53.777) : TeamRationalRealist
+16 (53.456) : TeamWatermelon
+17 (53.329) : TeamRationalPessimist
+18 (53.274) : TeamRationalPessimist
+19 (53.077) : TeamRationalPessimist
+20 (53.037) : TeamRationalPessimist
+21 (52.788) : TeamRationalPessimist
+22 (50.646) : TeamRationalScrapper
+23 (48.306) : TeamRationalQueller
+24 (47.913) : TeamRationalQueller
+25 (40.450) : TeamMonkey
+26 (38.723) : TeamRationalTruster
+27 (38.124) : TeamRationalUtilitarian
+28 (38.104) : TeamRationalOptimist
+29 (10.663) : TeamNihilist

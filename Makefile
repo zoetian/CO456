@@ -6,7 +6,7 @@ clean:
 	rm -rf *.class
 
 fast:
-	rm -rf *.class
+	rm -rf *.class *.txt
 	javac *.java
 	wait
-	java Tournament full 
+	java Tournament full > result.txt 
