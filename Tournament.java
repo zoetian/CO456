@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 public class Tournament {
-	public static boolean CHECK_MEMORY = false;
+	public static boolean CHECK_MEMORY = true;
 	private int numPlayers;
 	private Random rand;
 	private DecimalFormat numberFormat;
