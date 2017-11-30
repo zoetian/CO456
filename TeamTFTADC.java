@@ -109,9 +109,10 @@ public class TeamTFTADC extends Player {
 
 		// If you cannot force a tie, and it is still possible to tie, and trust
 		// remains, then play trustingly:
+		//System.out.println(bestScoreRealist+" "+bestScoreCooperative+" "+bestScoreTruster);
 		if (bestScoreRealist != 2 && bestScoreCooperative == 3 && trust > 0) {
 			return nodeCooperative.bestMove;
-		} else if (isTrustModeOn) {
+		} else if (bestScoreRealist != 2 && bestScoreCooperative == 10 && isTrustModeOn && trust > 0) {
 			return nodeTruster.bestMove;
 		} else { // In all other cases, play realistically:
 			return nodeRealist.bestMove;
