@@ -1,5 +1,3 @@
-
-
 public class MoveDescription {
 
 	private String pieceToMove;

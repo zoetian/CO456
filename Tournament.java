@@ -1,12 +1,9 @@
-
-
-
 import java.io.*;
 import java.text.DecimalFormat;
 import java.util.*;
 
 public class Tournament {
-	public static boolean CHECK_MEMORY = true;
+
 	private int numPlayers;
 	private Random rand;
 	private DecimalFormat numberFormat;
@@ -29,7 +26,6 @@ public class Tournament {
 		// New players can be registered here
 		playerFactory.registerPlayer("TeamMonkey", i -> new TeamMonkey(i));
 		playerFactory.registerPlayer("TeamNihilist", i -> new TeamNihilist(i));
-
 		playerFactory.registerPlayer("TeamRationalOptimist", i -> TeamRational.createOptimist(i));
 		playerFactory.registerPlayer("TeamRationalPessimist", i -> TeamRational.createPessimist(i));
 		playerFactory.registerPlayer("TeamRationalQueller", i -> TeamRational.createQueller(i));
@@ -38,62 +34,49 @@ public class Tournament {
 		playerFactory.registerPlayer("TeamRationalTruster", i -> TeamRational.createTruster(i));
 		playerFactory.registerPlayer("TeamRationalUtilitarian", i -> TeamRational.createUtilitarian(i));
 
-		playerFactory.registerPlayer("TeamRational", i -> new TeamRational(i));
+		playerFactory.registerPlayer("TeamTitForTat", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamDoubleAgent", i -> new TeamDoubleAgent(i));
+		playerFactory.registerPlayer("TeamHandshaker", i -> new TeamHandshaker(i));
+
+		// alliance list
+		/**
+		playerFactory.registerPlayer("TeamAlphaChess0", i -> new TeamAlphaChess0(i));
+		playerFactory.registerPlayer("TeamBestResponse", i -> new TeamBestResponse(i));
+		playerFactory.registerPlayer("TeamBigBallerBrand", i -> new TeamBigBallerBrand(i));
+		playerFactory.registerPlayer("TeamBlue", i -> new TeamBlue(i));
+		playerFactory.registerPlayer("TeamBOOPS", i -> new TeamBOOPS(i));
+		playerFactory.registerPlayer("TeamBrentastic", i -> new TeamBrentastic(i));
+		playerFactory.registerPlayer("TeamDddddd", i -> new TeamDddddd(i));
+		playerFactory.registerPlayer("TeamDROPLET", i -> new TeamDROPLET(i));
+		playerFactory.registerPlayer("TeamEMANMEAT", i -> new TeamEMANMEAT(i));
+		playerFactory.registerPlayer("TeamFUNKYMONKEYS", i -> new TeamFUNKYMONKEYS(i));
+		playerFactory.registerPlayer("TeamGOOSEMATE", i -> new TeamGOOSEMATE(i));
+		playerFactory.registerPlayer("TeamGUCKSQUAD", i -> new TeamGUCKSQUAD(i));
+		playerFactory.registerPlayer("TeamHAL9001", i -> new TeamHAL9001(i));
+		playerFactory.registerPlayer("TeamHumongous", i -> new TeamHumongous(i));
+		playerFactory.registerPlayer("TeamInfeasible", i -> new TeamInfeasible(i));
+		playerFactory.registerPlayer("TeamJinners", i -> new TeamJinners(i));
+		playerFactory.registerPlayer("TeamKismet", i -> new TeamKismet(i));
+		playerFactory.registerPlayer("TeamLEEROOOOOOY", i -> new TeamLEEROOOOOOY(i));
+		playerFactory.registerPlayer("TeamLEMONCHURRO", i -> new TeamLEMONCHURRO(i));
+		playerFactory.registerPlayer("TeamMachineLearn", i -> new TeamMachineLearn(i));
+		playerFactory.registerPlayer("TeamMaverick", i -> new TeamMaverick(i));
+		playerFactory.registerPlayer("TeamMonkeyKing", i -> new TeamMonkeyKing(i));
+		playerFactory.registerPlayer("TeamOreo", i -> new TeamOreo(i));
+		playerFactory.registerPlayer("TeamMonkeyKing", i -> new TeamPendo(i));
+		playerFactory.registerPlayer("TeamPredator", i -> new TeamPredator(i));
+		playerFactory.registerPlayer("TeamPVKHNOHX", i -> new TeamPVKHNOHX(i));
+		playerFactory.registerPlayer("TeamRocket", i -> new TeamRocket(i));
+		playerFactory.registerPlayer("TeamSnek", i -> new TeamSnek(i));
+		playerFactory.registerPlayer("TeamTANGOMANGOS", i -> new TeamTANGOMANGOS(i));
+		playerFactory.registerPlayer("TeamTwoBrownGuys", i -> new TeamTwoBrownGuys(i));
+		playerFactory.registerPlayer("TeamUtilityMaxim", i -> new TeamUtilityMaxim(i));
 		playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
-
-		playerFactory.registerPlayer("TeamTFTADC", i -> new TeamTFTADC(i));
-		playerFactory.registerPlayer("TeamLessBetrayal", i -> new TeamLessBetrayal(i));
-		playerFactory.registerPlayer("TeamMoreBetralTFT", i -> new TeamMoreBetralTFT(i));
-		playerFactory.registerPlayer("TeamMoreCoopTFT", i -> new TeamMoreCoopTFT(i));
-		playerFactory.registerPlayer("TeamMoreMoreTFT", i -> new TeamMoreMoreTFT(i));
-		playerFactory.registerPlayer("TeamMoreMoreTFT", i -> new TeamMoreMoreTFT(i));
-
-		playerFactory.registerPlayer("TeamTitForTat1", i -> new TeamTitForTat(i));
-		playerFactory.registerPlayer("TeamTitForTat2", i -> new TeamTitForTat(i));
-		playerFactory.registerPlayer("TeamTitForTat3", i -> new TeamTitForTat(i));
-		playerFactory.registerPlayer("TeamTitForTat4", i -> new TeamTitForTat(i));
-		playerFactory.registerPlayer("TeamTitForTat5", i -> new TeamTitForTat(i));
-		playerFactory.registerPlayer("TeamTitForTat6", i -> new TeamTitForTat(i));
-		playerFactory.registerPlayer("TeamTitForTat7", i -> new TeamTitForTat(i));
-		playerFactory.registerPlayer("TeamTitForTat8", i -> new TeamTitForTat(i));
-		playerFactory.registerPlayer("TeamTitForTat9", i -> new TeamTitForTat(i));
-		playerFactory.registerPlayer("TeamTitForTat10", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat11", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat12", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat13", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat14", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat15", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat16", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat17", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat18", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat19", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat20", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat21", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat22", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat23", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat24", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat25", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat26", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat27", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat28", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat29", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat30", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat31", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat32", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat33", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat34", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat35", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat36", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat37", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat38", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat39", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat40", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat41", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat42", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat43", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat44", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTat45", i -> new TeamTitForTat(i));
-
+		playerFactory.registerPlayer("TeamWoops", i -> new TeamWoops(i));
+		playerFactory.registerPlayer("TeamYfnl", i -> new TeamYfnl(i));
+		playerFactory.registerPlayer("TeamZedModTwoZed", i -> new TeamZedModTwoZed(i));
+		playerFactory.registerPlayer("TeamZinger", i -> new TeamZinger(i));
+		**/
 	}
 
 	public Player getPlayer(String id) {
@@ -105,10 +88,10 @@ public class Tournament {
 		Player player = playerFactory.createPlayer(id, Parameters.MAX_NUM_MOVES);
 		boolean noLimitViolation = true;
 		noLimitViolation &= watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_CONSTRUCTOR, "constructor");
-		if(CHECK_MEMORY) System.out.println("Constructor of player " + player.getName() + " took "
+		System.out.println("Constructor of player " + player.getName() + " took "
 				+ numberFormat.format(watch.getElapsedTime()) + " seconds.");
 		noLimitViolation &= watch.enforceMemoryLimit(player, Parameters.MEMORY_LIMIT_CONSTRUCTOR, "constructor");
-		if(CHECK_MEMORY) System.out.println("Constructor of player " + player.getName() + " used " + Long.toString(watch.getMemoryUse())
+		System.out.println("Constructor of player " + player.getName() + " used " + Long.toString(watch.getMemoryUse())
 				+ " megabytes.\n");
 		if (!noLimitViolation) {
 			System.out.println("Turning player " + id + " into a monkey");
@@ -169,38 +152,55 @@ public class Tournament {
 		// Setting number of players
 		numPlayers = allPlayers.size();
 
-		// pair off players
-		int[][] pairsOfPlayers;
-		pairsOfPlayers = new int[(numPlayers * (numPlayers - 1)) / 2][];
+		// pair off players, by id number.
+		int[][] pairsOfIds;
+		pairsOfIds = new int[(numPlayers * (numPlayers - 1)) / 2][];
 		int count = 0;
 		for (int idPlayer1 = 0; idPlayer1 < numPlayers; ++idPlayer1) {
 			for (int idPlayer2 = idPlayer1 + 1; idPlayer2 < numPlayers; ++idPlayer2) {
-				pairsOfPlayers[count++] = new int[] { idPlayer1, idPlayer2 };
+				pairsOfIds[count++] = new int[] { idPlayer1, idPlayer2 };
 			}
 		}
 
 		// Setting Scores
 		double[] totalScore = new double[numPlayers];
 
-		Collections.shuffle(Arrays.asList(pairsOfPlayers));
-		for (int[] playersInThisRound : pairsOfPlayers) {
-			System.out.println("*********************");
-			System.out.println("Starting new round.");
+		Collections.shuffle(Arrays.asList(pairsOfIds));
+		for (int[] idsInThisRound : pairsOfIds) {
+			System.out.println("************************************************************************************");
+			System.out.println("Starting new series:");
 
-			// generate boards
+			// Generate all of the boards that will be played in the series.
+			// This is Parameters.MIN_NUM_DIFFERENT_BOARDS + (#heads when we flip a coin until tails).
 			int numBoards = getNumBoards();
 
-			Cell[][] startingPositions = new Cell[numBoards][];
-			for (int t = 0; t < numBoards; ++t) {
-				startingPositions[t] = randomStartingPositions();
+			Player[] playersInThisRound = new Player[] { allPlayers.get(idsInThisRound[0]), allPlayers.get(idsInThisRound[1]) };
+			
+			Cell[][] startingPositions = new Cell[2*numBoards][];
+			int[] whiteTeamNumbers = new int[2*numBoards];
+			int[] blackTeamNumbers = new int[2*numBoards];
+			//Loop over all mirror matches (so jump by 2 at a time):
+			for (int matchNumber = 0; matchNumber < 2*numBoards; matchNumber += 2) {
+				startingPositions[matchNumber] = randomStartingPositions();
+				startingPositions[matchNumber+1] = startingPositions[matchNumber];
+				//I hope this is safe... Should I make a proper copy instead?
+				
+				//Each mirror match has a random starting player:
+				if (rand.nextBoolean()) {
+					whiteTeamNumbers[matchNumber] = 0;
+					blackTeamNumbers[matchNumber] = 1;
+					whiteTeamNumbers[matchNumber+1] = 1;
+					blackTeamNumbers[matchNumber+1] = 0;
+				} else {
+					whiteTeamNumbers[matchNumber] = 1;
+					blackTeamNumbers[matchNumber] = 0;
+					whiteTeamNumbers[matchNumber+1] = 0;
+					blackTeamNumbers[matchNumber+1] = 1;
+				}
 			}
 
-			Player[] players = new Player[] { allPlayers.get(playersInThisRound[0]),
-					allPlayers.get(playersInThisRound[1]) };
-
 			// prepare players for round
-
-			for (Player player : players) {
+			for (Player player : playersInThisRound) {
 				watch.startCounting();
 				player.prepareForSeries();
 				watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_PREPARE_FOR_SERIES, "prepareForSeries()");
@@ -208,35 +208,61 @@ public class Tournament {
 
 			double[] averagePayoffInThisRound = new double[2];
 
-			for (int i = 0; i <= 1; ++i) {
-				System.out.println("Team " + (i + 1) + ": " + players[i].getName());
+			for (int teamNumber = 0; teamNumber <= 1; ++teamNumber) {
+				System.out.println("Team " + teamNumber + ": " + playersInThisRound[teamNumber].getName());
 			}
 
-			for (int t = 0; t < 2 * numBoards; ++t) {
+			// list the round numbers, and who plays white at each round:
+			if (!verbose) {
+				/*System.out.print("Match #:    ");
+				for (int matchNumber = 0; matchNumber < 2 * numBoards; matchNumber +=2) {
+					System.out.print(String.format("%02d", matchNumber));
+					System.out.print(" ");
+				}
+				System.out.print("\nWhite team: ");*/
+				System.out.print("White team: ");
+				for (int matchNumber = 0; matchNumber < 2 * numBoards; matchNumber +=2) {
+					System.out.print(whiteTeamNumbers[matchNumber]);
+					System.out.print(whiteTeamNumbers[matchNumber+1]);
+					System.out.print(" ");
+				}
+				System.out.print("\nOutcome:    ");
+			}
+			
+			for (int matchNumber = 0; matchNumber < 2 * numBoards; ++matchNumber) {
+				// These were randomly chosen so that in mirror matches, each team plays each colour:
+				int whiteTeamNumber=whiteTeamNumbers[matchNumber];
+				Player whitePlayer=playersInThisRound[whiteTeamNumber];
+				int blackTeamNumber=blackTeamNumbers[matchNumber];
+				Player blackPlayer=playersInThisRound[blackTeamNumber];
+				
 				if (Parameters.PRINT_LOG) {
 					log.println("\n\\clearpage\n");
 					log.println("Starting match:\n");
-					log.println("White player: " + players[t % 2].getName() + "\n");
-					log.println("Black player: " + players[(t + 1) % 2].getName() + "\n");
+					log.println("White player: " + whitePlayer.getName() + "\n");
+					log.println("Black player: " + blackPlayer.getName() + "\n");
 				}
 				if (verbose) {
-					System.out.println("*********************");
-					System.out.println("Starting match:\n");
-					System.out.println("White player: " + players[t % 2].getName() + "\n");
-					System.out.println("Black player: " + players[(t + 1) % 2].getName() + "\n");
+					System.out.println("************************************************************************************");
+					System.out.println();
+					System.out.println("Starting match number: "+matchNumber);
+					System.out.println("White player: " + whitePlayer.getName());
+					System.out.println("Black player: " + blackPlayer.getName());
+					System.out.println();
 				}
-				Board board = new Board(startingPositions[t / 2]);
-				Match match = new Match(players[t % 2], players[(t + 1) % 2], board, log, verbose);
+				Board board = new Board(startingPositions[matchNumber]);
+				Match match = new Match(whitePlayer, blackPlayer, board, log, verbose);
 				MatchOutcome matchOutcome = match.run();
 				if (verbose) {
 					System.out.println("Outcome: " + matchOutcome.toString());
+					System.out.println();
 				} else {
 					switch (matchOutcome) {
 					case WHITE_WINS:
-						System.out.print(1 + t % 2);
+						System.out.print(whiteTeamNumber);
 						break;
 					case BLACK_WINS:
-						System.out.print(1 + (t + 1) % 2);
+						System.out.print(blackTeamNumber);
 						break;
 					case TIE:
 						System.out.print('T');
@@ -244,21 +270,27 @@ public class Tournament {
 					case DRAW:
 						System.out.print('D');
 					}
+					if (matchNumber%2==1) {
+						System.out.print(' ');
+					} //separate mirror matches for readability.
 				}
 				double[] payoffs = matchOutcome.getPayoffs();
-				for (int i = 0; i <= 1; ++i) {
-					averagePayoffInThisRound[i] += payoffs[(t % 2 == 0) ? i : 1 - i] / (2 * numBoards);
-				}
+				averagePayoffInThisRound[whiteTeamNumber] += payoffs[0] / (2*numBoards);
+				averagePayoffInThisRound[blackTeamNumber] += payoffs[1] / (2*numBoards);
 			}
 			System.out.println();
-			System.out.println("Round ended");
+			System.out.println("************************************************************************************");
+			System.out.println();
+			System.out.println("Round ended.");
 
-			for (int i = 0; i <= 1; ++i) {
-				System.out.println("Average payoff of player " + players[i].getName() + ": "
-						+ numberFormat.format(averagePayoffInThisRound[i]));
-				totalScore[playersInThisRound[i]] += averagePayoffInThisRound[i];
+			for (int teamNumber = 0; teamNumber <= 1; ++teamNumber) {
+				System.out.println("Average payoff of player " + playersInThisRound[teamNumber].getName() + ": "
+						+ numberFormat.format(averagePayoffInThisRound[teamNumber]));
+				totalScore[idsInThisRound[teamNumber]] += averagePayoffInThisRound[teamNumber];
 			}
-			System.out.println("*********************");
+			System.out.println();
+			System.out.println("************************************************************************************");
+			System.out.println();
 		}
 
 		if (Parameters.PRINT_LOG) {
@@ -271,7 +303,6 @@ public class Tournament {
 
 	private ArrayList<Player> getPlayers() throws FileNotFoundException {
 		ArrayList<Player> allPlayers = new ArrayList<Player>();
-
 		Scanner scanner = new Scanner(new File("playermanifest.txt"));
 
 		while (scanner.hasNextLine()) {

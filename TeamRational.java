@@ -1,5 +1,3 @@
-
-
 import java.util.*;
 
 public class TeamRational extends Player {
@@ -14,8 +12,8 @@ public class TeamRational extends Player {
 
 	public int payoff1WW, payoff1WL, payoff1LW, payoff1LL, payoff2WW, payoff2WL, payoff2LW, payoff2LL;
 	/*These give the payoff table, according to this player's beliefs:
-	 *
-	 * P1\P2 |         W           |          L          |
+	 * 
+	 * P1\P2 |         W           |          L          | 
 	 * ---------------------------------------------------
 	 *   W   | payoff1WW,payoff2WW | payoff1WL,payoff2WL |
 	 * ---------------------------------------------------
@@ -54,7 +52,6 @@ public class TeamRational extends Player {
 		this(maxNumMoves, 2, 3,	0, 1, 2, 0,	3, 1);
 	}
 
-
 	public void prepareForSeries() {
 	}
 
@@ -74,7 +71,7 @@ public class TeamRational extends Player {
 	private byte[] computeBestMove(BoardPosition boardPosition) {
 
 		int currentPositionInt = boardPosition.toInt();
-
+		
 		if (this.bestMoveBytes[currentPositionInt] != Node.UNINITIALIZED) {
 			return new byte[] {this.bestMoveBytes[currentPositionInt],
 					this.scoreWhiteBytes[currentPositionInt],this.scoreBlackBytes[currentPositionInt]};
@@ -97,67 +94,73 @@ public class TeamRational extends Player {
 			payoffsDraw = new int[] {payoff2LL,payoff1LL};
 		}
 
-		Node ret = null; // Node to be returned by this function.
+		Node returnNode = null; // Node to be returned by this function.
 
 		// ---> First we go through the cases where the game has ended:
 		if (boardPosition.whiteKingPosition == 0 && boardPosition.blackKingPosition == 0) {
 			// if both kings have been captured, the game has ended
-			ret = new Node(null, payoffsTie);
+			returnNode = new Node(null, payoffsTie);
 		} else if (boardPosition.whiteKingPosition == 0 && currentPlayerColour == BLACK) {
 			// if white king has been captured and it's black player's turn, the
 			// game has ended black won
-			ret = new Node(null, payoffsBlackWins);
+			returnNode = new Node(null, payoffsBlackWins);
 		} else if (boardPosition.blackKingPosition == 0 && currentPlayerColour == WHITE) {
 			// if black king has been captured and it's white player's turn, the
 			// game has ended white won
-			ret = new Node(null, payoffsWhiteWins);
+			returnNode = new Node(null, payoffsWhiteWins);
 		} else if (currentPlayerColour == WHITE && boardPosition.whiteKingPosition == 0
 				&& boardPosition.whiteRookPosition == 0) {
 			// if it's white player's turn but he has no pieces left, the game
 			// has ended black won
-			ret = new Node(null, payoffsBlackWins);
+			returnNode = new Node(null, payoffsBlackWins);
 		} else if (currentPlayerColour == BLACK && boardPosition.blackKingPosition == 0
 				&& boardPosition.blackRookPosition == 0) {
 			// if it's black player's turn but he has no pieces left, the game
 			// has ended white won
-			ret = new Node(null, payoffsWhiteWins);
+			returnNode = new Node(null, payoffsWhiteWins);
 		} else if (boardPosition.numMovesPlayed >= maxNumMoves) {
 			// if we have reached the maximum number of moves, the game is over
 			if (boardPosition.whiteKingPosition != 0 && boardPosition.blackKingPosition != 0) {
 				// draw
-				ret = new Node(null, payoffsDraw);
+				returnNode = new Node(null, payoffsDraw);
 			} else if (boardPosition.blackKingPosition == 0) {
 				// white won
-				ret = new Node(null, payoffsWhiteWins);
+				returnNode = new Node(null, payoffsWhiteWins);
 			} else {
 				// !whiteKingRemains
 				// black won
-				ret = new Node(null, payoffsBlackWins);
+				returnNode = new Node(null, payoffsBlackWins);
 			}
 		} else {
 			// ---> Otherwise, the game has not ended and we explore all possible moves:
 			ArrayList<MoveDescription> allPossibleMoves = boardPosition.getAllPossibleMoves();
-			ArrayList<Node> allBestNodes = new ArrayList<Node>();
+			// Explore the moves one by one, keeping track of best achievable score:
 			int bestScore = 0;
+			// As well as all Nodes that achieve that score:
+			ArrayList<Node> allBestNodes = new ArrayList<Node>();
 			for (MoveDescription moveDescription : allPossibleMoves) {
 				BoardPosition newBoardPosition = boardPosition.doMove(moveDescription);
-				Node node = new Node(computeBestMove(newBoardPosition));
+				Node node = new Node(computeBestMove(newBoardPosition)); // Recursion!
 				if (allBestNodes.size() == 0) {
+					// First move is always the best so far:
 					bestScore = node.getScore(currentPlayerColour);
 					allBestNodes.add(new Node(moveDescription, node.getScore(WHITE), node.getScore(BLACK)));
 				} else if (node.getScore(currentPlayerColour) == bestScore) {
+					// If current move is as good as our best so far, add it to the list:
 					allBestNodes.add(new Node(moveDescription, node.getScore(WHITE), node.getScore(BLACK)));
 				} else if (node.getScore(currentPlayerColour) > bestScore) {
+					// If current move is better than our best so far, wipe the list and add current move:
 					bestScore = node.getScore(currentPlayerColour);
 					allBestNodes = new ArrayList<Node>();
 					allBestNodes.add(new Node(moveDescription, node.getScore(WHITE), node.getScore(BLACK)));
 				}
 			}
-			ret = allBestNodes.get(rand.nextInt(allBestNodes.size()));
+			// Choose a random move among the best available options:
+			returnNode = allBestNodes.get(rand.nextInt(allBestNodes.size()));
 		}
 
-		// Add result to array!
-		byte [] nodeBytes = ret.toBytes();
+		// Add results to our byte arrays:
+		byte [] nodeBytes = returnNode.toBytes();
 		bestMoveBytes[currentPositionInt] = nodeBytes[0];
 		scoreWhiteBytes[currentPositionInt] = nodeBytes[1];
 		scoreBlackBytes[currentPositionInt] = nodeBytes[2];
@@ -169,7 +172,7 @@ public class TeamRational extends Player {
 
 		public static final int UNINITIALIZED = -2;
 		public static final int NULL = -1;
-
+		
 		public MoveDescription bestMove;
 		public int scoreWhite, scoreBlack;
 
@@ -195,11 +198,12 @@ public class TeamRational extends Player {
 			}
 		}
 
-		public Node(byte[] nodeBytes) {// decode an integer into a node.
+		public Node(byte[] nodeBytes) {// decode array with three bytes into a node.
 			this(nodeBytes[0],nodeBytes[1],nodeBytes[2]);
 		}
 
 		public Node(byte bestMoveByte, byte scoreWhiteByte, byte scoreBlackByte) {
+			// decode three bytes into a node.
 			if (bestMoveByte==Node.NULL || bestMoveByte==Node.UNINITIALIZED) {
 				bestMove = null;
 			} else {
@@ -211,7 +215,7 @@ public class TeamRational extends Player {
 	}
 
 	public static TeamRational createOptimist(Integer maxNumMoves) {
-		return new TeamRational(maxNumMoves, 4, 3, 3, 2, 4, 3, 3, 2);
+		return new TeamRational(maxNumMoves, 2, 3, 0, 1, 2, 3, 0, 1);
 	}
 
 	public static TeamRational createPessimist(Integer maxNumMoves) {
@@ -239,6 +243,6 @@ public class TeamRational extends Player {
 	}
 
 	public static TeamRational createCooperative(Integer maxNumMoves) {
-		return new TeamRational(maxNumMoves, 3, 2, 0, 1, 3, 0, 2, 1);
+		return new TeamRational(maxNumMoves, 3, 2, 0, 1, 3, 0, 2, 1); //3 means WW
 	}
 }

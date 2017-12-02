@@ -1,5 +1,3 @@
-
-
 public enum MatchOutcome {
 	WHITE_WINS, BLACK_WINS, TIE, DRAW;
 

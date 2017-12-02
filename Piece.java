@@ -1,5 +1,3 @@
-
-
 public class Piece {
 	private PieceType type;
 	private Colour colour;

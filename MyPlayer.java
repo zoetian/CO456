@@ -1,5 +1,3 @@
-
-
 /*
  * This is a beta version. We will release version 1.0 Monday November 13th.
  * Please email us if you have any comments/bugs to report.

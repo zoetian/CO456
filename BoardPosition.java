@@ -1,5 +1,3 @@
-
-
 import java.text.*;
 import java.util.*;
 
@@ -42,7 +40,7 @@ public class BoardPosition {
 	}
 
 	public BoardPosition(int pos) { // This is recovers a BoardPosition from the
-									// integer output to toInt().
+		// integer output to toInt().
 		int wkp = pos - ((pos >> 4) << 4);
 		int wrp = (pos >> 4) - ((pos >> 8) << 4);
 		int bkp = (pos >> 8) - ((pos >> 12) << 4);
@@ -76,7 +74,7 @@ public class BoardPosition {
 	/* ----- REPRESENTATIONS ----- */
 
 	public static final int MAX_INT = 1 << 23; // Max size of
-												// BoardPosition.toInt()
+	// BoardPosition.toInt()
 
 	public int toInt() {
 		// Intention: to save memory, use this as an array index to store data.
@@ -162,18 +160,59 @@ public class BoardPosition {
 
 	@Deprecated
 	public String toString() { // Representation as a string. I don't think this
-								// is used anymore.
+		// is used anymore.
 		DecimalFormat decimalFormat = new DecimalFormat("00");
 		String S = decimalFormat.format(whiteKingPosition) + decimalFormat.format(whiteRookPosition)
-				+ decimalFormat.format(blackKingPosition) + decimalFormat.format(blackRookPosition);
+		+ decimalFormat.format(blackKingPosition) + decimalFormat.format(blackRookPosition);
 		S += decimalFormat.format(numMovesPlayed);
 		S += myColour;
 		return S;
 	}
 
+	public void print() {
+		char[][] board = new char[5][5];
+		for (int column = 1; column <= 4; ++column) {
+			for (int row = 1; row <= 4; ++row) {
+				board[column][row] = '.';
+			}
+		}
+		if (whiteKingPosition != 0) {
+			board[getColumn(whiteKingPosition)][getRow(whiteKingPosition)]='K';
+		}
+		if (whiteRookPosition != 0) {
+			board[getColumn(whiteRookPosition)][getRow(whiteRookPosition)]='R';
+		}
+		if (blackKingPosition != 0) {
+			board[getColumn(blackKingPosition)][getRow(blackKingPosition)]='k';
+		}
+		if (blackRookPosition != 0) {
+			board[getColumn(blackRookPosition)][getRow(blackRookPosition)]='r';
+		}
+		System.out.println();
+		
+		System.out.println("myColour="+myColour+" numMovesPlayed="+numMovesPlayed+" maxNumMoves="+Parameters.MAX_NUM_MOVES);
+		
+		System.out.println();
+
+		for (int row = 4; row >= 1; --row) {
+			System.out.println("---------");
+
+			for (int column = 1; column <= 4; ++column) {
+				System.out.print("|");
+
+				System.out.print(board[column][row]);
+
+			}
+			System.out.print("|");
+			System.out.println();
+		}
+		System.out.println("---------");
+		System.out.println();
+	}
+
 	/* ----- UTILITIES ----- */
 
-	static final int getCellId(boolean isAlive, int column, int row) {
+	public static final int getCellId(boolean isAlive, int column, int row) {
 		if (!isAlive) {
 			return 0;
 		} else {
@@ -213,7 +252,7 @@ public class BoardPosition {
 	/* ----- USEFUL METHODS ----- */
 
 	public void clearCell(int cell) { // Should this be private? Not changing
-										// this now.
+		// this now.
 		if (whiteKingPosition == cell) {
 			whiteKingPosition = 0;
 		}
@@ -228,9 +267,8 @@ public class BoardPosition {
 		}
 	}
 
-	public BoardPosition doMove(MoveDescription moveDescription) { // used by
-																	// TeamRealist,
-																	// etc.
+	public BoardPosition doMove(MoveDescription moveDescription) { // used by TeamRational,
+		// etc.
 		BoardPosition newBoardPosition = new BoardPosition(this);
 		++newBoardPosition.numMovesPlayed;
 		int destination = getCellId(moveDescription.getDestinationColumn(), moveDescription.getDestinationRow());
@@ -273,15 +311,15 @@ public class BoardPosition {
 						|| (board[column][row] == 'k' && currentPlayerColour == BLACK)) {
 					// this cell has a king that can be moved
 					int[][] possibleDirections = new int[][] { { -1, -1 }, { -1, 0 }, { -1, +1 }, { 0, -1 }, { 0, +1 },
-							{ +1, -1 }, { +1, 0 }, { +1, +1 } };
-					for (int[] direction : possibleDirections) {
-						int column_ = column + direction[0];
-						int row_ = row + direction[1];
-						if (1 <= column_ && column_ <= 4 && 1 <= row_ && row_ <= 4 && (board[column_][row_] == '.'
-								|| distinctColours(board[column][row], board[column_][row_]))) {
-							L.add(new MoveDescription("king", column_, row_));
+						{ +1, -1 }, { +1, 0 }, { +1, +1 } };
+						for (int[] direction : possibleDirections) {
+							int column_ = column + direction[0];
+							int row_ = row + direction[1];
+							if (1 <= column_ && column_ <= 4 && 1 <= row_ && row_ <= 4 && (board[column_][row_] == '.'
+									|| distinctColours(board[column][row], board[column_][row_]))) {
+								L.add(new MoveDescription("king", column_, row_));
+							}
 						}
-					}
 				} else if ((board[column][row] == 'R' && currentPlayerColour == WHITE)
 						|| (board[column][row] == 'r' && currentPlayerColour == BLACK)) {
 					// this cell has a rook that can be moved

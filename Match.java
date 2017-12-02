@@ -1,5 +1,3 @@
-
-
 import java.io.*;
 import java.util.*;
 
@@ -19,6 +17,9 @@ public class Match {
 		this.log = log;
 		numMovesPlayed = 0;
 		this.verbose = verbose;
+
+		whitePlayer.update(board, Colour.WHITE, numMovesPlayed);
+		blackPlayer.update(board, Colour.BLACK, numMovesPlayed);
 	}
 
 	private MatchOutcome computeMatchOutcome() {
@@ -53,7 +54,9 @@ public class Match {
 		for (Player player : players.values()) {
 			watch.startCounting();
 			
-			player.update(board, player.getColour(), numMovesPlayed);
+			//player.update(board, player.getColour(), numMovesPlayed);
+			//player.getColour() won't work at this point!
+			
 			player.prepareForMatch();
 			watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_PREPARE_FOR_MATCH, "prepareForMatch");
 		}
@@ -65,7 +68,8 @@ public class Match {
 		}
 
 		if (verbose) {
-			board.print();
+			System.out.println("Board configuration:");
+			board.printSmall();
 		}
 
 		while (numMovesPlayed < Parameters.MAX_NUM_MOVES && gameStatus != MatchStatus.OVER) {
@@ -81,18 +85,15 @@ public class Match {
 				log.println("Move chosen by " + currentPlayer.getColour().toString() + ": " + moveDescription.toString()
 						+ "\n");
 			}
-
-			if (verbose) {
-				System.out.println("*********************");
-				System.out.println("Move chosen by " + currentPlayer.getColour().toString() + ": "
-						+ moveDescription.toString() + "\n");
-			}
-
+			
 			gameStatus = board.performMove(new Move(moveDescription), currentPlayer.getColour(), gameStatus);
 
 			if (verbose) {
-				System.out.println("Board configuration after the move:");
-				board.print();
+				System.out.println("Board configuration after "
+						+ currentPlayer.getColour().toString()
+						+ " (" + currentPlayer.getName() + ") plays "
+						+ moveDescription.toString() + ":");
+				board.printSmall();
 			}
 
 			if (log != null) {

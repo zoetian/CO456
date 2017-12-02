@@ -1,5 +1,3 @@
-
-
 public class Cell {
 	private int column, row;
 
@@ -7,6 +5,11 @@ public class Cell {
 		this.column = column;
 		this.row = row;
 	}
+	
+	/*public Cell(Cell other) {
+		this.column = other.column;
+		this.row = other.row;
+	}*/
 
 	public int getColumn() {
 		return column;

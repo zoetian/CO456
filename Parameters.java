@@ -1,5 +1,3 @@
-
-
 public class Parameters {
 	public static final int NUM_COLUMNS = 4;
 	public static final int NUM_ROWS = 4;

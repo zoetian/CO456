@@ -1,5 +1,3 @@
-
-
 public class Move {
 	private PieceType pieceType;
 	private Cell destination;
