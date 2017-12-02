@@ -34,49 +34,11 @@ public class Tournament {
 		playerFactory.registerPlayer("TeamRationalTruster", i -> TeamRational.createTruster(i));
 		playerFactory.registerPlayer("TeamRationalUtilitarian", i -> TeamRational.createUtilitarian(i));
 
+		playerFactory.registerPlayer("TeamW", i -> new TeamW(i));
+		// playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
 		playerFactory.registerPlayer("TeamTitForTat", i -> new TeamTitForTat(i));
 		playerFactory.registerPlayer("TeamDoubleAgent", i -> new TeamDoubleAgent(i));
 		playerFactory.registerPlayer("TeamHandshaker", i -> new TeamHandshaker(i));
-
-		// alliance list
-		/**
-		playerFactory.registerPlayer("TeamAlphaChess0", i -> new TeamAlphaChess0(i));
-		playerFactory.registerPlayer("TeamBestResponse", i -> new TeamBestResponse(i));
-		playerFactory.registerPlayer("TeamBigBallerBrand", i -> new TeamBigBallerBrand(i));
-		playerFactory.registerPlayer("TeamBlue", i -> new TeamBlue(i));
-		playerFactory.registerPlayer("TeamBOOPS", i -> new TeamBOOPS(i));
-		playerFactory.registerPlayer("TeamBrentastic", i -> new TeamBrentastic(i));
-		playerFactory.registerPlayer("TeamDddddd", i -> new TeamDddddd(i));
-		playerFactory.registerPlayer("TeamDROPLET", i -> new TeamDROPLET(i));
-		playerFactory.registerPlayer("TeamEMANMEAT", i -> new TeamEMANMEAT(i));
-		playerFactory.registerPlayer("TeamFUNKYMONKEYS", i -> new TeamFUNKYMONKEYS(i));
-		playerFactory.registerPlayer("TeamGOOSEMATE", i -> new TeamGOOSEMATE(i));
-		playerFactory.registerPlayer("TeamGUCKSQUAD", i -> new TeamGUCKSQUAD(i));
-		playerFactory.registerPlayer("TeamHAL9001", i -> new TeamHAL9001(i));
-		playerFactory.registerPlayer("TeamHumongous", i -> new TeamHumongous(i));
-		playerFactory.registerPlayer("TeamInfeasible", i -> new TeamInfeasible(i));
-		playerFactory.registerPlayer("TeamJinners", i -> new TeamJinners(i));
-		playerFactory.registerPlayer("TeamKismet", i -> new TeamKismet(i));
-		playerFactory.registerPlayer("TeamLEEROOOOOOY", i -> new TeamLEEROOOOOOY(i));
-		playerFactory.registerPlayer("TeamLEMONCHURRO", i -> new TeamLEMONCHURRO(i));
-		playerFactory.registerPlayer("TeamMachineLearn", i -> new TeamMachineLearn(i));
-		playerFactory.registerPlayer("TeamMaverick", i -> new TeamMaverick(i));
-		playerFactory.registerPlayer("TeamMonkeyKing", i -> new TeamMonkeyKing(i));
-		playerFactory.registerPlayer("TeamOreo", i -> new TeamOreo(i));
-		playerFactory.registerPlayer("TeamMonkeyKing", i -> new TeamPendo(i));
-		playerFactory.registerPlayer("TeamPredator", i -> new TeamPredator(i));
-		playerFactory.registerPlayer("TeamPVKHNOHX", i -> new TeamPVKHNOHX(i));
-		playerFactory.registerPlayer("TeamRocket", i -> new TeamRocket(i));
-		playerFactory.registerPlayer("TeamSnek", i -> new TeamSnek(i));
-		playerFactory.registerPlayer("TeamTANGOMANGOS", i -> new TeamTANGOMANGOS(i));
-		playerFactory.registerPlayer("TeamTwoBrownGuys", i -> new TeamTwoBrownGuys(i));
-		playerFactory.registerPlayer("TeamUtilityMaxim", i -> new TeamUtilityMaxim(i));
-		playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
-		playerFactory.registerPlayer("TeamWoops", i -> new TeamWoops(i));
-		playerFactory.registerPlayer("TeamYfnl", i -> new TeamYfnl(i));
-		playerFactory.registerPlayer("TeamZedModTwoZed", i -> new TeamZedModTwoZed(i));
-		playerFactory.registerPlayer("TeamZinger", i -> new TeamZinger(i));
-		**/
 	}
 
 	public Player getPlayer(String id) {
@@ -175,7 +137,7 @@ public class Tournament {
 			int numBoards = getNumBoards();
 
 			Player[] playersInThisRound = new Player[] { allPlayers.get(idsInThisRound[0]), allPlayers.get(idsInThisRound[1]) };
-			
+
 			Cell[][] startingPositions = new Cell[2*numBoards][];
 			int[] whiteTeamNumbers = new int[2*numBoards];
 			int[] blackTeamNumbers = new int[2*numBoards];
@@ -184,7 +146,7 @@ public class Tournament {
 				startingPositions[matchNumber] = randomStartingPositions();
 				startingPositions[matchNumber+1] = startingPositions[matchNumber];
 				//I hope this is safe... Should I make a proper copy instead?
-				
+
 				//Each mirror match has a random starting player:
 				if (rand.nextBoolean()) {
 					whiteTeamNumbers[matchNumber] = 0;
@@ -228,14 +190,14 @@ public class Tournament {
 				}
 				System.out.print("\nOutcome:    ");
 			}
-			
+
 			for (int matchNumber = 0; matchNumber < 2 * numBoards; ++matchNumber) {
 				// These were randomly chosen so that in mirror matches, each team plays each colour:
 				int whiteTeamNumber=whiteTeamNumbers[matchNumber];
 				Player whitePlayer=playersInThisRound[whiteTeamNumber];
 				int blackTeamNumber=blackTeamNumbers[matchNumber];
 				Player blackPlayer=playersInThisRound[blackTeamNumber];
-				
+
 				if (Parameters.PRINT_LOG) {
 					log.println("\n\\clearpage\n");
 					log.println("Starting match:\n");

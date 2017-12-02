@@ -1,11 +1,13 @@
-TeamMonkey
+TeamW
 1
+TeamMonkey
+5
 TeamNihilist
 1
 TeamRationalRealist
 1
 TeamTitForTat
-1
+5
 TeamDoubleAgent
 1
 TeamHandshaker

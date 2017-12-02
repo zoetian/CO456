@@ -1,7 +1,10 @@
 
 public class TeamWatermelon extends Player {
 
-	private Handshaker shaker;
+	// for Monkey player
+	boolean opponentCanCaptureKing = false;
+	boolean opponentCanCaptureRook = false;
+
 	boolean opponentCanWin;
 	int trust;
 	static boolean isTrustModeOn = false;
@@ -38,17 +41,14 @@ public class TeamWatermelon extends Player {
 
 		opponentCanWin = false;
 		trust = 1;
-		shaker = Handshaker.createHandshakeAccepter();
 	}
 
 	public void prepareForSeries() {
 		trust = 1;
-		shaker.handshakePrepareForSeries();
 	}
 
 	public void prepareForMatch() {
 		BoardPosition boardPosition;
-		shaker.handshakePrepareForMatch(toBoardPosition());
 
 		// Initial belief about whether opponent can win; if they can but a tie
 		// happens, we increase trust.
@@ -65,8 +65,6 @@ public class TeamWatermelon extends Player {
 	public void receiveMatchOutcome(int matchOutcome) {
 		int matchPayoff = outcomeToPayoff(matchOutcome);
 		trust = updateTrust(trust, matchPayoff);
-
-		shaker.handshakeReceiveMatchOutcome(matchOutcome, toBoardPosition());
 	}
 
 	public int updateTrust(int trust, int matchPayoff) {
@@ -80,26 +78,42 @@ public class TeamWatermelon extends Player {
 		return trust;
 	}
 
-	// mainly against the DoubleAgent
-	public MoveDescription chooseMove() {
-		BoardPosition currentBoardPosition = toBoardPosition();
-		// update shaker with opponent move
-		shaker.updateTheirMove(currentBoardPosition);
-
-		MoveDescription myMove;
-		if (shaker.shouldSendHandshakeMove()) {
-			myMove=Handshaker.getHandshakeMove(currentBoardPosition);
-		} else {
-			myMove = internalChooseMove();
+	// for monkey player
+	public void updateOpponentCanCaptureKingAndRook() {
+		// their king captures our king
+		if(theirKingIsAlive && myKingIsAlive){
+			if ((theirKingRow == myKingRow && Math.abs(theirKingColumn - myKingColumn)==1) ||
+			 		(theirKingColumn == myKingColumn && Math.abs(theirKingRow - myKingRow)==1) ||
+					(Math.abs(theirKingColumn - myKingColumn)==1 && Math.abs(theirKingRow - myKingRow)==1)) {
+						opponentCanCaptureKing = true;
+			}
 		}
-
-		shaker.receiveMyMove(myMove);
-		return myMove;
+		// their rook captures our king
+		if(theirRookIsAlive && myKingIsAlive) {
+			if((theirRookRow==myKingRow && myRookRow != myKingRow) ||
+			   (theirRookColumn==myKingColumn && myRookColumn != myKingColumn)) {
+					 opponentCanCaptureKing = true;
+			}
+		}
+		// their king captures our rook
+		if(theirKingIsAlive && myRookIsAlive) {
+			if ((theirKingRow == myRookRow && Math.abs(theirKingColumn - myRookColumn)==1) ||
+			 		(theirKingColumn == myRookColumn && Math.abs(theirKingRow - myRookRow)==1) ||
+					(Math.abs(theirKingColumn - myRookColumn)==1 && Math.abs(theirKingRow - myRookRow)==1)) {
+						opponentCanCaptureRook = true;
+			}
+		}
+		// their rook captures our rook
+		if(theirRookIsAlive && myRookIsAlive) {
+			if((theirRookRow==myRookRow && theirRookRow != theirKingRow) ||
+			   (theirRookColumn==myRookColumn && theirRookColumn != theirKingColumn)) {
+					 opponentCanCaptureRook = true;
+			}
+		}
 	}
 
-
 	// the original chooseMove
-	public MoveDescription internalChooseMove() {
+	public MoveDescription chooseMove() {
 
 		BoardPosition boardPosition = toBoardPosition();
 

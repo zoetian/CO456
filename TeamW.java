@@ -1,5 +1,8 @@
 public class TeamW extends Player {
 
+	// for DoubleAgent
+	private Handshaker shaker;
+
 	boolean opponentHadWinningPosition; //set to true if opponent can force a win at any point in the match.
 	int trust;
 
@@ -52,10 +55,12 @@ public class TeamW extends Player {
 		scoreWhiteBytesCooperative = teamRationalCooperative.scoreWhiteBytes;
 		scoreBlackBytesCooperative = teamRationalCooperative.scoreBlackBytes;
 		// then teamRationalCooperative will be deconstructed.
+		shaker = Handshaker.createHandshakeAccepter();
 	}
 
 	public void prepareForSeries() {
 		trust = 1;
+		shaker.handshakePrepareForSeries();
 	}
 
 	public void prepareForMatch() {
@@ -70,12 +75,15 @@ public class TeamW extends Player {
 				opponentHadWinningPosition = true;
 			}
 		}
+		shaker.handshakePrepareForMatch(toBoardPosition());
 	}
 
 	public void receiveMatchOutcome(int matchOutcome) {
 		//Convert to a more reasonable format first:
 		int myMatchPayoff = outcomeToPayoff(matchOutcome);
 		trust = updateTrust(trust, myMatchPayoff);
+
+		shaker.handshakeReceiveMatchOutcome(matchOutcome, toBoardPosition());
 	}
 
 	public int updateTrust(int trust, int myMatchPayoff) {
@@ -122,7 +130,27 @@ public class TeamW extends Player {
 		}
 	}
 
+
+	// Against DoubleAgent ONLY!!!
 	public MoveDescription chooseMove() {
+		BoardPosition currentBoardPosition = toBoardPosition();
+		// update shaker with opponent move
+		shaker.updateTheirMove(currentBoardPosition);
+
+		MoveDescription myMove;
+		if (shaker.shouldSendHandshakeMove()) {
+			myMove=Handshaker.getHandshakeMove(currentBoardPosition);
+		} else {
+			myMove = internalChooseMove();
+		}
+
+		shaker.receiveMyMove(myMove);
+		return myMove;
+	}
+
+	// double check if this is working against the other players
+	// the original chooseMove: now this is for all the non-doubleAgent player
+	public MoveDescription internalChooseMove() {
 		BoardPosition boardPosition = toBoardPosition();
 		int currentPlayerColour = (boardPosition.numMovesPlayed % 2 == 0) ? WHITE : BLACK;
 		opponentHadWinningPosition = updateOpponentHadWinningPosition(boardPosition, currentPlayerColour);
