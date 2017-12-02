@@ -9,4 +9,4 @@ fast:
 	rm -rf *.class result.txt
 	javac *.java
 	wait
-	java Tournament full > result.txt 
+	java Tournament full 

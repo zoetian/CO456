@@ -1,6 +1,7 @@
 
 public class TeamWatermelon extends Player {
 
+	private Handshaker shaker;
 	boolean opponentCanWin;
 	int trust;
 	static boolean isTrustModeOn = false;
@@ -37,14 +38,17 @@ public class TeamWatermelon extends Player {
 
 		opponentCanWin = false;
 		trust = 1;
+		shaker = Handshaker.createHandshakeAccepter();
 	}
 
 	public void prepareForSeries() {
 		trust = 1;
+		shaker.handshakePrepareForSeries();
 	}
 
 	public void prepareForMatch() {
 		BoardPosition boardPosition;
+		shaker.handshakePrepareForMatch(toBoardPosition());
 
 		// Initial belief about whether opponent can win; if they can but a tie
 		// happens, we increase trust.
@@ -61,6 +65,8 @@ public class TeamWatermelon extends Player {
 	public void receiveMatchOutcome(int matchOutcome) {
 		int matchPayoff = outcomeToPayoff(matchOutcome);
 		trust = updateTrust(trust, matchPayoff);
+
+		shaker.handshakeReceiveMatchOutcome(matchOutcome, toBoardPosition());
 	}
 
 	public int updateTrust(int trust, int matchPayoff) {
@@ -74,7 +80,26 @@ public class TeamWatermelon extends Player {
 		return trust;
 	}
 
+	// mainly against the DoubleAgent
 	public MoveDescription chooseMove() {
+		BoardPosition currentBoardPosition = toBoardPosition();
+		// update shaker with opponent move
+		shaker.updateTheirMove(currentBoardPosition);
+
+		MoveDescription myMove;
+		if (shaker.shouldSendHandshakeMove()) {
+			myMove=Handshaker.getHandshakeMove(currentBoardPosition);
+		} else {
+			myMove = internalChooseMove();
+		}
+
+		shaker.receiveMyMove(myMove);
+		return myMove;
+	}
+
+
+	// the original chooseMove
+	public MoveDescription internalChooseMove() {
 
 		BoardPosition boardPosition = toBoardPosition();
 
@@ -89,22 +114,16 @@ public class TeamWatermelon extends Player {
 
 	public MoveDescription bestMoveFromTrust(BoardPosition boardPosition, int currentPlayerColour) {
 		TeamRational.Node nodeRealist = new TeamRational.Node(bestMoveBytesRealist[boardPosition.toInt()],
-				scoreWhiteBytesRealist[boardPosition.toInt()], scoreBlackBytesRealist[boardPosition.toInt()]);
+															  scoreWhiteBytesRealist[boardPosition.toInt()], scoreBlackBytesRealist[boardPosition.toInt()]);
 		int bestScoreRealist = nodeRealist.getScore(currentPlayerColour);
 
-		// TeamRational.Node nodeCooperative = new TeamRational.Node(bestMoveBytesCooperative[boardPosition.toInt()],
-		// 		scoreWhiteBytesCooperative[boardPosition.toInt()], scoreBlackBytesCooperative[boardPosition.toInt()]);
-		// int bestScoreCooperative = nodeCooperative.getScore(currentPlayerColour);
-
 		TeamRational.Node nodeCooperative = new TeamRational.Node(bestMoveBytesCooperative[boardPosition.toInt()],
-				scoreWhiteBytesCooperative[boardPosition.toInt()], scoreBlackBytesCooperative[boardPosition.toInt()]);
+																  scoreWhiteBytesCooperative[boardPosition.toInt()], scoreBlackBytesCooperative[boardPosition.toInt()]);
 		int bestScoreCooperative = nodeCooperative.getScore(currentPlayerColour);
 
 		TeamRational.Node nodeTruster = new TeamRational.Node(bestMoveBytesTruster[boardPosition.toInt()],
-				scoreWhiteBytesTruster[boardPosition.toInt()], scoreBlackBytesTruster[boardPosition.toInt()]);
+															  scoreWhiteBytesTruster[boardPosition.toInt()], scoreBlackBytesTruster[boardPosition.toInt()]);
 		int bestScoreTruster = nodeTruster.getScore(currentPlayerColour);
-//
-
 
 
 		// If you cannot force a tie, and it is still possible to tie, and trust
@@ -121,7 +140,7 @@ public class TeamWatermelon extends Player {
 
 	public boolean updateOpponentCanWin(BoardPosition boardPosition, int currentPlayerColour) {
 		TeamRational.Node nodeRealist = new TeamRational.Node(bestMoveBytesRealist[boardPosition.toInt()],
-				scoreWhiteBytesRealist[boardPosition.toInt()], scoreBlackBytesRealist[boardPosition.toInt()]);
+															  scoreWhiteBytesRealist[boardPosition.toInt()], scoreBlackBytesRealist[boardPosition.toInt()]);
 		int bestScoreRealist = nodeRealist.getScore(currentPlayerColour);
 
 		if (!opponentCanWin && bestScoreRealist == 0) {
