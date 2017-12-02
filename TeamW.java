@@ -180,7 +180,7 @@ public class TeamW extends Player {
 			isOpponentMonkey += 5;
 		}
 
-		if (bestScoreRealist==2 || isOpponentMonkey >= 15) {
+		if (bestScoreRealist==2 || isOpponentMonkey >= 17) {
 			// If the move forces a tie, play it in all cases (to be safe):
 			return nodeRealist.bestMove;
 		} else if (trust > 0 && bestScoreCooperative == 3) {
