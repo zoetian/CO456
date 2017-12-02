@@ -11,10 +11,14 @@ public class Tournament {
 	private boolean verbose;
 	private PlayerFactory playerFactory = new PlayerFactory();
 
+	public static final boolean needMemoryCheck = false;
+
 	public Tournament(boolean verbose) {
 		rand = new Random(System.currentTimeMillis());
 		numberFormat = new DecimalFormat("#.000");
-		watch = new Watch();
+		if(needMemoryCheck) {
+			watch = new Watch();
+		}
 		this.verbose = verbose;
 		// Registering Players
 		registerPlayers();
@@ -23,7 +27,7 @@ public class Tournament {
 	}
 
 	private void registerPlayers() {
-		// New players can be registered here
+		// hordes
 		playerFactory.registerPlayer("TeamMonkey", i -> new TeamMonkey(i));
 		playerFactory.registerPlayer("TeamNihilist", i -> new TeamNihilist(i));
 		playerFactory.registerPlayer("TeamRationalOptimist", i -> TeamRational.createOptimist(i));
@@ -34,30 +38,41 @@ public class Tournament {
 		playerFactory.registerPlayer("TeamRationalTruster", i -> TeamRational.createTruster(i));
 		playerFactory.registerPlayer("TeamRationalUtilitarian", i -> TeamRational.createUtilitarian(i));
 
-		playerFactory.registerPlayer("TeamW", i -> new TeamW(i));
-		// playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
 		playerFactory.registerPlayer("TeamTitForTat", i -> new TeamTitForTat(i));
 		playerFactory.registerPlayer("TeamDoubleAgent", i -> new TeamDoubleAgent(i));
 		playerFactory.registerPlayer("TeamHandshaker", i -> new TeamHandshaker(i));
+
+		// fake human player
+		playerFactory.registerPlayer("TeamTFTADC", i -> new TeamTFTADC(i));
+		playerFactory.registerPlayer("TeamMoreCoopTFT", i -> new TeamMoreCoopTFT(i));
+		playerFactory.registerPlayer("TeamMoreBetrayalTFT", i -> new TeamMoreBetrayalTFT(i));
+		playerFactory.registerPlayer("TeamMoreMoreTFT", i -> new TeamMoreMoreTFT(i));
+
+		playerFactory.registerPlayer("TeamW", i -> new TeamW(i));
+		// playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
 	}
 
 	public Player getPlayer(String id) {
 
-		watch.startMemoryComparison();
-		watch.startCounting();
+		if(needMemoryCheck) {
+			watch.startMemoryComparison();
+			watch.startCounting();
+		}
 		System.out.println("Calling Constructor of player: " + id);
-
 		Player player = playerFactory.createPlayer(id, Parameters.MAX_NUM_MOVES);
-		boolean noLimitViolation = true;
-		noLimitViolation &= watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_CONSTRUCTOR, "constructor");
-		System.out.println("Constructor of player " + player.getName() + " took "
+		if(needMemoryCheck) {
+			boolean noLimitViolation = true;
+			noLimitViolation &= watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_CONSTRUCTOR, "constructor");
+			System.out.println("Constructor of player " + player.getName() + " took "
 				+ numberFormat.format(watch.getElapsedTime()) + " seconds.");
-		noLimitViolation &= watch.enforceMemoryLimit(player, Parameters.MEMORY_LIMIT_CONSTRUCTOR, "constructor");
-		System.out.println("Constructor of player " + player.getName() + " used " + Long.toString(watch.getMemoryUse())
+				noLimitViolation &= watch.enforceMemoryLimit(player, Parameters.MEMORY_LIMIT_CONSTRUCTOR, "constructor");
+			System.out.println("Constructor of player " + player.getName() + " used " + Long.toString(watch.getMemoryUse())
 				+ " megabytes.\n");
-		if (!noLimitViolation) {
-			System.out.println("Turning player " + id + " into a monkey");
-			player = playerFactory.createPlayer("TeamMonkey", Parameters.MAX_NUM_MOVES);
+
+			if (!noLimitViolation) {
+				System.out.println("Turning player " + id + " into a monkey");
+				player = playerFactory.createPlayer("TeamMonkey", Parameters.MAX_NUM_MOVES);
+			}
 		}
 		// Set player name to id
 		player.setName(id);
@@ -163,9 +178,9 @@ public class Tournament {
 
 			// prepare players for round
 			for (Player player : playersInThisRound) {
-				watch.startCounting();
+				if(needMemoryCheck) watch.startCounting();
 				player.prepareForSeries();
-				watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_PREPARE_FOR_SERIES, "prepareForSeries()");
+				if(needMemoryCheck) watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_PREPARE_FOR_SERIES, "prepareForSeries()");
 			}
 
 			double[] averagePayoffInThisRound = new double[2];

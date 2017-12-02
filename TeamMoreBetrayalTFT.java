@@ -1,5 +1,5 @@
 
-public class TeamMoreBetralTFT extends Player {
+public class TeamMoreBetrayalTFT extends Player {
 
 	boolean opponentCanWin;
 	int trust;
@@ -14,7 +14,7 @@ public class TeamMoreBetralTFT extends Player {
 	public final int BETRAYAL_DELTA = 6;
 	public final int COOPERATION_DELTA = 1;
 
-	public TeamMoreBetralTFT(int maxNumMoves) {
+	public TeamMoreBetrayalTFT(int maxNumMoves) {
 		TeamRational teamRationalRealist = TeamRational.createRealist(maxNumMoves);
 		TeamRational teamRationalCooperative = TeamRational.createCooperative(maxNumMoves);
 

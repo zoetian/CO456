@@ -174,7 +174,9 @@ public class TeamW extends Player {
 
 		int bestScoreCooperative = nodeCooperative.getScore(currentPlayerColour);
 
-		if((opponentCanCaptureKing && !myKingIsAlive) || (opponentCanCaptureRook && !myRookIsAlive)) {
+		if (opponentCanCaptureKing && !myKingIsAlive) {
+			isOpponentMonkey += 3;
+		} else if (opponentCanCaptureRook && !myRookIsAlive) {
 			isOpponentMonkey += 5;
 		}
 
