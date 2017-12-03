@@ -9,7 +9,7 @@ public class TeamWatermelon extends Player {
 	public byte[] bestMoveBytesRealist, scoreWhiteBytesRealist, scoreBlackBytesRealist;
 	public byte[] bestMoveBytesCooperative, scoreWhiteBytesCooperative, scoreBlackBytesCooperative;
 
-	public int BETRAYAL_DELTA = 2;
+	public int BETRAYAL_DELTA = 1;
 	public int COOPERATION_DELTA = 1;
 	public int IRRATIONALITY_DELTA = 3;
 	public int SUBOPTIMALITY_DELTA = 1;
@@ -97,9 +97,13 @@ public class TeamWatermelon extends Player {
 				// I tried to tie, but I won!!! I don't trust that you know what you're doing.
 				return trust - IRRATIONALITY_DELTA;
 			}
-		} else if (opponentHadWinningPosition && myMatchPayoff >= 2) {
-			// You gave up a win for a tie/loss? I trust you more now.
+		} else if (opponentHadWinningPosition && myMatchPayoff == 2) {
+			// I didn't trust you. I'm very picky about restoring trust!
+			// You gave up a win for a tie? I trust you more now.
 			return trust + COOPERATION_DELTA;
+		//} else if (opponentHadWinningPosition && myMatchPayoff != 2) {
+			// I don't believe that you needed to let me win.
+		//	return trust - SUBOPTIMALITY_DELTA;
 		}
 		return trust;
 	}
@@ -186,7 +190,7 @@ public class TeamWatermelon extends Player {
 		}
 
 		if (opponentCanCaptureRook && !myRookIsAlive) {
-			isOpponentMonkey += 5;
+			isOpponentMonkey += 7;
 		}
 
 		if (bestScoreRealist==2 || isOpponentMonkey >= 20) {
