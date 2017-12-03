@@ -20,4 +20,8 @@ class PlayerFactory {
     public Set<String> playerIds() {
     	return registeredPlayers.keySet();
     }
+
+	public boolean hasPlayer(String teamClassName) {
+		return registeredPlayers.containsKey(teamClassName);
+	}
 }

@@ -11,14 +11,10 @@ public class Tournament {
 	private boolean verbose;
 	private PlayerFactory playerFactory = new PlayerFactory();
 
-	public static final boolean needMemoryCheck = false;
-
 	public Tournament(boolean verbose) {
 		rand = new Random(System.currentTimeMillis());
 		numberFormat = new DecimalFormat("#.000");
-		if(needMemoryCheck) {
-			watch = new Watch();
-		}
+		watch = new Watch();
 		this.verbose = verbose;
 		// Registering Players
 		registerPlayers();
@@ -27,7 +23,7 @@ public class Tournament {
 	}
 
 	private void registerPlayers() {
-		// hordes
+		// New players can be registered here
 		playerFactory.registerPlayer("TeamMonkey", i -> new TeamMonkey(i));
 		playerFactory.registerPlayer("TeamNihilist", i -> new TeamNihilist(i));
 		playerFactory.registerPlayer("TeamRationalOptimist", i -> TeamRational.createOptimist(i));
@@ -38,40 +34,75 @@ public class Tournament {
 		playerFactory.registerPlayer("TeamRationalTruster", i -> TeamRational.createTruster(i));
 		playerFactory.registerPlayer("TeamRationalUtilitarian", i -> TeamRational.createUtilitarian(i));
 
-		playerFactory.registerPlayer("TeamTitForTat", i -> new TeamTitForTat(i));
-		playerFactory.registerPlayer("TeamDoubleAgent", i -> new TeamDoubleAgent(i));
 		playerFactory.registerPlayer("TeamHandshaker", i -> new TeamHandshaker(i));
+		playerFactory.registerPlayer("TeamDoubleAgent", i -> new TeamDoubleAgent(i));
 
-		// fake human player
-		playerFactory.registerPlayer("TeamTFTADC", i -> new TeamTFTADC(i));
-		playerFactory.registerPlayer("TeamMoreCoopTFT", i -> new TeamMoreCoopTFT(i));
-		playerFactory.registerPlayer("TeamMoreBetrayalTFT", i -> new TeamMoreBetrayalTFT(i));
-		playerFactory.registerPlayer("TeamMoreMoreTFT", i -> new TeamMoreMoreTFT(i));
+		playerFactory.registerPlayer("TeamTitForTat", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTatRecovery", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTatTat", i -> new TeamTitForTatTat(i));
+		playerFactory.registerPlayer("TeamTatForTit", i -> new TeamTatForTit(i));
+		playerFactory.registerPlayer("TeamGrudger", i -> new TeamGrudger(i));
+		playerFactory.registerPlayer("TeamCondescension", i -> new TeamCondescension(i));
+		playerFactory.registerPlayer("TeamTwitchForTat", i -> new TeamTwitchForTat(i));
+		playerFactory.registerPlayer("TeamForgiveness", i -> new TeamForgiveness(i));
 
+		// alliance list
+
+		/*playerFactory.registerPlayer("TeamAlphaChess0", i -> new TeamAlphaChess0(i));
+		playerFactory.registerPlayer("TeamBestResponse", i -> new TeamBestResponse(i));
+		playerFactory.registerPlayer("TeamBigBallerBrand", i -> new TeamBigBallerBrand(i));
+		playerFactory.registerPlayer("TeamBlue", i -> new TeamBlue(i));
+		playerFactory.registerPlayer("TeamBrentastic", i -> new TeamBrentastic(i));
+		playerFactory.registerPlayer("TeamDddddd", i -> new TeamDddddd(i));
+		playerFactory.registerPlayer("TeamDROPLET", i -> new TeamDROPLET(i));
+		playerFactory.registerPlayer("TeamEMANMEAT", i -> new TeamEMANMEAT(i));
+		playerFactory.registerPlayer("TeamFUNKYMONKEYS", i -> new TeamFUNKYMONKEYS(i));
+		playerFactory.registerPlayer("TeamGOOSEMATE", i -> new TeamGOOSEMATE(i));
+		playerFactory.registerPlayer("TeamGUCKSQUAD", i -> new TeamGUCKSQUAD(i));
+		playerFactory.registerPlayer("TeamHAL9001", i -> new TeamHAL9001(i));
+		playerFactory.registerPlayer("TeamHumongous", i -> new TeamHumongous(i));
+		playerFactory.registerPlayer("TeamInfeasible", i -> new TeamInfeasible(i));
+		playerFactory.registerPlayer("TeamJinners", i -> new TeamJinners(i));
+		playerFactory.registerPlayer("TeamKismet", i -> new TeamKismet(i));
+		playerFactory.registerPlayer("TeamLEEROOOOOOY", i -> new TeamLEEROOOOOOY(i));
+		playerFactory.registerPlayer("TeamLEMONCHURRO", i -> new TeamLEMONCHURRO(i));
+		playerFactory.registerPlayer("TeamMachineLearn", i -> new TeamMachineLearn(i));
+		playerFactory.registerPlayer("TeamMaverick", i -> new TeamMaverick(i));
+		playerFactory.registerPlayer("TeamMonkeyKing", i -> new TeamMonkeyKing(i));
+		playerFactory.registerPlayer("TeamOreo", i -> new TeamOreo(i));
+		playerFactory.registerPlayer("TeamPendo", i -> new TeamPendo(i));
+		playerFactory.registerPlayer("TeamPredator", i -> new TeamPredator(i));
+		playerFactory.registerPlayer("TeamPVKHNOHX", i -> new TeamPVKHNOHX(i));
+		playerFactory.registerPlayer("TeamRocket", i -> new TeamRocket(i));
+		playerFactory.registerPlayer("TeamDotJava", i -> new TeamDotJava(i));
+		playerFactory.registerPlayer("TeamTANGOMANGOS", i -> new TeamTANGOMANGOS(i));
+		playerFactory.registerPlayer("TeamTwoBrownGuys", i -> new TeamTwoBrownGuys(i));
+		playerFactory.registerPlayer("TeamUtilityMaxim", i -> new TeamUtilityMaxim(i));
 		playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
+		playerFactory.registerPlayer("TeamWoops", i -> new TeamWoops(i));
+		playerFactory.registerPlayer("TeamYfnl", i -> new TeamYfnl(i));
+		playerFactory.registerPlayer("TeamZedModTwoZed", i -> new TeamZedModTwoZed(i));
+		playerFactory.registerPlayer("TeamZinger", i -> new TeamZinger(i));*/
+
 	}
 
 	public Player getPlayer(String id) {
 
-		if(needMemoryCheck) {
-			watch.startMemoryComparison();
-			watch.startCounting();
-		}
+		watch.startMemoryComparison();
+		watch.startCounting();
 		System.out.println("Calling Constructor of player: " + id);
-		Player player = playerFactory.createPlayer(id, Parameters.MAX_NUM_MOVES);
-		if(needMemoryCheck) {
-			boolean noLimitViolation = true;
-			noLimitViolation &= watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_CONSTRUCTOR, "constructor");
-			System.out.println("Constructor of player " + player.getName() + " took "
-				+ numberFormat.format(watch.getElapsedTime()) + " seconds.");
-				noLimitViolation &= watch.enforceMemoryLimit(player, Parameters.MEMORY_LIMIT_CONSTRUCTOR, "constructor");
-			System.out.println("Constructor of player " + player.getName() + " used " + Long.toString(watch.getMemoryUse())
-				+ " megabytes.\n");
 
-			if (!noLimitViolation) {
-				System.out.println("Turning player " + id + " into a monkey");
-				player = playerFactory.createPlayer("TeamMonkey", Parameters.MAX_NUM_MOVES);
-			}
+		Player player = playerFactory.createPlayer(id, Parameters.MAX_NUM_MOVES);
+		boolean noLimitViolation = true;
+		noLimitViolation &= watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_CONSTRUCTOR, "constructor");
+		System.out.println("Constructor of player " + player.getName() + " took "
+				+ numberFormat.format(watch.getElapsedTime()) + " seconds.");
+		noLimitViolation &= watch.enforceMemoryLimit(player, Parameters.MEMORY_LIMIT_CONSTRUCTOR, "constructor");
+		System.out.println("Constructor of player " + player.getName() + " used " + Long.toString(watch.getMemoryUse())
+				+ " megabytes.\n");
+		if (!noLimitViolation) {
+			System.out.println("Turning player " + id + " into a monkey");
+			player = playerFactory.createPlayer("TeamMonkey", Parameters.MAX_NUM_MOVES);
 		}
 		// Set player name to id
 		player.setName(id);
@@ -122,6 +153,13 @@ public class Tournament {
 			log.println("\\begin{document}");
 		}
 
+		// verify playermanifest.txt
+		if (!verifyPlayerManifest()) {
+			System.out.println("Tournament closing due to playermanifest.txt error");
+			log.close();
+			return;
+		}
+
 		// initialize players
 		ArrayList<Player> allPlayers = getPlayers();
 
@@ -147,39 +185,41 @@ public class Tournament {
 			System.out.println("Starting new series:");
 
 			// Generate all of the boards that will be played in the series.
-			// This is Parameters.MIN_NUM_DIFFERENT_BOARDS + (#heads when we flip a coin until tails).
+			// This is Parameters.MIN_NUM_DIFFERENT_BOARDS + (#heads when we
+			// flip a coin until tails).
 			int numBoards = getNumBoards();
 
-			Player[] playersInThisRound = new Player[] { allPlayers.get(idsInThisRound[0]), allPlayers.get(idsInThisRound[1]) };
+			Player[] playersInThisRound = new Player[] { allPlayers.get(idsInThisRound[0]),
+					allPlayers.get(idsInThisRound[1]) };
 
-			Cell[][] startingPositions = new Cell[2*numBoards][];
-			int[] whiteTeamNumbers = new int[2*numBoards];
-			int[] blackTeamNumbers = new int[2*numBoards];
-			//Loop over all mirror matches (so jump by 2 at a time):
-			for (int matchNumber = 0; matchNumber < 2*numBoards; matchNumber += 2) {
+			Cell[][] startingPositions = new Cell[2 * numBoards][];
+			int[] whiteTeamNumbers = new int[2 * numBoards];
+			int[] blackTeamNumbers = new int[2 * numBoards];
+			// Loop over all mirror matches (so jump by 2 at a time):
+			for (int matchNumber = 0; matchNumber < 2 * numBoards; matchNumber += 2) {
 				startingPositions[matchNumber] = randomStartingPositions();
-				startingPositions[matchNumber+1] = startingPositions[matchNumber];
-				//I hope this is safe... Should I make a proper copy instead?
+				startingPositions[matchNumber + 1] = startingPositions[matchNumber];
+				// I hope this is safe... Should I make a proper copy instead?
 
-				//Each mirror match has a random starting player:
+				// Each mirror match has a random starting player:
 				if (rand.nextBoolean()) {
 					whiteTeamNumbers[matchNumber] = 0;
 					blackTeamNumbers[matchNumber] = 1;
-					whiteTeamNumbers[matchNumber+1] = 1;
-					blackTeamNumbers[matchNumber+1] = 0;
+					whiteTeamNumbers[matchNumber + 1] = 1;
+					blackTeamNumbers[matchNumber + 1] = 0;
 				} else {
 					whiteTeamNumbers[matchNumber] = 1;
 					blackTeamNumbers[matchNumber] = 0;
-					whiteTeamNumbers[matchNumber+1] = 0;
-					blackTeamNumbers[matchNumber+1] = 1;
+					whiteTeamNumbers[matchNumber + 1] = 0;
+					blackTeamNumbers[matchNumber + 1] = 1;
 				}
 			}
 
 			// prepare players for round
 			for (Player player : playersInThisRound) {
-				if(needMemoryCheck) watch.startCounting();
+				watch.startCounting();
 				player.prepareForSeries();
-				if(needMemoryCheck) watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_PREPARE_FOR_SERIES, "prepareForSeries()");
+				watch.enforceTimeLimit(player, Parameters.TIME_LIMIT_PREPARE_FOR_SERIES, "prepareForSeries()");
 			}
 
 			double[] averagePayoffInThisRound = new double[2];
@@ -190,27 +230,28 @@ public class Tournament {
 
 			// list the round numbers, and who plays white at each round:
 			if (!verbose) {
-				/*System.out.print("Match #:    ");
-				for (int matchNumber = 0; matchNumber < 2 * numBoards; matchNumber +=2) {
-					System.out.print(String.format("%02d", matchNumber));
-					System.out.print(" ");
-				}
-				System.out.print("\nWhite team: ");*/
+				/*
+				 * System.out.print("Match #:    "); for (int matchNumber = 0;
+				 * matchNumber < 2 * numBoards; matchNumber +=2) {
+				 * System.out.print(String.format("%02d", matchNumber));
+				 * System.out.print(" "); } System.out.print("\nWhite team: ");
+				 */
 				System.out.print("White team: ");
-				for (int matchNumber = 0; matchNumber < 2 * numBoards; matchNumber +=2) {
+				for (int matchNumber = 0; matchNumber < 2 * numBoards; matchNumber += 2) {
 					System.out.print(whiteTeamNumbers[matchNumber]);
-					System.out.print(whiteTeamNumbers[matchNumber+1]);
+					System.out.print(whiteTeamNumbers[matchNumber + 1]);
 					System.out.print(" ");
 				}
 				System.out.print("\nOutcome:    ");
 			}
 
 			for (int matchNumber = 0; matchNumber < 2 * numBoards; ++matchNumber) {
-				// These were randomly chosen so that in mirror matches, each team plays each colour:
-				int whiteTeamNumber=whiteTeamNumbers[matchNumber];
-				Player whitePlayer=playersInThisRound[whiteTeamNumber];
-				int blackTeamNumber=blackTeamNumbers[matchNumber];
-				Player blackPlayer=playersInThisRound[blackTeamNumber];
+				// These were randomly chosen so that in mirror matches, each
+				// team plays each colour:
+				int whiteTeamNumberInMatch = whiteTeamNumbers[matchNumber];
+				Player whitePlayer = playersInThisRound[whiteTeamNumberInMatch];
+				int blackTeamNumberInMatch = blackTeamNumbers[matchNumber];
+				Player blackPlayer = playersInThisRound[blackTeamNumberInMatch];
 
 				if (Parameters.PRINT_LOG) {
 					log.println("\n\\clearpage\n");
@@ -219,9 +260,10 @@ public class Tournament {
 					log.println("Black player: " + blackPlayer.getName() + "\n");
 				}
 				if (verbose) {
-					System.out.println("************************************************************************************");
+					System.out.println(
+							"************************************************************************************");
 					System.out.println();
-					System.out.println("Starting match number: "+matchNumber);
+					System.out.println("Starting match number: " + matchNumber);
 					System.out.println("White player: " + whitePlayer.getName());
 					System.out.println("Black player: " + blackPlayer.getName());
 					System.out.println();
@@ -235,10 +277,10 @@ public class Tournament {
 				} else {
 					switch (matchOutcome) {
 					case WHITE_WINS:
-						System.out.print(whiteTeamNumber);
+						System.out.print(whiteTeamNumberInMatch);
 						break;
 					case BLACK_WINS:
-						System.out.print(blackTeamNumber);
+						System.out.print(blackTeamNumberInMatch);
 						break;
 					case TIE:
 						System.out.print('T');
@@ -246,13 +288,13 @@ public class Tournament {
 					case DRAW:
 						System.out.print('D');
 					}
-					if (matchNumber%2==1) {
+					if (matchNumber % 2 == 1) {
 						System.out.print(' ');
-					} //separate mirror matches for readability.
+					} // separate mirror matches for readability.
 				}
 				double[] payoffs = matchOutcome.getPayoffs();
-				averagePayoffInThisRound[whiteTeamNumber] += payoffs[0] / (2*numBoards);
-				averagePayoffInThisRound[blackTeamNumber] += payoffs[1] / (2*numBoards);
+				averagePayoffInThisRound[whiteTeamNumberInMatch] += payoffs[0] / (2 * numBoards);
+				averagePayoffInThisRound[blackTeamNumberInMatch] += payoffs[1] / (2 * numBoards);
 			}
 			System.out.println();
 			System.out.println("************************************************************************************");
@@ -275,6 +317,46 @@ public class Tournament {
 		}
 
 		printRanking(allPlayers, totalScore);
+	}
+
+	private boolean verifyPlayerManifest() {
+		Scanner scanner;
+		try {
+			scanner = new Scanner(new File("playermanifest.txt"));
+		} catch (FileNotFoundException e) {
+			System.out.println("Please add a playermanifest.txt file to current working directory");
+			return false;
+		}
+		int line = 0;
+		while (scanner.hasNextLine()) {
+			// each pair of lines in the manifest after the first should be of
+			// the form:
+			// teamName
+			// n
+			// where n is the number of players of team "teamName" you want in
+			// tournament
+			++line;
+			String teamClassName = scanner.nextLine();
+			if (!playerFactory.hasPlayer(teamClassName)) {
+				System.out.println("Error in playermanifest.txt line: " + line);
+				System.out.println("Team Name: " + teamClassName + " not found in playerFactory.registeredPlayers");
+				scanner.close();
+				return false;
+			}
+			// now check population
+			++line;
+			try {
+				Integer.parseInt(scanner.nextLine());
+			} catch (NumberFormatException e) {
+				System.out.println("Error in playermanifest.txt line: " + line);
+				System.out.println(
+						"Expected a single integer corresponding to number of players from team " + teamClassName);
+				scanner.close();
+				return false;
+			}
+		}
+		scanner.close();
+		return true;
 	}
 
 	private ArrayList<Player> getPlayers() throws FileNotFoundException {
@@ -316,24 +398,9 @@ public class Tournament {
 	}
 
 	public static void main(String[] args) throws IOException {
-		if (args.length == 0 || (!args[0].equals("full") && !args[0].equals("individual"))
-				|| (args.length == 2 && !args[1].equals("verbose")) || args.length > 2) {
-			System.out.println("To launch the program use one of the following options:");
-			System.out.println("1. \"java Tournament full\" (round robin, non-verbose mode)");
-			System.out.println("2. \"java Tournament full verbose\" (round robin, verbose mode)");
-			System.out.println(
-					"3. \"java Tournament individual\" (your player against all the others, non-verbose mode)");
-			System.out.println(
-					"4. \"java Tournament individual verbose\" (your player against all the others, verbose mode)");
-			// + " or \"Tournament individual\" (your player against all the
-			// others)" );
-		} else {
-			boolean verbose = false;
-			if (args.length == 2 && args[1].equals("verbose")) {
-				verbose = true;
-			}
-			Tournament tournament = new Tournament(verbose);
-			tournament.run();
-		}
+		boolean verbose = (args.length >= 1 && args[0].equals("verbose"))
+				|| (args.length == 2 && args[1].equals("verbose"));
+		Tournament tournament = new Tournament(verbose);
+		tournament.run();
 	}
 }

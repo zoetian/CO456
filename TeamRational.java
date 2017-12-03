@@ -3,9 +3,7 @@ import java.util.*;
 public class TeamRational extends Player {
 	// A BoardPosition includes the piece positions, the number of moves played, and myColour.
 	// We attach to each one a Node: bestMove, scoreWhite, scoreBlack (assuming perfect play.)
-	public byte[] bestMoveBytes;
-	public byte[] scoreWhiteBytes;
-	public byte[] scoreBlackBytes;
+	public byte[] bestMoveBytes, scoreWhiteBytes, scoreBlackBytes;
 
 	int maxNumMoves; // Called GameLimit in the project specs; game cannot have more than this many moves.
 	private Random rand; // For choosing random moves
@@ -19,6 +17,7 @@ public class TeamRational extends Player {
 	 * ---------------------------------------------------
 	 *   L   | payoff1LW,payoff2LW | payoff1LL,payoff2LL |
 	 * ---------------------------------------------------*/
+	
 	public TeamRational(int maxNumMoves,
 			int payoff1WW, int payoff1WL,
 			int payoff1LW, int payoff1LL,

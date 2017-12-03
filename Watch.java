@@ -1,4 +1,3 @@
-
 //This is to check whether a player has violated the time (and memory) limits.
 //If they have doubled them, the tournament is aborted; otherwise the tournament might take too long to run.
 

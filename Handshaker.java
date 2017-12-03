@@ -73,6 +73,8 @@ public class Handshaker {
 		if (shouldSendHandshakeMove()) {
 			if (wasHandshakeMovePlayed(beforeBoardPosition,latestBoardPosition)) {
 				++sentHandshakeMoves;
+			} else {
+				throw new RuntimeException("Should have made handshake move, but didn't...");
 			}
 		}
 	}
@@ -99,6 +101,7 @@ public class Handshaker {
 					return;
 				}
 			}
+			throw new RuntimeException("Called Handshaker.update without any move that worked...");
 		}
 	}
 
