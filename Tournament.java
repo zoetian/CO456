@@ -48,8 +48,7 @@ public class Tournament {
 		playerFactory.registerPlayer("TeamMoreBetrayalTFT", i -> new TeamMoreBetrayalTFT(i));
 		playerFactory.registerPlayer("TeamMoreMoreTFT", i -> new TeamMoreMoreTFT(i));
 
-		playerFactory.registerPlayer("TeamW", i -> new TeamW(i));
-		// playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
+		playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
 	}
 
 	public Player getPlayer(String id) {
