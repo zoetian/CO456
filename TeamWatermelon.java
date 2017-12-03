@@ -176,11 +176,13 @@ public class TeamWatermelon extends Player {
 
 		if (opponentCanCaptureKing && !myKingIsAlive) {
 			isOpponentMonkey += 3;
-		} else if (opponentCanCaptureRook && !myRookIsAlive) {
+		}
+
+		if (opponentCanCaptureRook && !myRookIsAlive) {
 			isOpponentMonkey += 5;
 		}
 
-		if (bestScoreRealist==2 || isOpponentMonkey >= 17) {
+		if (bestScoreRealist==2 || isOpponentMonkey >= 20) {
 			// If the move forces a tie, play it in all cases (to be safe):
 			return nodeRealist.bestMove;
 		} else if (trust > 0 && bestScoreCooperative == 3) {
