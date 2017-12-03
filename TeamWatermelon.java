@@ -9,8 +9,10 @@ public class TeamWatermelon extends Player {
 	public byte[] bestMoveBytesRealist, scoreWhiteBytesRealist, scoreBlackBytesRealist;
 	public byte[] bestMoveBytesCooperative, scoreWhiteBytesCooperative, scoreBlackBytesCooperative;
 
-	public int BETRAYAL_DELTA = 1;
+	public int BETRAYAL_DELTA = 2;
 	public int COOPERATION_DELTA = 1;
+	public int IRRATIONALITY_DELTA = 3;
+	public int SUBOPTIMALITY_DELTA = 1;
 
 	int isOpponentMonkey = 0;
 	boolean isOpponentNihilist = false;
@@ -87,9 +89,14 @@ public class TeamWatermelon extends Player {
 	}
 
 	public int updateTrust(int trust, int myMatchPayoff) {
-		if (myMatchPayoff < 2) {
-			// I didn't take your king? I trust you less now.
-			return trust - BETRAYAL_DELTA;
+		if (trust>0) { // I trusted you! Let's see how you did:
+			if (myMatchPayoff < 2) {
+				// I didn't take your king? I trust you less now.
+				return trust - BETRAYAL_DELTA;
+			} else if (myMatchPayoff == 3) {
+				// I tried to tie, but I won!!! I don't trust that you know what you're doing.
+				return trust - IRRATIONALITY_DELTA;
+			}
 		} else if (opponentHadWinningPosition && myMatchPayoff >= 2) {
 			// You gave up a win for a tie/loss? I trust you more now.
 			return trust + COOPERATION_DELTA;
