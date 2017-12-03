@@ -46,43 +46,12 @@ public class Tournament {
 		playerFactory.registerPlayer("TeamTwitchForTat", i -> new TeamTwitchForTat(i));
 		playerFactory.registerPlayer("TeamForgiveness", i -> new TeamForgiveness(i));
 
-		// alliance list
+		playerFactory.registerPlayer("TeamMoreCoopTFT", i -> new TeamMoreCoopTFT(i));
+		playerFactory.registerPlayer("TeamMoreBetrayalTFT", i -> new TeamMoreBetrayalTFT(i));
+		playerFactory.registerPlayer("TeamMoreMoreTFT", i -> new TeamMoreMoreTFT(i));
+		playerFactory.registerPlayer("TeamTFTADC", i -> new TeamTFTADC(i));
 
-		/*playerFactory.registerPlayer("TeamAlphaChess0", i -> new TeamAlphaChess0(i));
-		playerFactory.registerPlayer("TeamBestResponse", i -> new TeamBestResponse(i));
-		playerFactory.registerPlayer("TeamBigBallerBrand", i -> new TeamBigBallerBrand(i));
-		playerFactory.registerPlayer("TeamBlue", i -> new TeamBlue(i));
-		playerFactory.registerPlayer("TeamBrentastic", i -> new TeamBrentastic(i));
-		playerFactory.registerPlayer("TeamDddddd", i -> new TeamDddddd(i));
-		playerFactory.registerPlayer("TeamDROPLET", i -> new TeamDROPLET(i));
-		playerFactory.registerPlayer("TeamEMANMEAT", i -> new TeamEMANMEAT(i));
-		playerFactory.registerPlayer("TeamFUNKYMONKEYS", i -> new TeamFUNKYMONKEYS(i));
-		playerFactory.registerPlayer("TeamGOOSEMATE", i -> new TeamGOOSEMATE(i));
-		playerFactory.registerPlayer("TeamGUCKSQUAD", i -> new TeamGUCKSQUAD(i));
-		playerFactory.registerPlayer("TeamHAL9001", i -> new TeamHAL9001(i));
-		playerFactory.registerPlayer("TeamHumongous", i -> new TeamHumongous(i));
-		playerFactory.registerPlayer("TeamInfeasible", i -> new TeamInfeasible(i));
-		playerFactory.registerPlayer("TeamJinners", i -> new TeamJinners(i));
-		playerFactory.registerPlayer("TeamKismet", i -> new TeamKismet(i));
-		playerFactory.registerPlayer("TeamLEEROOOOOOY", i -> new TeamLEEROOOOOOY(i));
-		playerFactory.registerPlayer("TeamLEMONCHURRO", i -> new TeamLEMONCHURRO(i));
-		playerFactory.registerPlayer("TeamMachineLearn", i -> new TeamMachineLearn(i));
-		playerFactory.registerPlayer("TeamMaverick", i -> new TeamMaverick(i));
-		playerFactory.registerPlayer("TeamMonkeyKing", i -> new TeamMonkeyKing(i));
-		playerFactory.registerPlayer("TeamOreo", i -> new TeamOreo(i));
-		playerFactory.registerPlayer("TeamPendo", i -> new TeamPendo(i));
-		playerFactory.registerPlayer("TeamPredator", i -> new TeamPredator(i));
-		playerFactory.registerPlayer("TeamPVKHNOHX", i -> new TeamPVKHNOHX(i));
-		playerFactory.registerPlayer("TeamRocket", i -> new TeamRocket(i));
-		playerFactory.registerPlayer("TeamDotJava", i -> new TeamDotJava(i));
-		playerFactory.registerPlayer("TeamTANGOMANGOS", i -> new TeamTANGOMANGOS(i));
-		playerFactory.registerPlayer("TeamTwoBrownGuys", i -> new TeamTwoBrownGuys(i));
-		playerFactory.registerPlayer("TeamUtilityMaxim", i -> new TeamUtilityMaxim(i));
 		playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
-		playerFactory.registerPlayer("TeamWoops", i -> new TeamWoops(i));
-		playerFactory.registerPlayer("TeamYfnl", i -> new TeamYfnl(i));
-		playerFactory.registerPlayer("TeamZedModTwoZed", i -> new TeamZedModTwoZed(i));
-		playerFactory.registerPlayer("TeamZinger", i -> new TeamZinger(i));*/
 
 	}
 
