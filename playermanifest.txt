@@ -19,13 +19,13 @@ TeamRationalTruster
 TeamRationalUtilitarian
 1
 TeamTitForTat
-5
+3
 TeamTatForTit
-1
+3
 TeamTwitchForTat
-1
+3
 TeamGrudger
-2
+3
 TeamForgiveness
 1
 TeamCondescension

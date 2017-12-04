@@ -52,6 +52,7 @@ public class Tournament {
 		playerFactory.registerPlayer("TeamTFTADC", i -> new TeamTFTADC(i));
 
 		playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
+		playerFactory.registerPlayer("TeamWa", i -> new TeamWa(i));
 
 	}
 

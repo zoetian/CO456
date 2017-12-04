@@ -11,7 +11,11 @@ fast:
 	wait
 	java Tournament full > result.txt
 	wait
-	python3 parse.py
+	python3 parse.py > analysis.txt
+	wait
+	cat analysis.txt
 
 parse:
-	python3 parse.py
+	python3 parse.py > analysis.txt
+	wait
+	cat analysis.txt
