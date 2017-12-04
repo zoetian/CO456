@@ -11,10 +11,11 @@ public class TeamWatermelon extends Player {
 
 	public int BETRAYAL_DELTA = 1;
 	public int COOPERATION_DELTA = 1;
-	public int IRRATIONALITY_DELTA = 1;
+	public int IRRATIONALITY_DELTA = 2;
 	public int SUBOPTIMALITY_DELTA = 1;
 
 	int isOpponentMonkey = 0;
+	boolean isMonkey = false;
 	boolean isOpponentNihilist = false;
 	boolean isOpponentOptimist = false;
 	boolean isOpponentPessimist = false;
@@ -26,6 +27,8 @@ public class TeamWatermelon extends Player {
 
 	boolean opponentCanCaptureKing = false;
 	boolean opponentCanCaptureRook = false;
+
+	int matchNum;
 
 	public TeamWatermelon(int maxNumMoves) {
 		TeamRational teamRationalRealist = TeamRational.createRealist(maxNumMoves);
@@ -62,6 +65,9 @@ public class TeamWatermelon extends Player {
 
 	public void prepareForSeries() {
 		trust = 1;
+		isOpponentMonkey = 0;
+		matchNum = 0;
+		isMonkey = false;
 		shaker.handshakePrepareForSeries();
 	}
 
@@ -70,6 +76,7 @@ public class TeamWatermelon extends Player {
 
 		opponentHadWinningPosition = false;
 
+		matchNum += 1;
 		// Take note if opponent starts in winning position:
 		if (myColour == BLACK) {
 			boardPosition = toBoardPosition();
@@ -84,7 +91,7 @@ public class TeamWatermelon extends Player {
 		//Convert to a more reasonable format first:
 		int myMatchPayoff = outcomeToPayoff(matchOutcome);
 		trust = updateTrust(trust, myMatchPayoff);
-
+		//System.out.println("Match "+matchNum+" This is a monkey: "+isMonkey+" Monkey score is "+isOpponentMonkey);
 		shaker.handshakeReceiveMatchOutcome(matchOutcome, toBoardPosition());
 	}
 
@@ -95,15 +102,17 @@ public class TeamWatermelon extends Player {
 				return trust - BETRAYAL_DELTA;
 			} else if (myMatchPayoff == 3) {
 				// I tried to tie, but I won!!! I don't trust that you know what you're doing.
+				//isOpponentMonkey += 2;
 				return trust - IRRATIONALITY_DELTA;
 			}
 		} else if (opponentHadWinningPosition && myMatchPayoff == 2) {
 			// I didn't trust you. I'm very picky about restoring trust!
 			// You gave up a win for a tie? I trust you more now.
 			return trust + COOPERATION_DELTA;
-		//} else if (opponentHadWinningPosition && myMatchPayoff != 2) {
+		} else if (opponentHadWinningPosition && myMatchPayoff != 2) {
 			// I don't believe that you needed to let me win.
-		//	return trust - SUBOPTIMALITY_DELTA;
+			//isOpponentMonkey += 4;
+			return trust - SUBOPTIMALITY_DELTA;
 		}
 		return trust;
 	}
@@ -186,18 +195,26 @@ public class TeamWatermelon extends Player {
 		int bestScoreCooperative = nodeCooperative.getScore(currentPlayerColour);
 
 		if (opponentCanCaptureKing && !myKingIsAlive) {
-			if (trust > 0) {
-				isOpponentMonkey += 2;
-			} else {
+			opponentCanCaptureKing = false;
+			if (trust < 0) {
+				//System.out.println("He ate my king! in Match "+matchNum+" Monkey score added! because trust is "+trust);
 				isOpponentMonkey += 4;
 			}
 		}
 
 		if (opponentCanCaptureRook && !myRookIsAlive) {
-			isOpponentMonkey += 7;
+			opponentCanCaptureRook = false;
+			if (trust < 0) {
+				//System.out.println("He ate my rook! in Match "+matchNum+" Monkey score added! because trust is "+trust);
+				isOpponentMonkey += 6;
+			}
 		}
 
-		if (bestScoreRealist==2 || isOpponentMonkey >= 20) {
+		if(isOpponentMonkey >= 20) isMonkey = true;
+
+		//if (bestScoreRealist==2 || (isMonkey == true && matchNum <= 12)) {
+		if (bestScoreRealist==2) {
+			//System.out.println("Monkey score is "+isOpponentMonkey);
 			// If the move forces a tie, play it in all cases (to be safe):
 			return nodeRealist.bestMove;
 		} else if (trust > 0 && bestScoreCooperative == 3) {
