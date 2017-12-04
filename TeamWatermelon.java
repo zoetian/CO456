@@ -11,7 +11,7 @@ public class TeamWatermelon extends Player {
 
 	public int BETRAYAL_DELTA = 1;
 	public int COOPERATION_DELTA = 1;
-	public int IRRATIONALITY_DELTA = 3;
+	public int IRRATIONALITY_DELTA = 1;
 	public int SUBOPTIMALITY_DELTA = 1;
 
 	int isOpponentMonkey = 0;
@@ -186,7 +186,11 @@ public class TeamWatermelon extends Player {
 		int bestScoreCooperative = nodeCooperative.getScore(currentPlayerColour);
 
 		if (opponentCanCaptureKing && !myKingIsAlive) {
-			isOpponentMonkey += 3;
+			if (trust > 0) {
+				isOpponentMonkey += 2;
+			} else {
+				isOpponentMonkey += 4;
+			}
 		}
 
 		if (opponentCanCaptureRook && !myRookIsAlive) {
