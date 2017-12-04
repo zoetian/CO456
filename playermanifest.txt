@@ -20,6 +20,16 @@ TeamRationalUtilitarian
 1
 TeamTitForTat
 5
+TeamTatForTit
+1
+TeamTwitchForTat
+1
+TeamGrudger
+2
+TeamForgiveness
+1
+TeamCondescension
+1
 TeamDoubleAgent
 1
 TeamHandshaker
