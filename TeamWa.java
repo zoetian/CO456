@@ -1,4 +1,4 @@
-public class TeamWatermelon extends Player {
+public class TeamWa extends Player {
 
 	// for DoubleAgent
 	private Handshaker shaker;
@@ -9,9 +9,9 @@ public class TeamWatermelon extends Player {
 	public byte[] bestMoveBytesRealist, scoreWhiteBytesRealist, scoreBlackBytesRealist;
 	public byte[] bestMoveBytesCooperative, scoreWhiteBytesCooperative, scoreBlackBytesCooperative;
 
-	public int BETRAYAL_DELTA = 2;
+	public int BETRAYAL_DELTA = 1;
 	public int COOPERATION_DELTA = 1;
-	public int IRRATIONALITY_DELTA = 3;
+	public int IRRATIONALITY_DELTA = 2;
 	public int SUBOPTIMALITY_DELTA = 1;
 
 	int monkeyScore;
@@ -34,7 +34,7 @@ public class TeamWatermelon extends Player {
 
 	int matchNum;
 
-	public TeamWatermelon(int maxNumMoves) {
+	public TeamWa(int maxNumMoves) {
 		TeamRational teamRationalRealist = TeamRational.createRealist(maxNumMoves);
 		/*TeamRationalRealist has the following beliefs as P1:
 		 * P1\P2 |  W  |  L  |
@@ -88,14 +88,20 @@ public class TeamWatermelon extends Player {
 		matchNum += 1;
 		// Take note if opponent starts in winning position:
 		if (myColour == BLACK) {
+			System.out.println("Match "+matchNum+" We are BLACK");
 			boardPosition = toBoardPosition();
 			if (scoreBlackBytesRealist[boardPosition.toInt()] == 0) {
 				opponentHadWinningPosition = true;
 			}
-		} else {
-			// if we are not going first, we have to check if monkey can eat our king/rook
+
 			opponentCanCaptureRookThisRound=updateOpponentCanCaptureRook(myRookRow,myRookColumn);
 			opponentCanCaptureKingThisRound=updateOpponentCanCaptureKing(myKingRow,myRookColumn);
+			System.out.println("Can opponent capture our rook at the beginning? "+opponentCanCaptureRookThisRound);
+			System.out.println("Can opponent capture our king at the beginning? "+opponentCanCaptureKingThisRound);
+
+		} else {
+			System.out.println("Match "+matchNum+" We are WHITE");
+
 		}
 		shaker.handshakePrepareForMatch(toBoardPosition());
 
@@ -146,10 +152,11 @@ public class TeamWatermelon extends Player {
 	public boolean updateOpponentCanCaptureKing(int nextRow, int nextCol) {
 		// their king captures our king
 		if(theirKingIsAlive && myKingIsAlive){
-			if (Math.abs(theirKingColumn - nextCol)==1 || Math.abs(theirKingRow - nextRow)==1) {
+			if (Math.abs(theirKingColumn - nextCol)<=1 && Math.abs(theirKingRow-nextRow)<=1) {
 						return true;
 			}
 		}
+
 		// their rook captures our king
 		if(theirRookIsAlive && myKingIsAlive) {
 			if((theirRookRow==nextRow && myRookRow != nextRow && theirKingRow != nextRow) ||
@@ -163,7 +170,7 @@ public class TeamWatermelon extends Player {
 	 public boolean updateOpponentCanCaptureRook(int nextRow, int nextCol) {
 		// their king captures our rook
 		if(theirKingIsAlive && myRookIsAlive) {
-			if (Math.abs(theirKingColumn - nextCol)==1 || Math.abs(theirKingRow - nextRow)==1) {
+			if (Math.abs(theirKingColumn - nextCol)<=1 && Math.abs(theirKingRow-nextRow)<=1) {
 						return true;
 			}
 		}
@@ -210,7 +217,7 @@ public class TeamWatermelon extends Player {
 		int nextRow = nextMove.getDestinationRow();
 		int nextCol = nextMove.getDestinationColumn();
 		String piece = nextMove.getPieceToMove();
-		if(Math.abs(nextRow-theirKingRow)==1||Math.abs(nextCol-theirKingColumn)==1||
+		if((Math.abs(theirKingColumn - nextCol)<=1 && Math.abs(theirKingRow-nextRow)<=1)||
 			 (theirRookRow==nextRow && theirRookRow != theirKingRow) ||
 			 (theirRookColumn==nextCol && theirRookColumn != theirKingColumn)) {
 				 return true;
@@ -235,22 +242,9 @@ public class TeamWatermelon extends Player {
 		int bestScoreCooperative = nodeCooperative.getScore(currentPlayerColour);
 
 		// detect monkey
-		if(detectMonkey && matchNum>1 && myColour==currentPlayerColour) {
-			if (opponentCanCaptureKingThisRound) {
-				if (!myKingIsAlive) {
-					// our king was captured in the last round!
-					if (trust < 0 && (bestScoreCooperative == 3 || bestScoreRealist == 2)) {
-						System.out.println("He ate my king while we can tie! in Match "+matchNum+" Monkey score added! because trust is "+trust);
-						monkeyScore += 4;
-					}
-				} else {
-					// the enemy can take my king but he did not. Definitely not a monkey
-					System.out.println("the enemy can take my king but he did not. Definitely not a monkey");
-					isOpponentMonkey=false;
-					detectMonkey=false;
-				}
-			}
-
+		// logic when we start first, so we cannot detect monkey for now
+		if(detectMonkey) {
+			
 			if (opponentCanCaptureRookThisRound) {
 				if (!myRookIsAlive) {
 					if (trust < 1) {
@@ -260,6 +254,21 @@ public class TeamWatermelon extends Player {
 				} else {
 					// the enemy can take my rook but he did not. Definitely not a monkey
 					System.out.println("the enemy can take my rook but he did not. Definitely not a monkey");
+					isOpponentMonkey=false;
+					detectMonkey=false;
+				}
+			}
+
+			if (opponentCanCaptureKingThisRound) { // for next round?
+				if (!myKingIsAlive) {
+					// our king was captured in the last round!
+					if (trust < 0 && (bestScoreCooperative == 3 || bestScoreRealist == 2)) {
+						System.out.println("He ate my king while we can tie! in Match "+matchNum+" Monkey score added! because trust is "+trust);
+						monkeyScore += 4;
+					}
+				} else {
+					// the enemy can take my king but he did not. Definitely not a monkey
+					System.out.println("the enemy can take my king but he did not. Definitely not a monkey");
 					isOpponentMonkey=false;
 					detectMonkey=false;
 				}
@@ -304,12 +313,24 @@ public class TeamWatermelon extends Player {
 
 		switch (pieceToMove){
 		case "king":
-			opponentCanCaptureRookThisRound = updateOpponentCanCaptureKing(nextRow,nextCol);
-			System.out.println("We decide to move king in Match "+matchNum+". Can our king be captured next round? "+opponentCanCaptureKingThisRound);
+			opponentCanCaptureKingThisRound = updateOpponentCanCaptureKing(nextRow,nextCol);
+			if(opponentCanCaptureKingThisRound) {
+				System.out.println("We decide to move king in Match "+matchNum+". Our king be captured next round");
+			}
+			System.out.println("Our king is at "+nextRow+" "+nextCol);
+			System.out.println("Our rook is at "+myRookRow+" "+myRookColumn);
+			System.out.println("Their king is at "+theirKingRow+" "+theirKingColumn);
+			System.out.println("Their rook is at "+theirRookRow+" "+theirRookColumn);
 			break;
 		case "rook":
 			opponentCanCaptureRookThisRound = updateOpponentCanCaptureRook(nextRow,nextCol);
-			System.out.println("We decide to move rook in Match "+matchNum+". Can our rook be captured next round? "+opponentCanCaptureKingThisRound);
+			if(opponentCanCaptureRookThisRound) {
+				System.out.println("We decide to move rook in Match "+matchNum+". Our rook be captured next round");
+			}
+			System.out.println("Our rook is at "+nextRow+" "+nextCol);
+			System.out.println("Our king is at "+myKingRow+" "+myKingColumn);
+			System.out.println("Their king is at "+theirKingRow+" "+theirKingColumn);
+			System.out.println("Their rook is at "+theirRookRow+" "+theirRookColumn);
 			break;
 		}
 		return move;
