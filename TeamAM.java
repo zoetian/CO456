@@ -57,7 +57,7 @@ public class TeamAM extends Player {
 		monkeyScore = 0;
 		matchNum = 0;
 		isDetectMonkeyModeOn = true;
-		isOpponentMonkey = false;
+		isOpponentMonkey = true;
 		opponentCanCaptureKingThisRound = false;
 		opponentCanCaptureRookThisRound = false;
 		shaker.handshakePrepareForSeries();
@@ -297,89 +297,21 @@ public class TeamAM extends Player {
 		// boolean isMyTurn = (numMovesPlayed % 2 == 0 && myColour == 0) || (numMovesPlayed%2!=0 && myColour == 1);
 		boolean isMyTurn = (numMovesPlayed%2 == myColour);
 
-		/*
-		什么情况一定不是猴子
+		if(isDetectMonkeyModeOn) {
 
-		如果是上一轮 对方走 并且对方可以吃KING
-		X+1的时候 KING还在 那么不是
-
-		如果是上一轮 对方走 并且对方只能吃ROOK
-		X+1的时候 ROOK还在 那么不是
-		*/
-
-		if(isDetectMonkeyModeOn)
-		{
-			if(DEBUG_MODE) {
-				System.out.println("[CORE] numMovesPlayed: "+numMovesPlayed);
-				System.out.println("[CORE] myColour:"+myColour);
-				System.out.println("[CORE] isMyTurn: "+isMyTurn);
-				System.out.println("Can opponent capture our king? "+opponentCanCaptureKingThisRound);
-				System.out.println("Can opponent capture our Rook? "+opponentCanCaptureRookThisRound);
-				System.out.println("My current king: ["+myKingRow+", "+myKingColumn+"]");
-				System.out.println("My current rook: ["+myRookRow+", "+myRookColumn+"]");
-				System.out.println("Their current king: ["+theirKingRow+", "+theirKingColumn+"]");
-				System.out.println("Their current rook: ["+theirRookRow+", "+theirRookColumn+"]");
-			}
-
-			if (opponentCanCaptureKingThisRound && numMovesPlayed != 0)
-			{
-				if (!myKingIsAlive)
-				{	 // our king was captured in the last round!
-					if (trust < 1 || numMovesPlayed <=2)
-					{
-
-						if(CHECK_MODE) System.out.println("Oppo took my king while we can tie! \nIn Match "+matchNum+" Monkey score added! because trust is "+trust);
-
-						monkeyScore += 5;
-
-						if(bestScoreRealist==2 || bestScoreCooperative==3) {
-							isOpponentMonkey = true;
-							isDetectMonkeyModeOn = false;
-						}
-					}
-				}
-
-				else {
-
-					if(CHECK_MODE) System.out.println("Oppo could take my king but he did not. Definitely not a monkey at "+numMovesPlayed);
+			if (opponentCanCaptureKingThisRound && numMovesPlayed != 0 && myKingIsAlive) {
 
 					isOpponentMonkey = false;
 					isDetectMonkeyModeOn = false;
-				}
+
 			}
 
-			else if (opponentCanCaptureRookThisRound && numMovesPlayed != 0)
-			{
-				if (!myRookIsAlive)
-				{
-					if (trust < 1 || numMovesPlayed <=2)
-					{
-						if(CHECK_MODE) System.out.println("Oppo took my rook! \nIn Match "+matchNum+" Monkey score added! because trust is "+trust);
-						monkeyScore += 5;
-					}
-				}
-				else
-				{
-					if(CHECK_MODE) {
-						System.out.println("Oppo could take my rook but he did not. Definitely not a monkey at "+numMovesPlayed);
-						System.out.println("Is our rook alive? "+myRookIsAlive);
-						System.out.println("Our rook row "+myRookRow+" Our rook col "+myRookColumn);
-						System.out.println("Can opponent capture our rook? "+opponentCanCaptureRookThisRound);
-						System.out.println("Our king row "+myKingRow+" Our rook col "+myKingColumn);
-						System.out.println("Their rook row "+theirRookRow+" their rook col "+theirRookColumn);
-						System.out.println("Their king row "+theirKingRow+" Their king col "+theirKingColumn);
-					}
+		  if (opponentCanCaptureRookThisRound && numMovesPlayed != 0 && myRookIsAlive) {
 
 					isOpponentMonkey = false;
 					isDetectMonkeyModeOn = false;
-				}
 			}
 
-			if(monkeyScore >= 10 || (monkeyScore>= 6 && matchNum > 5) || matchNum >= 20) {
-				isOpponentMonkey = true;
-				isDetectMonkeyModeOn = false;
-				if(DEBUG_MODE) System.out.println("Fuck god, you are a monkey");
-			}
 		}
 		return isOpponentMonkey;
 	}
@@ -402,19 +334,6 @@ public class TeamAM extends Player {
 
 		isOpponentMonkey = isAgainstMonkey(bestScoreCooperative, bestScoreRealist);
 
-		// TODO: change the logic for this one
-		if(isOpponentMonkey) {
-			if(CHECK_MODE) System.out.println("Activating Monkey Code...");
-			int iteration = 40;
-			while(iteration>0) {
-				MoveDescription move = nodeRealist.bestMove;
-				if(!kingOrRookCanBeCapturedNextRound(move)){
-					return move;
-				}
-				iteration -= 1;
-			}
-		}
-
 		MoveDescription move;
 		//if (bestScoreRealist==2 || (isMonkey == true && matchNum <= 12)) {
 		if (bestScoreRealist==2) {
@@ -429,19 +348,18 @@ public class TeamAM extends Player {
 			move = nodeRealist.bestMove;
 		}
 
-
-		int myNextRow = move.getDestinationRow();
-		int myNextCol = move.getDestinationColumn();
-		String myNextPieceType = move.getPieceToMove();
-
-		checkNextThreaten(myNextRow, myNextCol, myNextPieceType, "BESTMOVE");
-		// check threaten for the other chess
-		if (myNextPieceType.equals("king")) {
-			checkNextThreaten(myRookRow, myRookColumn, "rook", "THE OTHER CHESS");
-		} else {
-			checkNextThreaten(myKingRow, myKingColumn, "king", "THE OTHER CHESS");
+		// TODO: change the logic for this one
+		if(isOpponentMonkey) {
+			//if(CHECK_MODE) System.out.println("Activating Monkey Code...");
+			int iteration = 40;
+			while(iteration>0) {
+				move = nodeRealist.bestMove;
+				if(!kingOrRookCanBeCapturedNextRound(move)){
+					break;
+				}
+				iteration -= 1;
+			}
 		}
-
 		return move;
 	}
 
