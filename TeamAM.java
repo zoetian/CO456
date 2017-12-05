@@ -161,6 +161,14 @@ public class TeamAM extends Player {
 			System.out.println("*********Check Next Threaten******* Move Num is "+numMovesPlayed+"*****");
 		}
 
+		if(myNextPieceType.equals("king")) {
+			myKingRow = myNextRow;
+			myKingColumn = myNextCol;
+		} else {
+			myRookRow = myNextRow;
+			myRookColumn = myNextCol;
+		}
+
 		// those two statements shouldn't be printed at any cases!
 		if (myNextPieceType.equals("king") && !myKingIsAlive) return "delete non-existing king /error";
 		if (myNextPieceType.equals("rook") && !myRookIsAlive) return "delete non-existing rook /error";
@@ -179,18 +187,30 @@ public class TeamAM extends Player {
 		boolean threatenVertical;
 	//	if(myColour != 1 && numMovesPlayed != 0) {
 												// same row
-			threatenHorizon = (theirRookRow == myNextRow) &&
+		if (myNextPieceType.equals("king")) {
+			threatenHorizon = (theirRookRow == myKingRow) &&
 												// blocked if their king is on the same row and blocks the column
-												!(isBlocked(theirRookColumn, myNextCol, theirKingColumn)&&theirKingRow==theirRookRow) &&
+												!(isBlocked(theirRookColumn, myKingColumn, theirKingColumn)&& theirKingRow==theirRookRow) &&
 												// blocked if their rook is on the same row and blocks the column
-												!(isBlocked(theirRookColumn, myNextCol, myRookColumn)&&myRookRow==theirRookRow) &&
-												!(isBlocked(theirRookColumn, myNextCol, myKingColumn)&&myKingRow==theirRookRow);
+												!(isBlocked(theirRookColumn, myKingColumn, myRookColumn) && myRookRow==theirRookRow);
 												// same column
-			threatenVertical = (theirRookColumn == myNextCol) &&
+			threatenVertical = (theirRookColumn == myKingColumn) &&
 												// blocked if their king is on the same column and blocks the row
-												!(isBlocked(theirRookRow, myNextRow, theirKingRow) &&  theirKingColumn == theirRookColumn) &&
-												!(isBlocked(theirRookRow, myNextRow, myRookRow) && myRookColumn == theirRookColumn) &&
-												!(isBlocked(theirRookRow, myNextRow, myKingRow)&&myKingColumn==theirRookColumn);;
+												!(isBlocked(theirRookRow, myKingRow, theirKingRow) &&  theirKingColumn == theirRookColumn) &&
+												!(isBlocked(theirRookRow, myKingRow, myRookRow) && myRookColumn==theirRookColumn);;
+		} else {
+			threatenHorizon = (theirRookRow == myRookRow) &&
+												// blocked if their king is on the same row and blocks the column
+												!(isBlocked(theirRookColumn, myRookColumn, theirKingColumn) && theirKingRow==theirRookRow) &&
+												// blocked if their rook is on the same row and blocks the column
+												!(isBlocked(theirRookColumn, myRookColumn, myKingColumn) && myKingRow==theirRookRow);
+												// same column
+			threatenVertical = (theirRookColumn == myRookColumn) &&
+												// blocked if their king is on the same column and blocks the row
+												!(isBlocked(theirRookRow, myRookRow, theirKingRow) &&  theirKingColumn == theirRookColumn) &&
+												!(isBlocked(theirRookRow, myRookRow, myKingRow) && myKingColumn == theirRookColumn);;
+		}
+
 /*
 		} else {
 			threatenHorizon = (theirRookRow == myNextRow) && !isBlocked(theirRookColumn, myNextCol, theirKingColumn);
@@ -205,10 +225,10 @@ public class TeamAM extends Player {
 
 		boolean isThreaten = isThreatenByTheirKing || isThreatenByTheirRook;
 
-		if (isThreaten && myNextPieceType.equals("king")) {
-			opponentCanCaptureKingThisRound = true;
-		} else if (isThreaten && myNextPieceType.equals("rook"))  {
-			opponentCanCaptureRookThisRound = true;
+		if (myNextPieceType.equals("king")) {
+			opponentCanCaptureKingThisRound = isThreaten;
+		} else if (myNextPieceType.equals("rook"))  {
+			opponentCanCaptureRookThisRound = isThreaten;
 		}
 
 		String res = myNextPieceType;
