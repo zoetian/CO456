@@ -1,7 +1,14 @@
+import sys
+
 resultFile = open("result.txt", "rt")
 
 with open("analysis.txt", "wt") as analysisFile:
-	keyword = "TeamAgainstMonkey"
+	keyLen = len(sys.argv)
+	if keyLen == 1:
+		keyword = "TeamWatermelon"
+	else:
+		keyword = str("Team") + str(sys.argv[1])
+	
 	tmp = []
 	mine = []
 	oppo = []
