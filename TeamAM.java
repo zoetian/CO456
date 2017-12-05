@@ -7,7 +7,7 @@ public class TeamAM extends Player {
 	int trust;
 	// TODO BY ZOE: REMEMBER TO TURN THIS OFF
 	public final boolean DEBUG_MODE = false;
-	public final boolean CHECK_MODE = true;
+	public final boolean CHECK_MODE = false;
 
 	public byte[] bestMoveBytesRealist, scoreWhiteBytesRealist, scoreBlackBytesRealist;
 	public byte[] bestMoveBytesCooperative, scoreWhiteBytesCooperative, scoreBlackBytesCooperative;
@@ -84,7 +84,7 @@ public class TeamAM extends Player {
 
 		// Start in second : record the gameboard config?
 		if (myColour == BLACK) {
-			System.out.println("\n**************[prepareForMatch] Match "+matchNum+" We are BLACK");
+			//System.out.println("\n**************[prepareForMatch] Match "+matchNum+" We are BLACK");
 			boardPosition = toBoardPosition();
 			if (scoreBlackBytesRealist[boardPosition.toInt()] == 0) {
 				opponentHadWinningPosition = true;
@@ -325,12 +325,17 @@ public class TeamAM extends Player {
 			{
 				if (!myKingIsAlive)
 				{	 // our king was captured in the last round!
-					if (trust < 0 && (bestScoreCooperative == 3 || bestScoreRealist == 2))
+					if (trust < 1 || numMovesPlayed <=2)
 					{
 
 						if(CHECK_MODE) System.out.println("Oppo took my king while we can tie! \nIn Match "+matchNum+" Monkey score added! because trust is "+trust);
 
 						monkeyScore += 5;
+
+						if(bestScoreRealist==2 || bestScoreCooperative==3) {
+							isOpponentMonkey = true;
+							isDetectMonkeyModeOn = false;
+						}
 					}
 				}
 
@@ -347,7 +352,7 @@ public class TeamAM extends Player {
 			{
 				if (!myRookIsAlive)
 				{
-					if (trust < 0)
+					if (trust < 1 || numMovesPlayed <=2)
 					{
 						if(CHECK_MODE) System.out.println("Oppo took my rook! \nIn Match "+matchNum+" Monkey score added! because trust is "+trust);
 						monkeyScore += 5;
@@ -370,7 +375,7 @@ public class TeamAM extends Player {
 				}
 			}
 
-			if(monkeyScore >= 15) {
+			if(monkeyScore >= 10 || (monkeyScore>= 6 && matchNum > 5) || matchNum >= 20) {
 				isOpponentMonkey = true;
 				isDetectMonkeyModeOn = false;
 				if(DEBUG_MODE) System.out.println("Fuck god, you are a monkey");
