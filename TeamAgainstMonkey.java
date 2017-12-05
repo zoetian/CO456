@@ -83,7 +83,7 @@ public class TeamAgainstMonkey extends Player {
 
 		// Start in second : record the gameboard config?
 		if (myColour == BLACK) {
-			System.out.println("\n[prepareForMatch] Match "+matchNum+" We are BLACK");
+			System.out.println("\n**************[prepareForMatch] Match "+matchNum+" We are BLACK");
 			boardPosition = toBoardPosition();
 			if (scoreBlackBytesRealist[boardPosition.toInt()] == 0) {
 				opponentHadWinningPosition = true;
@@ -95,11 +95,13 @@ public class TeamAgainstMonkey extends Player {
 			String myKingThreatenBy = parseThreatenBy(kingRes);
 			String myRookThreatenBy = parseThreatenBy(rookRes);
 
-			opponentCanCaptureRookThisRound = !myKingThreatenBy.equals("safe");
-			opponentCanCaptureKingThisRound = !myRookThreatenBy.equals("safe");
+
+			opponentCanCaptureKingThisRound = !myKingThreatenBy.equals("safe");
+			opponentCanCaptureRookThisRound = !myRookThreatenBy.equals("safe");
 
 			if(DEBUG_MODE) {
 				System.out.println("===");
+				System.out.println("[prepareForMatch] isMyTurn: " + (myColour == numMovesPlayed%2));
 				System.out.println("[prepareForMatch] kingRes: "+kingRes);
 				System.out.println("[prepareForMatch] rookRes: "+rookRes);
 
@@ -109,7 +111,7 @@ public class TeamAgainstMonkey extends Player {
 			}
 
 		} else {
-			 if(DEBUG_MODE) System.out.println("[prepareForMatch] Match "+matchNum+" We are WHITE");
+			 if(DEBUG_MODE) System.out.println("\n**************[prepareForMatch] Match "+matchNum+" We are WHITE");
 
 		}
 		shaker.handshakePrepareForMatch(toBoardPosition());
@@ -176,6 +178,7 @@ public class TeamAgainstMonkey extends Player {
 
 		if(DEBUG_MODE) {
 			System.out.println("STATE = XXXX "+state);
+			System.out.println("Current numMovesPlayed "+ numMovesPlayed);
 			System.out.println("My next "+myNextPieceType+": [" + myNextRow + ", " + myNextCol + "]");
 			System.out.println("My current king: ["+myKingRow+", "+myKingColumn+"]");
 			System.out.println("My current rook: ["+myRookRow+", "+myRookColumn+"]");
@@ -231,7 +234,11 @@ public class TeamAgainstMonkey extends Player {
 
 	// core function to detect monkey
 	public boolean isAgainstMonkey(int bestScoreCooperative, int bestScoreRealist) {
-		if(isDetectMonkeyModeOn)
+
+		// boolean isMyTurn = (numMovesPlayed % 2 == 0 && myColour == 0) || (numMovesPlayed%2!=0 && myColour == 1);
+		boolean isMyTurn = (numMovesPlayed%2 == myColour);
+
+		if(isDetectMonkeyModeOn && isMyTurn && numMovesPlayed != 0)
 		{
 			if (opponentCanCaptureKingThisRound)
 			{
@@ -248,7 +255,7 @@ public class TeamAgainstMonkey extends Player {
 
 				else {
 
-					if(DEBUG_MODE) System.out.println("Oppo could take my king but he did not. Definitely not a monkey");
+					if(DEBUG_MODE) System.out.println("Oppo could take my king but he did not. Definitely not a monkey at "+numMovesPlayed);
 
 					isOpponentMonkey = false;
 					isDetectMonkeyModeOn = false;
@@ -267,7 +274,7 @@ public class TeamAgainstMonkey extends Player {
 				}
 				else
 				{
-					if(DEBUG_MODE) System.out.println("Oppo could take my rook but he did not. Definitely not a monkey");
+					if(DEBUG_MODE) System.out.println("Oppo could take my rook but he did not. Definitely not a monkey at "+numMovesPlayed);
 
 					isOpponentMonkey = false;
 					isDetectMonkeyModeOn = false;
@@ -277,6 +284,7 @@ public class TeamAgainstMonkey extends Player {
 			if(monkeyScore >= 20) {
 				isOpponentMonkey = true;
 				isDetectMonkeyModeOn = false;
+				if(DEBUG_MODE) System.out.println("Fuck god, you are a monkey");
 			}
 		}
 		return isOpponentMonkey;
