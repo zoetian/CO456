@@ -83,14 +83,14 @@ public class TeamAgainstMonkey extends Player {
 
 		// Start in second : record the gameboard config?
 		if (myColour == BLACK) {
-			System.out.println("[prepareForMatch] Match "+matchNum+" We are BLACK");
+			System.out.println("\n[prepareForMatch] Match "+matchNum+" We are BLACK");
 			boardPosition = toBoardPosition();
 			if (scoreBlackBytesRealist[boardPosition.toInt()] == 0) {
 				opponentHadWinningPosition = true;
 			}
 
-			String kingRes = checkNextThreaten(myKingRow, myKingColumn, "king");
-			String rookRes = checkNextThreaten(myRookRow, myRookColumn, "rook");
+			String kingRes = checkNextThreaten(myKingRow, myKingColumn, "king", "prepareForMatch");
+			String rookRes = checkNextThreaten(myRookRow, myRookColumn, "rook", "prepareForMatch");
 
 			String myKingThreatenBy = parseThreatenBy(kingRes);
 			String myRookThreatenBy = parseThreatenBy(rookRes);
@@ -99,12 +99,13 @@ public class TeamAgainstMonkey extends Player {
 			opponentCanCaptureKingThisRound = !myRookThreatenBy.equals("safe");
 
 			if(DEBUG_MODE) {
+				System.out.println("===");
 				System.out.println("[prepareForMatch] kingRes: "+kingRes);
 				System.out.println("[prepareForMatch] rookRes: "+rookRes);
-				System.out.println();
 
 				if(opponentCanCaptureRookThisRound) System.out.println("[prepareForMatch] Opponent can capture our rook ");
 				if(opponentCanCaptureKingThisRound) System.out.println("[prepareForMatch] Opponent can capture our king");
+				System.out.println("===");
 			}
 
 		} else {
@@ -152,8 +153,9 @@ public class TeamAgainstMonkey extends Player {
 	}
 
 	// print out all the coordinates
-	public void printCell(int myNextRow, int myNextCol, String myNextPieceType) {
+	public void printCell(int myNextRow, int myNextCol, String myNextPieceType, String state) {
 		if(DEBUG_MODE) {
+			System.out.println("STATE = XXXX "+state);
 			System.out.println("My next "+myNextPieceType+": [" + myNextRow + ", " + myNextCol + "]");
 			System.out.println("My current king: ["+myKingRow+", "+myKingColumn+"]");
 			System.out.println("My current rook: ["+myKingRow+", "+myKingColumn+"]");
@@ -163,7 +165,7 @@ public class TeamAgainstMonkey extends Player {
 	}
 
 	// can be used to check current threaten as well
-	public String checkNextThreaten(int myNextRow, int myNextCol, String myNextPieceType) {
+	public String checkNextThreaten(int myNextRow, int myNextCol, String myNextPieceType, String state) {
 		// those two statements shouldn't be printed at any cases!
 		if (myNextPieceType.equals("king") && !myKingIsAlive) return "delete non-existing king /error";
 		if (myNextPieceType.equals("rook") && !myRookIsAlive) return "delete non-existing rook /error";
@@ -184,8 +186,7 @@ public class TeamAgainstMonkey extends Player {
 		else
 			res = "/safe";
 
-
-		printCell(myNextRow, myNextCol, myNextPieceType);
+		printCell(myNextRow, myNextCol, myNextPieceType, state);
 
 		return res;
 	}
@@ -221,7 +222,69 @@ public class TeamAgainstMonkey extends Player {
 		int myNextCol = nextMove.getDestinationColumn();
 		String piece = nextMove.getPieceToMove();
 
-		return (checkNextThreaten(myNextRow, myNextCol, piece).equals("safe"));
+		return (checkNextThreaten(myNextRow, myNextCol, piece, "CHECKBOTH").equals("safe"));
+	}
+
+	// TODO: the opponentCanCaptureKingThisRound MUST BE CHANGED HERE!!
+	// THE RUN TIME VALUE FOR THIS IS NO LONGER MEANINGFUL
+
+	// also, the checkNextThreaten NEED TO BE CALLED AGAIN AND AGAIN DURING EVERY ROUND
+	// MUST DOUBLE CHECK THE TIME AND MEMROY IN EVERY ROUND
+
+	// Double check in isAgainstMonkey: when we determine the player type
+	// Why is it useful to check if our king/ rook is already dead???
+
+	// core function to detect monkey
+	public boolean isAgainstMonkey(int bestScoreCooperative, int bestScoreRealist) {
+		if(isDetectMonkeyModeOn)
+		{
+			if (opponentCanCaptureKingThisRound)
+			{
+				if (!myKingIsAlive)
+				{	 // our king was captured in the last round!
+					if (trust < 0 && (bestScoreCooperative == 3 || bestScoreRealist == 2))
+					{
+
+						if(DEBUG_MODE) System.out.println("Oppo took my king while we can tie! \nIn Match "+matchNum+" Monkey score added! because trust is "+trust);
+
+						monkeyScore += 4;
+					}
+				}
+
+				else {
+
+					if(DEBUG_MODE) System.out.println("Oppo could take my king but he did not. Definitely not a monkey");
+
+					isOpponentMonkey = false;
+					isDetectMonkeyModeOn = false;
+				}
+			}
+
+			else if (opponentCanCaptureRookThisRound)
+			{
+				if (!myRookIsAlive)
+				{
+					if (trust < 1)
+					{
+						if(DEBUG_MODE) System.out.println("Oppo took my rook! \nIn Match "+matchNum+" Monkey score added! because trust is "+trust);
+						monkeyScore += 4;
+					}
+				}
+				else
+				{
+					if(DEBUG_MODE) System.out.println("Oppo could take my rook but he did not. Definitely not a monkey");
+
+					isOpponentMonkey = false;
+					isDetectMonkeyModeOn = false;
+				}
+			}
+
+			if(monkeyScore >= 20) {
+				isOpponentMonkey = true;
+				isDetectMonkeyModeOn = false;
+			}
+		}
+		return isOpponentMonkey;
 	}
 
 	public MoveDescription bestMoveFromTrust(BoardPosition boardPosition, int currentPlayerColour) {
@@ -240,41 +303,9 @@ public class TeamAgainstMonkey extends Player {
 
 		int bestScoreCooperative = nodeCooperative.getScore(currentPlayerColour);
 
-		// detect monkey
-		if(isDetectMonkeyModeOn) {
-			if (opponentCanCaptureKingThisRound) {
-				if (!myKingIsAlive) {
-					// our king was captured in the last round!
-					if (trust < 0 && (bestScoreCooperative == 3 || bestScoreRealist == 2)) {
-						System.out.println("He ate my king while we can tie! in Match "+matchNum+" Monkey score added! because trust is "+trust);
-						monkeyScore += 4;
-					}
-				} else {
-					System.out.println("the enemy can take my king but he did not. Definitely not a monkey");
-					isOpponentMonkey=false;
-					isDetectMonkeyModeOn=false;
-				}
-			}
+		isOpponentMonkey = isAgainstMonkey(bestScoreCooperative, bestScoreRealist);
 
-			if (opponentCanCaptureRookThisRound) {
-				if (!myRookIsAlive) {
-					if (trust < 1) {
-						System.out.println("He ate my rook! in Match "+matchNum+" Monkey score added! because trust is "+trust);
-						monkeyScore += 4;
-					}
-				} else {
-					System.out.println("the enemy can take my rook but he did not. Definitely not a monkey");
-					isOpponentMonkey=false;
-					isDetectMonkeyModeOn=false;
-				}
-			}
-
-			if(monkeyScore>=20) {
-				isOpponentMonkey = true;
-				isDetectMonkeyModeOn = false;
-			}
-		}
-
+		// TODO: change the logic for this one
 		if(isOpponentMonkey) {
 			System.out.println("Activating Monkey Code...");
 			int iteration = 20;
@@ -306,7 +337,7 @@ public class TeamAgainstMonkey extends Player {
 		int myNextCol = move.getDestinationColumn();
 		String myNextPieceType = move.getPieceToMove();
 
-		checkNextThreaten(myNextRow, myNextCol, myNextPieceType);
+		checkNextThreaten(myNextRow, myNextCol, myNextPieceType, "BESTMOVE");
 
 		return move;
 	}
