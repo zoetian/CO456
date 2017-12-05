@@ -156,6 +156,11 @@ public class TeamAM extends Player {
 
 	// can be used to check current threaten as well
 	public String checkNextThreaten(int myNextRow, int myNextCol, String myNextPieceType, String state) {
+
+		if(DEBUG_MODE) {
+			System.out.println("*********Check Next Threaten******* Move Num is "+numMovesPlayed+"*****");
+		}
+
 		// those two statements shouldn't be printed at any cases!
 		if (myNextPieceType.equals("king") && !myKingIsAlive) return "delete non-existing king /error";
 		if (myNextPieceType.equals("rook") && !myRookIsAlive) return "delete non-existing rook /error";
@@ -164,6 +169,10 @@ public class TeamAM extends Player {
 		boolean doesMoveCaptureTheirRook = myNextRow==theirRookRow && myNextCol==theirRookColumn;
 
 		boolean isThreatenByTheirKing = (!doesMoveCaptureTheirKing && theirKingIsAlive && Math.abs(theirKingRow - myNextRow) <= 1 && Math.abs(theirKingColumn - myNextCol) <= 1);
+
+		if(DEBUG_MODE && isThreatenByTheirKing) {
+			System.out.println("[check next threat] "+myNextPieceType+" is threatened by their king");
+		}
 
 		// isThreatenByTheirRook: two directions
 		boolean threatenHorizon;
@@ -174,12 +183,14 @@ public class TeamAM extends Player {
 												// blocked if their king is on the same row and blocks the column
 												!(isBlocked(theirRookColumn, myNextCol, theirKingColumn)&&theirKingRow==theirRookRow) &&
 												// blocked if their rook is on the same row and blocks the column
-												!(isBlocked(theirRookColumn, myNextCol, myRookColumn)&&myRookRow==theirRookRow);
+												!(isBlocked(theirRookColumn, myNextCol, myRookColumn)&&myRookRow==theirRookRow) &&
+												!(isBlocked(theirRookColumn, myNextCol, myKingColumn)&&myKingRow==theirRookRow);
 												// same column
 			threatenVertical = (theirRookColumn == myNextCol) &&
 												// blocked if their king is on the same column and blocks the row
 												!(isBlocked(theirRookRow, myNextRow, theirKingRow) &&  theirKingColumn == theirRookColumn) &&
-												!(isBlocked(theirRookRow, myNextRow, myRookRow) && myRookColumn == theirRookColumn);
+												!(isBlocked(theirRookRow, myNextRow, myRookRow) && myRookColumn == theirRookColumn) &&
+												!(isBlocked(theirRookRow, myNextRow, myKingRow)&&myKingColumn==theirRookColumn);;
 /*
 		} else {
 			threatenHorizon = (theirRookRow == myNextRow) && !isBlocked(theirRookColumn, myNextCol, theirKingColumn);
@@ -188,13 +199,29 @@ public class TeamAM extends Player {
 */
 		boolean isThreatenByTheirRook = (!doesMoveCaptureTheirRook && theirRookIsAlive && (threatenHorizon || threatenVertical));
 
+		if(DEBUG_MODE && isThreatenByTheirRook) {
+			System.out.println("[check next threat] "+myNextPieceType+" is threatened by their rook");
+		}
+
+		boolean isThreaten = isThreatenByTheirKing || isThreatenByTheirRook;
+
+		if (isThreaten && myNextPieceType.equals("king")) {
+			opponentCanCaptureKingThisRound = true;
+		} else if (isThreaten && myNextPieceType.equals("rook"))  {
+			opponentCanCaptureRookThisRound = true;
+		}
+
 		String res = myNextPieceType;
 
-		if(isThreatenByTheirKing && isThreatenByTheirRook) res += " threaten by /both";
-		else if(isThreatenByTheirKing) res += " threaten by /theirKing";
-		else if(isThreatenByTheirRook) res += " threaten by /theirRook";
-		else
+		if(isThreatenByTheirKing && isThreatenByTheirRook) {
+			res += " threaten by /both";
+		} else if(isThreatenByTheirKing) {
+			res += " threaten by /theirKing";
+		} else if(isThreatenByTheirRook)  {
+			res += " threaten by /theirRook";
+		}	else {
 			res = "/safe";
+		}
 
 		if(DEBUG_MODE) {
 			System.out.println("STATE = XXXX "+state);
@@ -382,6 +409,12 @@ public class TeamAM extends Player {
 		String myNextPieceType = move.getPieceToMove();
 
 		checkNextThreaten(myNextRow, myNextCol, myNextPieceType, "BESTMOVE");
+		// check threaten for the other chess
+		if (myNextPieceType.equals("king")) {
+			checkNextThreaten(myRookRow, myRookColumn, "rook", "THE OTHER CHESS");
+		} else {
+			checkNextThreaten(myKingRow, myKingColumn, "king", "THE OTHER CHESS");
+		}
 
 		return move;
 	}
