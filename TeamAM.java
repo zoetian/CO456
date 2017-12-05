@@ -6,14 +6,15 @@ public class TeamAM extends Player {
 	boolean opponentHadWinningPosition; //set to true if opponent can force a win at any point in the match.
 	int trust;
 	// TODO BY ZOE: REMEMBER TO TURN THIS OFF
-	public final boolean DEBUG_MODE = true;
+	public final boolean DEBUG_MODE = false;
+	public final boolean CHECK_MODE = true;
 
 	public byte[] bestMoveBytesRealist, scoreWhiteBytesRealist, scoreBlackBytesRealist;
 	public byte[] bestMoveBytesCooperative, scoreWhiteBytesCooperative, scoreBlackBytesCooperative;
 
 	public int BETRAYAL_DELTA = 1;
 	public int COOPERATION_DELTA = 1;
-	public int IRRATIONALITY_DELTA = 2;
+	public int IRRATIONALITY_DELTA = 1;
 	public int SUBOPTIMALITY_DELTA = 1;
 
 	int monkeyScore;
@@ -327,15 +328,15 @@ public class TeamAM extends Player {
 					if (trust < 0 && (bestScoreCooperative == 3 || bestScoreRealist == 2))
 					{
 
-						if(DEBUG_MODE) System.out.println("Oppo took my king while we can tie! \nIn Match "+matchNum+" Monkey score added! because trust is "+trust);
+						if(CHECK_MODE) System.out.println("Oppo took my king while we can tie! \nIn Match "+matchNum+" Monkey score added! because trust is "+trust);
 
-						monkeyScore += 4;
+						monkeyScore += 5;
 					}
 				}
 
 				else {
 
-					if(DEBUG_MODE) System.out.println("Oppo could take my king but he did not. Definitely not a monkey at "+numMovesPlayed);
+					if(CHECK_MODE) System.out.println("Oppo could take my king but he did not. Definitely not a monkey at "+numMovesPlayed);
 
 					isOpponentMonkey = false;
 					isDetectMonkeyModeOn = false;
@@ -346,15 +347,15 @@ public class TeamAM extends Player {
 			{
 				if (!myRookIsAlive)
 				{
-					if (trust < 1)
+					if (trust < 0)
 					{
-						if(DEBUG_MODE) System.out.println("Oppo took my rook! \nIn Match "+matchNum+" Monkey score added! because trust is "+trust);
-						monkeyScore += 4;
+						if(CHECK_MODE) System.out.println("Oppo took my rook! \nIn Match "+matchNum+" Monkey score added! because trust is "+trust);
+						monkeyScore += 5;
 					}
 				}
 				else
 				{
-					if(DEBUG_MODE) {
+					if(CHECK_MODE) {
 						System.out.println("Oppo could take my rook but he did not. Definitely not a monkey at "+numMovesPlayed);
 						System.out.println("Is our rook alive? "+myRookIsAlive);
 						System.out.println("Our rook row "+myRookRow+" Our rook col "+myRookColumn);
