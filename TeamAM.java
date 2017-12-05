@@ -404,7 +404,7 @@ public class TeamAM extends Player {
 
 		// TODO: change the logic for this one
 		if(isOpponentMonkey) {
-			System.out.println("Activating Monkey Code...");
+			if(CHECK_MODE) System.out.println("Activating Monkey Code...");
 			int iteration = 40;
 			while(iteration>0) {
 				MoveDescription move = nodeRealist.bestMove;
