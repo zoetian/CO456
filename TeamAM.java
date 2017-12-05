@@ -14,7 +14,7 @@ public class TeamAM extends Player {
 
 	public int BETRAYAL_DELTA = 1;
 	public int COOPERATION_DELTA = 1;
-	public int IRRATIONALITY_DELTA = 1;
+	public int IRRATIONALITY_DELTA = 2;
 	public int SUBOPTIMALITY_DELTA = 1;
 
 	int monkeyScore;
@@ -370,7 +370,7 @@ public class TeamAM extends Player {
 				}
 			}
 
-			if(monkeyScore >= 20) {
+			if(monkeyScore >= 15) {
 				isOpponentMonkey = true;
 				isDetectMonkeyModeOn = false;
 				if(DEBUG_MODE) System.out.println("Fuck god, you are a monkey");
@@ -400,7 +400,7 @@ public class TeamAM extends Player {
 		// TODO: change the logic for this one
 		if(isOpponentMonkey) {
 			System.out.println("Activating Monkey Code...");
-			int iteration = 20;
+			int iteration = 40;
 			while(iteration>0) {
 				MoveDescription move = nodeRealist.bestMove;
 				if(!kingOrRookCanBeCapturedNextRound(move)){
