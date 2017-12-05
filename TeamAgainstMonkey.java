@@ -89,8 +89,8 @@ public class TeamAgainstMonkey extends Player {
 				opponentHadWinningPosition = true;
 			}
 
-			String kingRes = checkNextThreaten(myKingRow, myKingColumn, "king", "prepareForMatch");
-			String rookRes = checkNextThreaten(myRookRow, myRookColumn, "rook", "prepareForMatch");
+			String kingRes = checkNextThreaten(myKingRow, myKingColumn, "king", "InsidePrepareForMatch");
+			String rookRes = checkNextThreaten(myRookRow, myRookColumn, "rook", "InsidePrepareForMatch");
 
 			String myKingThreatenBy = parseThreatenBy(kingRes);
 			String myRookThreatenBy = parseThreatenBy(rookRes);
@@ -150,8 +150,8 @@ public class TeamAgainstMonkey extends Player {
 
 
 	public boolean isBlocked(int src, int dest, int curr) {
-		return (src <= dest && src <= curr && curr <= dest) ||
-			   (dest <= src && dest <= curr && curr <= src);
+		return (src <= curr && curr <= dest) ||
+			   (dest <= curr && curr <= src);
 	}
 
 	// can be used to check current threaten as well
@@ -163,8 +163,15 @@ public class TeamAgainstMonkey extends Player {
 		boolean isThreatenByTheirKing = (theirKingIsAlive && Math.abs(theirKingRow - myNextRow) <= 1 && Math.abs(theirKingColumn - myNextCol) <= 1);
 
 		// isThreatenByTheirRook: two directions
-		boolean threatenHorizon = (theirRookRow == myNextRow) && !isBlocked(theirRookColumn, myNextCol, theirKingColumn) && !isBlocked(theirRookColumn, myNextCol, myRookColumn);
-		boolean threatenVertical = (theirRookColumn == myNextCol) && !isBlocked(theirRookRow, myNextRow, theirKingRow) && !isBlocked(theirRookRow, myNextRow, myRookRow);
+		boolean threatenHorizon;
+		boolean threatenVertical;
+		if(myColour != 1 && numMovesPlayed != 0) {
+			threatenHorizon = (theirRookRow == myNextRow) && !isBlocked(theirRookColumn, myNextCol, theirKingColumn) && !isBlocked(theirRookColumn, myNextCol, myRookColumn);
+			threatenVertical = (theirRookColumn == myNextCol) && !isBlocked(theirRookRow, myNextRow, theirKingRow) && !isBlocked(theirRookRow, myNextRow, myRookRow);
+		} else {
+			threatenHorizon = (theirRookRow == myNextRow) && !isBlocked(theirRookColumn, myNextCol, theirKingColumn);
+			threatenVertical = (theirRookColumn == myNextCol) && !isBlocked(theirRookRow, myNextRow, theirKingRow);
+		}
 
 		boolean isThreatenByTheirRook = (theirRookIsAlive && threatenHorizon && threatenVertical);
 
@@ -223,24 +230,31 @@ public class TeamAgainstMonkey extends Player {
 		return (checkNextThreaten(myNextRow, myNextCol, piece, "CHECKBOTH").equals("safe"));
 	}
 
-	// TODO: the opponentCanCaptureKingThisRound MUST BE CHANGED HERE!!
-	// THE RUN TIME VALUE FOR THIS IS NO LONGER MEANINGFUL
-
-	// also, the checkNextThreaten NEED TO BE CALLED AGAIN AND AGAIN DURING EVERY ROUND
-	// MUST DOUBLE CHECK THE TIME AND MEMROY IN EVERY ROUND
-
-	// Double check in isAgainstMonkey: when we determine the player type
-	// Why is it useful to check if our king/ rook is already dead???
-
 	// core function to detect monkey
 	public boolean isAgainstMonkey(int bestScoreCooperative, int bestScoreRealist) {
 
 		// boolean isMyTurn = (numMovesPlayed % 2 == 0 && myColour == 0) || (numMovesPlayed%2!=0 && myColour == 1);
 		boolean isMyTurn = (numMovesPlayed%2 == myColour);
 
-		if(isDetectMonkeyModeOn && isMyTurn && numMovesPlayed != 0)
+		/*
+		什么情况一定不是猴子
+
+		如果是上一轮 对方走 并且对方可以吃KING
+		X+1的时候 KING还在 那么不是
+
+		如果是上一轮 对方走 并且对方只能吃ROOK
+		X+1的时候 ROOK还在 那么不是
+		*/
+
+		if(isDetectMonkeyModeOn)
 		{
-			if (opponentCanCaptureKingThisRound)
+			if(DEBUG_MODE) {
+				System.out.println("[CORE] numMovesPlayed: "+numMovesPlayed);
+				System.out.println("[CORE] myColour:"+myColour);
+				System.out.println("[CORE] isMyTurn: "+isMyTurn);
+			}
+
+			if (opponentCanCaptureKingThisRound && numMovesPlayed != 0)
 			{
 				if (!myKingIsAlive)
 				{	 // our king was captured in the last round!
@@ -262,7 +276,7 @@ public class TeamAgainstMonkey extends Player {
 				}
 			}
 
-			else if (opponentCanCaptureRookThisRound)
+			else if (opponentCanCaptureRookThisRound && numMovesPlayed != 0)
 			{
 				if (!myRookIsAlive)
 				{
