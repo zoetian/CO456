@@ -152,18 +152,6 @@ public class TeamAgainstMonkey extends Player {
 			   (dest <= src && dest <= curr && curr <= src);
 	}
 
-	// print out all the coordinates
-	public void printCell(int myNextRow, int myNextCol, String myNextPieceType, String state) {
-		if(DEBUG_MODE) {
-			System.out.println("STATE = XXXX "+state);
-			System.out.println("My next "+myNextPieceType+": [" + myNextRow + ", " + myNextCol + "]");
-			System.out.println("My current king: ["+myKingRow+", "+myKingColumn+"]");
-			System.out.println("My current rook: ["+myKingRow+", "+myKingColumn+"]");
-			System.out.println("Their current king: ["+theirKingRow+", "+theirKingColumn+"]");
-			System.out.println("Their current rook: ["+theirRookRow+", "+theirRookColumn+"]");
-		}
-	}
-
 	// can be used to check current threaten as well
 	public String checkNextThreaten(int myNextRow, int myNextCol, String myNextPieceType, String state) {
 		// those two statements shouldn't be printed at any cases!
@@ -186,7 +174,14 @@ public class TeamAgainstMonkey extends Player {
 		else
 			res = "/safe";
 
-		printCell(myNextRow, myNextCol, myNextPieceType, state);
+		if(DEBUG_MODE) {
+			System.out.println("STATE = XXXX "+state);
+			System.out.println("My next "+myNextPieceType+": [" + myNextRow + ", " + myNextCol + "]");
+			System.out.println("My current king: ["+myKingRow+", "+myKingColumn+"]");
+			System.out.println("My current rook: ["+myRookRow+", "+myRookColumn+"]");
+			System.out.println("Their current king: ["+theirKingRow+", "+theirKingColumn+"]");
+			System.out.println("Their current rook: ["+theirRookRow+", "+theirRookColumn+"]");
+		}
 
 		return res;
 	}
