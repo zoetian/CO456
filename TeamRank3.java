@@ -1,4 +1,4 @@
-public class TeamWatermelon extends Player {
+public class TeamRank3 extends Player {
 
 	// for DoubleAgent
 	private Handshaker shaker;
@@ -30,7 +30,7 @@ public class TeamWatermelon extends Player {
 
 	int matchNum;
 
-	public TeamWatermelon(int maxNumMoves) {
+	public TeamRank3(int maxNumMoves) {
 		TeamRational teamRationalRealist = TeamRational.createRealist(maxNumMoves);
 		/*TeamRationalRealist has the following beliefs as P1:
 		 * P1\P2 |  W  |  L  |

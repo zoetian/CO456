@@ -1,7 +1,7 @@
 resultFile = open("result.txt", "rt")
 
 with open("analysis.txt", "wt") as analysisFile:
-	keyword = "TeamWatermelon"
+	keyword = "TeamAgainstMonkey"
 	tmp = []
 	mine = []
 	oppo = []
