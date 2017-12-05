@@ -25,34 +25,35 @@ public class Tournament {
 	private void registerPlayers() {
 		// New players can be registered here
 		playerFactory.registerPlayer("TeamMonkey", i -> new TeamMonkey(i));
-		// playerFactory.registerPlayer("TeamNihilist", i -> new TeamNihilist(i));
-		// playerFactory.registerPlayer("TeamRationalOptimist", i -> TeamRational.createOptimist(i));
-		// playerFactory.registerPlayer("TeamRationalPessimist", i -> TeamRational.createPessimist(i));
-		// playerFactory.registerPlayer("TeamRationalQueller", i -> TeamRational.createQueller(i));
-		// playerFactory.registerPlayer("TeamRationalRealist", i -> TeamRational.createRealist(i));
-		// playerFactory.registerPlayer("TeamRationalScrapper", i -> TeamRational.createScrapper(i));
-		// playerFactory.registerPlayer("TeamRationalTruster", i -> TeamRational.createTruster(i));
-		// playerFactory.registerPlayer("TeamRationalUtilitarian", i -> TeamRational.createUtilitarian(i));
-        //
-		// playerFactory.registerPlayer("TeamHandshaker", i -> new TeamHandshaker(i));
-		// playerFactory.registerPlayer("TeamDoubleAgent", i -> new TeamDoubleAgent(i));
-        //
-		// playerFactory.registerPlayer("TeamTitForTat", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTatRecovery", i -> new TeamTitForTat(i));
-		// playerFactory.registerPlayer("TeamTitForTatTat", i -> new TeamTitForTatTat(i));
-		// playerFactory.registerPlayer("TeamTatForTit", i -> new TeamTatForTit(i));
-		// playerFactory.registerPlayer("TeamGrudger", i -> new TeamGrudger(i));
-		// playerFactory.registerPlayer("TeamCondescension", i -> new TeamCondescension(i));
-		// playerFactory.registerPlayer("TeamTwitchForTat", i -> new TeamTwitchForTat(i));
-		// playerFactory.registerPlayer("TeamForgiveness", i -> new TeamForgiveness(i));
-        //
-		// playerFactory.registerPlayer("TeamMoreCoopTFT", i -> new TeamMoreCoopTFT(i));
-		// playerFactory.registerPlayer("TeamMoreBetrayalTFT", i -> new TeamMoreBetrayalTFT(i));
-		// playerFactory.registerPlayer("TeamMoreMoreTFT", i -> new TeamMoreMoreTFT(i));
-		// playerFactory.registerPlayer("TeamTFTADC", i -> new TeamTFTADC(i));
-        //
-		// playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
-		playerFactory.registerPlayer("TeamAgainstMonkey", i -> new TeamAgainstMonkey(i));
+		playerFactory.registerPlayer("TeamNihilist", i -> new TeamNihilist(i));
+		playerFactory.registerPlayer("TeamRationalOptimist", i -> TeamRational.createOptimist(i));
+		playerFactory.registerPlayer("TeamRationalPessimist", i -> TeamRational.createPessimist(i));
+		playerFactory.registerPlayer("TeamRationalQueller", i -> TeamRational.createQueller(i));
+		playerFactory.registerPlayer("TeamRationalRealist", i -> TeamRational.createRealist(i));
+		playerFactory.registerPlayer("TeamRationalScrapper", i -> TeamRational.createScrapper(i));
+		playerFactory.registerPlayer("TeamRationalTruster", i -> TeamRational.createTruster(i));
+		playerFactory.registerPlayer("TeamRationalUtilitarian", i -> TeamRational.createUtilitarian(i));
+
+		playerFactory.registerPlayer("TeamHandshaker", i -> new TeamHandshaker(i));
+		playerFactory.registerPlayer("TeamDoubleAgent", i -> new TeamDoubleAgent(i));
+
+		playerFactory.registerPlayer("TeamTitForTat", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTatRecovery", i -> new TeamTitForTat(i));
+		playerFactory.registerPlayer("TeamTitForTatTat", i -> new TeamTitForTatTat(i));
+		playerFactory.registerPlayer("TeamTatForTit", i -> new TeamTatForTit(i));
+		playerFactory.registerPlayer("TeamGrudger", i -> new TeamGrudger(i));
+		playerFactory.registerPlayer("TeamCondescension", i -> new TeamCondescension(i));
+		playerFactory.registerPlayer("TeamTwitchForTat", i -> new TeamTwitchForTat(i));
+		playerFactory.registerPlayer("TeamForgiveness", i -> new TeamForgiveness(i));
+
+		playerFactory.registerPlayer("TeamMoreCoopTFT", i -> new TeamMoreCoopTFT(i));
+		playerFactory.registerPlayer("TeamMoreBetrayalTFT", i -> new TeamMoreBetrayalTFT(i));
+		playerFactory.registerPlayer("TeamMoreMoreTFT", i -> new TeamMoreMoreTFT(i));
+		playerFactory.registerPlayer("TeamTFTADC", i -> new TeamTFTADC(i));
+
+		playerFactory.registerPlayer("TeamRank3", i -> new TeamRank3(i));
+		playerFactory.registerPlayer("TeamWatermelon", i -> new TeamWatermelon(i));
+		playerFactory.registerPlayer("TeamAM", i -> new TeamAM(i));
 
 	}
 
